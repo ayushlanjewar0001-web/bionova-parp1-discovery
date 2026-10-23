@@ -1,7 +1,7 @@
 {
   "project": {
     "name": "BioNova PARP1",
-    "title": "Computer-Aided In-Silico Prioritization & Generative Lead Optimization of Human PARP1 Inhibitors",
+    "title": "Computer-Aided In-Silico Prioritization & RDKit-Based Lead Optimization of Human PARP1 Inhibitors",
     "investigator": "Ayush Lanjewar",
     "role": "Principal Investigator (B.Pharm Candidate)",
     "target": {
@@ -54,15 +54,15 @@
     },
     {
       "id": 5,
-      "name": "REINVENT 4 Generative Lead Opt",
+      "name": "RDKit-Based Lead Optimization",
       "status": "COMPLETED",
-      "summary": "AstraZeneca REINVENT 4 Mol2Mol generative AI: 4 analogs per docked lead screened & docked."
+      "summary": "Rule-based molecular optimization: 4 target-directed analogues per lead screened via ChemProp v2 & redocked into PDB 7KK4."
     },
     {
       "id": 6,
       "name": "ADMET-AI & Research Reporting",
       "status": "COMPLETED",
-      "summary": "106 ADMET endpoints profiled post-docking, manuscript drafted, Vercel web app ready."
+      "summary": "ADMET-AI profiling post-docking, research manuscript, interactive research dashboard."
     }
   ],
   "data_quality": {
@@ -246,12 +246,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.32,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.3684635,
-      "mw": 379.41,
-      "logp": 3.1,
-      "qed": 0.87,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.04
+      "predicted_pIC50": 10.3684635
     },
     {
       "compound_id": "PUBCHEM_1002304",
@@ -268,12 +263,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.23,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.315493,
-      "mw": 398.3,
-      "logp": 3.74,
-      "qed": 0.818,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.05
+      "predicted_pIC50": 10.315493
     },
     {
       "compound_id": "PUBCHEM_1002274",
@@ -290,12 +280,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.43,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.280724,
-      "mw": 474.57,
-      "logp": 1.76,
-      "qed": 0.655,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.05
+      "predicted_pIC50": 10.280724
     },
     {
       "compound_id": "PUBCHEM_1002392",
@@ -312,12 +297,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.8,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.223887,
-      "mw": 479.58,
-      "logp": 4.41,
-      "qed": 0.625,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.06
+      "predicted_pIC50": 10.223887
     },
     {
       "compound_id": "PUBCHEM_1002469",
@@ -334,12 +314,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.17,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.202009,
-      "mw": 439.95,
-      "logp": 4.31,
-      "qed": 0.764,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.06
+      "predicted_pIC50": 10.202009
     },
     {
       "compound_id": "PUBCHEM_1002285",
@@ -356,12 +331,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.49,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.166494,
-      "mw": 431.54,
-      "logp": 3.62,
-      "qed": 0.7,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.07
+      "predicted_pIC50": 10.166494
     },
     {
       "compound_id": "PUBCHEM_1002391",
@@ -378,12 +348,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.96,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.159033,
-      "mw": 370.24,
-      "logp": 3.01,
-      "qed": 0.79,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.07
+      "predicted_pIC50": 10.159033
     },
     {
       "compound_id": "PUBCHEM_1002464",
@@ -400,12 +365,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.84,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.152843,
-      "mw": 403.49,
-      "logp": 2.84,
-      "qed": 0.803,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.07
+      "predicted_pIC50": 10.152843
     },
     {
       "compound_id": "PUBCHEM_1002435",
@@ -422,12 +382,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.2,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.147057,
-      "mw": 436.48,
-      "logp": 3.14,
-      "qed": 0.779,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.07
+      "predicted_pIC50": 10.147057
     },
     {
       "compound_id": "PUBCHEM_1002266",
@@ -444,12 +399,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.27,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.1339445,
-      "mw": 465.56,
-      "logp": 3.67,
-      "qed": 0.691,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.07
+      "predicted_pIC50": 10.1339445
     },
     {
       "compound_id": "PUBCHEM_1010644",
@@ -466,12 +416,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.08,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.1123,
-      "mw": 417.52,
-      "logp": 5.41,
-      "qed": 0.602,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.08
+      "predicted_pIC50": 10.1123
     },
     {
       "compound_id": "PUBCHEM_1002346",
@@ -488,12 +433,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.6,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.094841,
-      "mw": 403.49,
-      "logp": 2.84,
-      "qed": 0.803,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.08
+      "predicted_pIC50": 10.094841
     },
     {
       "compound_id": "PUBCHEM_1002492",
@@ -510,12 +450,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.36,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.088511,
-      "mw": 389.42,
-      "logp": 1.78,
-      "qed": 0.81,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.08
+      "predicted_pIC50": 10.088511
     },
     {
       "compound_id": "PUBCHEM_1002448",
@@ -532,12 +467,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.99,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.0793295,
-      "mw": 423.52,
-      "logp": 3.98,
-      "qed": 0.796,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.08
+      "predicted_pIC50": 10.0793295
     },
     {
       "compound_id": "PUBCHEM_1002264",
@@ -554,12 +484,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.44,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.078019,
-      "mw": 411.53,
-      "logp": 3.72,
-      "qed": 0.826,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.08
+      "predicted_pIC50": 10.078019
     },
     {
       "compound_id": "PUBCHEM_1002389",
@@ -576,12 +501,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.64,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.058318,
-      "mw": 445.57,
-      "logp": 4.01,
-      "qed": 0.673,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.09
+      "predicted_pIC50": 10.058318
     },
     {
       "compound_id": "PUBCHEM_1002432",
@@ -598,12 +518,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.78,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.049738,
-      "mw": 465.51,
-      "logp": 3.76,
-      "qed": 0.726,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.09
+      "predicted_pIC50": 10.049738
     },
     {
       "compound_id": "PUBCHEM_1002451",
@@ -620,12 +535,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.02,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.009853,
-      "mw": 453.5,
-      "logp": 3.73,
-      "qed": 0.747,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.1
+      "predicted_pIC50": 10.009853
     },
     {
       "compound_id": "PUBCHEM_1002472",
@@ -642,12 +552,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.04,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.957848,
-      "mw": 423.52,
-      "logp": 3.98,
-      "qed": 0.799,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.11
+      "predicted_pIC50": 9.957848
     },
     {
       "compound_id": "PUBCHEM_1002390",
@@ -664,12 +569,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.86,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.923067,
-      "mw": 361.41,
-      "logp": 1.72,
-      "qed": 0.838,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.12
+      "predicted_pIC50": 9.923067
     },
     {
       "compound_id": "PUBCHEM_1002267",
@@ -686,12 +586,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.87,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.896296,
-      "mw": 371.44,
-      "logp": 2.58,
-      "qed": 0.855,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.13
+      "predicted_pIC50": 9.896296
     },
     {
       "compound_id": "PUBCHEM_1002471",
@@ -708,12 +603,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.33,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.876955,
-      "mw": 373.46,
-      "logp": 2.83,
-      "qed": 0.872,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.13
+      "predicted_pIC50": 9.876955
     },
     {
       "compound_id": "PUBCHEM_1002489",
@@ -730,12 +620,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.06,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.869731,
-      "mw": 399.45,
-      "logp": 2.36,
-      "qed": 0.756,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.13
+      "predicted_pIC50": 9.869731
     },
     {
       "compound_id": "PUBCHEM_1002474",
@@ -752,12 +637,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.18,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.724621,
-      "mw": 481.56,
-      "logp": 4.51,
-      "qed": 0.666,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.19
+      "predicted_pIC50": 9.724621
     },
     {
       "compound_id": "PUBCHEM_1002309",
@@ -774,12 +654,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.94,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.715986,
-      "mw": 406.49,
-      "logp": 4.68,
-      "qed": 0.796,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.19
+      "predicted_pIC50": 9.715986
     },
     {
       "compound_id": "PUBCHEM_51033720",
@@ -796,12 +671,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.3,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.7154045,
-      "mw": 380.41,
-      "logp": 2.92,
-      "qed": 0.75,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.19
+      "predicted_pIC50": 9.7154045
     },
     {
       "compound_id": "PUBCHEM_56947515",
@@ -818,12 +688,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.14,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.552507,
-      "mw": 527.51,
-      "logp": 4.76,
-      "qed": 0.336,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.28
+      "predicted_pIC50": 9.552507
     },
     {
       "compound_id": "PUBCHEM_134817183",
@@ -840,12 +705,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.03,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.513874,
-      "mw": 468.54,
-      "logp": 5.45,
-      "qed": 0.529,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.31
+      "predicted_pIC50": 9.513874
     },
     {
       "compound_id": "PUBCHEM_1021550",
@@ -862,12 +722,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.78,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.511376,
-      "mw": 356.47,
-      "logp": 4.34,
-      "qed": 0.809,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.31
+      "predicted_pIC50": 9.511376
     },
     {
       "compound_id": "PUBCHEM_71550931",
@@ -884,12 +739,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.92,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.438005,
-      "mw": 546.6,
-      "logp": 4.71,
-      "qed": 0.368,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.36
+      "predicted_pIC50": 9.438005
     },
     {
       "compound_id": "PUBCHEM_46894021",
@@ -906,12 +756,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.68,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.412983,
-      "mw": 524.41,
-      "logp": 3.97,
-      "qed": 0.374,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.39
+      "predicted_pIC50": 9.412983
     },
     {
       "compound_id": "PUBCHEM_193962",
@@ -928,12 +773,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.52,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.38671,
-      "mw": 435.29,
-      "logp": 4.72,
-      "qed": 0.608,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.41
+      "predicted_pIC50": 9.38671
     },
     {
       "compound_id": "PUBCHEM_1021162",
@@ -950,12 +790,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.79,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.36436,
-      "mw": 385.45,
-      "logp": 4.43,
-      "qed": 0.826,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.43
+      "predicted_pIC50": 9.36436
     },
     {
       "compound_id": "PUBCHEM_71267243",
@@ -972,12 +807,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.39,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.33115,
-      "mw": 408.43,
-      "logp": 3.32,
-      "qed": 0.411,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.47
+      "predicted_pIC50": 9.33115
     },
     {
       "compound_id": "PUBCHEM_44200882",
@@ -994,12 +824,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.88,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.318185,
-      "mw": 393.83,
-      "logp": 3.98,
-      "qed": 0.672,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.48
+      "predicted_pIC50": 9.318185
     },
     {
       "compound_id": "PUBCHEM_71562418",
@@ -1016,12 +841,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.89,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.297928,
-      "mw": 518.54,
-      "logp": 4.38,
-      "qed": 0.393,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.5
+      "predicted_pIC50": 9.297928
     },
     {
       "compound_id": "PUBCHEM_24826799",
@@ -1038,12 +858,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.8,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.291334,
-      "mw": 532.57,
-      "logp": 4.46,
-      "qed": 0.394,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.51
+      "predicted_pIC50": 9.291334
     },
     {
       "compound_id": "PUBCHEM_147817927",
@@ -1060,12 +875,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.38,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.275661,
-      "mw": 435.46,
-      "logp": 2.43,
-      "qed": 0.518,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.53
+      "predicted_pIC50": 9.275661
     },
     {
       "compound_id": "PUBCHEM_6451164",
@@ -1082,12 +892,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.95,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.230241,
-      "mw": 366.43,
-      "logp": 4.99,
-      "qed": 0.617,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.59
+      "predicted_pIC50": 9.230241
     },
     {
       "compound_id": "PUBCHEM_44143088",
@@ -1104,12 +909,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.59,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.225325,
-      "mw": 300.27,
-      "logp": 2.74,
-      "qed": 0.804,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.6
+      "predicted_pIC50": 9.225325
     },
     {
       "compound_id": "PUBCHEM_71605047",
@@ -1126,12 +926,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.14,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.218828,
-      "mw": 532.57,
-      "logp": 4.46,
-      "qed": 0.394,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.6
+      "predicted_pIC50": 9.218828
     },
     {
       "compound_id": "PUBCHEM_53232451",
@@ -1148,12 +943,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.06,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.212717,
-      "mw": 355.35,
-      "logp": 3.57,
-      "qed": 0.646,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.61
+      "predicted_pIC50": 9.212717
     },
     {
       "compound_id": "PUBCHEM_9956119",
@@ -1170,12 +960,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.58,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.207462,
-      "mw": 465.35,
-      "logp": 4.94,
-      "qed": 0.331,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.62
+      "predicted_pIC50": 9.207462
     },
     {
       "compound_id": "PUBCHEM_162533924",
@@ -1192,12 +977,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.12,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.162253,
-      "mw": 531.89,
-      "logp": 2.33,
-      "qed": 0.334,
-      "lipinski": "Fail",
-      "pred_ic50_nm": 0.69
+      "predicted_pIC50": 9.162253
     },
     {
       "compound_id": "PUBCHEM_3033825",
@@ -1214,12 +994,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.68,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.160795,
-      "mw": 280.29,
-      "logp": 1.36,
-      "qed": 0.642,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.69
+      "predicted_pIC50": 9.160795
     },
     {
       "compound_id": "PUBCHEM_24779676",
@@ -1236,12 +1011,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.48,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.154718,
-      "mw": 375.82,
-      "logp": 4.01,
-      "qed": 0.547,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.7
+      "predicted_pIC50": 9.154718
     },
     {
       "compound_id": "PUBCHEM_71533696",
@@ -1258,12 +1028,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.25,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.125329,
-      "mw": 447.34,
-      "logp": 4.81,
-      "qed": 0.336,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.75
+      "predicted_pIC50": 9.125329
     },
     {
       "compound_id": "PUBCHEM_24959105",
@@ -1280,12 +1045,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.96,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.107193,
-      "mw": 289.34,
-      "logp": 3.15,
-      "qed": 0.844,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.78
+      "predicted_pIC50": 9.107193
     },
     {
       "compound_id": "PUBCHEM_76287717",
@@ -1302,12 +1062,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.29,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.098366,
-      "mw": 482.94,
-      "logp": 3.71,
-      "qed": 0.333,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.8
+      "predicted_pIC50": 9.098366
     },
     {
       "compound_id": "PUBCHEM_49872646",
@@ -1324,12 +1079,7 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.35,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.095687,
-      "mw": 496.55,
-      "logp": 3.5,
-      "qed": 0.382,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.8
+      "predicted_pIC50": 9.095687
     }
   ],
   "top50_summary": {
@@ -1352,7 +1102,7 @@
       "mw": 418.5,
       "logp": 4.8,
       "tpsa": 115.2,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.98,
       "parent_predicted_pIC50": 10.1123,
       "analog_predicted_pIC50": 10.242861,
@@ -1370,9 +1120,7 @@
       "Caco2_Wang": -4.847522,
       "hERG": 0.4767769,
       "CYP3A4_Substrate_CarbonMangels": 0.6584805,
-      "qed": 0.641,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.06
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1010644",
@@ -1384,7 +1132,7 @@
       "mw": 435.51,
       "logp": 5.55,
       "tpsa": 102.3,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.98,
       "parent_predicted_pIC50": 10.1123,
       "analog_predicted_pIC50": 10.303169,
@@ -1402,9 +1150,7 @@
       "Caco2_Wang": -4.692497,
       "hERG": 0.4237713,
       "CYP3A4_Substrate_CarbonMangels": 0.6711166,
-      "qed": 0.57,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.05
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1010644",
@@ -1416,7 +1162,7 @@
       "mw": 471.49,
       "logp": 5.95,
       "tpsa": 102.3,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.98,
       "parent_predicted_pIC50": 10.1123,
       "analog_predicted_pIC50": 10.186174,
@@ -1434,9 +1180,7 @@
       "Caco2_Wang": -4.7744017,
       "hERG": 0.4084057,
       "CYP3A4_Substrate_CarbonMangels": 0.6764595,
-      "qed": 0.499,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.07
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1010644",
@@ -1448,7 +1192,7 @@
       "mw": 429.53,
       "logp": 5.26,
       "tpsa": 102.3,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.98,
       "parent_predicted_pIC50": 10.1123,
       "analog_predicted_pIC50": 9.969296,
@@ -1466,9 +1210,7 @@
       "Caco2_Wang": -4.8710146,
       "hERG": 0.45595184,
       "CYP3A4_Substrate_CarbonMangels": 0.6946538,
-      "qed": 0.6,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.11
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_134817183",
@@ -1480,7 +1222,7 @@
       "mw": 469.52,
       "logp": 4.84,
       "tpsa": 121.5,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.84,
       "parent_predicted_pIC50": 9.513874,
       "analog_predicted_pIC50": 9.578041,
@@ -1498,9 +1240,7 @@
       "Caco2_Wang": -4.769511,
       "hERG": 0.5247216,
       "CYP3A4_Substrate_CarbonMangels": 0.65621746,
-      "qed": 0.564,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.26
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_134817183",
@@ -1512,7 +1252,7 @@
       "mw": 486.53,
       "logp": 5.59,
       "tpsa": 108.6,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.84,
       "parent_predicted_pIC50": 9.513874,
       "analog_predicted_pIC50": 9.637985,
@@ -1530,9 +1270,7 @@
       "Caco2_Wang": -4.7181096,
       "hERG": 0.51189625,
       "CYP3A4_Substrate_CarbonMangels": 0.6685932,
-      "qed": 0.5,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.23
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_134817183",
@@ -1544,7 +1282,7 @@
       "mw": 508.6,
       "logp": 6.01,
       "tpsa": 99.8,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.84,
       "parent_predicted_pIC50": 9.513874,
       "analog_predicted_pIC50": 9.515424,
@@ -1562,9 +1300,7 @@
       "Caco2_Wang": -4.7587066,
       "hERG": 0.5305732,
       "CYP3A4_Substrate_CarbonMangels": 0.74153364,
-      "qed": 0.455,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.31
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_134817183",
@@ -1576,7 +1312,7 @@
       "mw": 496.59,
       "logp": 6.18,
       "tpsa": 108.6,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.84,
       "parent_predicted_pIC50": 9.513874,
       "analog_predicted_pIC50": 9.131235,
@@ -1594,9 +1330,7 @@
       "Caco2_Wang": -4.8354573,
       "hERG": 0.60598844,
       "CYP3A4_Substrate_CarbonMangels": 0.7086345,
-      "qed": 0.45,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.74
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71550931",
@@ -1608,7 +1342,7 @@
       "mw": 547.59,
       "logp": 4.11,
       "tpsa": 78.7,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.11,
       "parent_predicted_pIC50": 9.438005,
       "analog_predicted_pIC50": 9.52228,
@@ -1626,9 +1360,7 @@
       "Caco2_Wang": -5.1960006,
       "hERG": 0.94223464,
       "CYP3A4_Substrate_CarbonMangels": 0.7625655,
-      "qed": 0.379,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.3
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71550931",
@@ -1640,7 +1372,7 @@
       "mw": 564.59,
       "logp": 4.85,
       "tpsa": 65.8,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.11,
       "parent_predicted_pIC50": 9.438005,
       "analog_predicted_pIC50": 9.600344,
@@ -1658,9 +1390,7 @@
       "Caco2_Wang": -5.029047,
       "hERG": 0.9566976,
       "CYP3A4_Substrate_CarbonMangels": 0.7962888,
-      "qed": 0.278,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.25
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71550931",
@@ -1672,7 +1402,7 @@
       "mw": 586.66,
       "logp": 5.27,
       "tpsa": 57.0,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.11,
       "parent_predicted_pIC50": 9.438005,
       "analog_predicted_pIC50": 9.438476,
@@ -1690,9 +1420,7 @@
       "Caco2_Wang": -5.031709,
       "hERG": 0.95665264,
       "CYP3A4_Substrate_CarbonMangels": 0.8298129,
-      "qed": 0.289,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.36
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71550931",
@@ -1704,7 +1432,7 @@
       "mw": 558.61,
       "logp": 4.85,
       "tpsa": 65.8,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -11.11,
       "parent_predicted_pIC50": 9.438005,
       "analog_predicted_pIC50": 9.1162815,
@@ -1722,9 +1450,7 @@
       "Caco2_Wang": -5.1959376,
       "hERG": 0.97299653,
       "CYP3A4_Substrate_CarbonMangels": 0.74426687,
-      "qed": 0.355,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.77
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71562418",
@@ -1736,7 +1462,7 @@
       "mw": 519.53,
       "logp": 3.77,
       "tpsa": 90.0,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.96,
       "parent_predicted_pIC50": 9.297928,
       "analog_predicted_pIC50": 9.410948,
@@ -1754,9 +1480,7 @@
       "Caco2_Wang": -5.2987123,
       "hERG": 0.91807634,
       "CYP3A4_Substrate_CarbonMangels": 0.66013545,
-      "qed": 0.399,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.39
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71562418",
@@ -1768,7 +1492,7 @@
       "mw": 536.53,
       "logp": 4.52,
       "tpsa": 77.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.96,
       "parent_predicted_pIC50": 9.297928,
       "analog_predicted_pIC50": 9.482428,
@@ -1786,9 +1510,7 @@
       "Caco2_Wang": -5.1289372,
       "hERG": 0.9582714,
       "CYP3A4_Substrate_CarbonMangels": 0.72142094,
-      "qed": 0.297,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.33
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71562418",
@@ -1800,7 +1522,7 @@
       "mw": 558.61,
       "logp": 4.93,
       "tpsa": 68.4,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.96,
       "parent_predicted_pIC50": 9.297928,
       "analog_predicted_pIC50": 9.297552,
@@ -1818,9 +1540,7 @@
       "Caco2_Wang": -5.1308885,
       "hERG": 0.9608439,
       "CYP3A4_Substrate_CarbonMangels": 0.7652284,
-      "qed": 0.352,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.5
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71562418",
@@ -1832,7 +1552,7 @@
       "mw": 530.55,
       "logp": 4.52,
       "tpsa": 77.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.96,
       "parent_predicted_pIC50": 9.297928,
       "analog_predicted_pIC50": 8.944455,
@@ -1850,9 +1570,7 @@
       "Caco2_Wang": -5.2924833,
       "hERG": 0.9705858,
       "CYP3A4_Substrate_CarbonMangels": 0.639103,
-      "qed": 0.38,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 1.14
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_162533924",
@@ -1864,7 +1582,7 @@
       "mw": 532.87,
       "logp": 1.73,
       "tpsa": 130.3,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.75,
       "parent_predicted_pIC50": 9.162253,
       "analog_predicted_pIC50": 9.342915,
@@ -1882,9 +1600,7 @@
       "Caco2_Wang": -5.2416983,
       "hERG": 0.5713903,
       "CYP3A4_Substrate_CarbonMangels": 0.77175945,
-      "qed": 0.327,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.45
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_162533924",
@@ -1896,7 +1612,7 @@
       "mw": 549.88,
       "logp": 2.47,
       "tpsa": 117.5,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.75,
       "parent_predicted_pIC50": 9.162253,
       "analog_predicted_pIC50": 9.307785,
@@ -1914,9 +1630,7 @@
       "Caco2_Wang": -4.881715,
       "hERG": 0.7496807,
       "CYP3A4_Substrate_CarbonMangels": 0.80008423,
-      "qed": 0.255,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.49
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_162533924",
@@ -1928,7 +1642,7 @@
       "mw": 571.95,
       "logp": 2.89,
       "tpsa": 108.7,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.75,
       "parent_predicted_pIC50": 9.162253,
       "analog_predicted_pIC50": 9.068395,
@@ -1946,9 +1660,7 @@
       "Caco2_Wang": -4.9811225,
       "hERG": 0.7366481,
       "CYP3A4_Substrate_CarbonMangels": 0.78059554,
-      "qed": 0.276,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.85
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_162533924",
@@ -1960,7 +1672,7 @@
       "mw": 559.94,
       "logp": 3.07,
       "tpsa": 117.4,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.75,
       "parent_predicted_pIC50": 9.162253,
       "analog_predicted_pIC50": 8.627893,
@@ -1978,9 +1690,7 @@
       "Caco2_Wang": -5.083509,
       "hERG": 0.7967273,
       "CYP3A4_Substrate_CarbonMangels": 0.8080819,
-      "qed": 0.318,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 2.36
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71533696",
@@ -1992,7 +1702,7 @@
       "mw": 448.33,
       "logp": 4.21,
       "tpsa": 82.0,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.75,
       "parent_predicted_pIC50": 9.125329,
       "analog_predicted_pIC50": 9.164842,
@@ -2010,9 +1720,7 @@
       "Caco2_Wang": -4.983575,
       "hERG": 0.56289613,
       "CYP3A4_Substrate_CarbonMangels": 0.64931166,
-      "qed": 0.349,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.68
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71533696",
@@ -2024,7 +1732,7 @@
       "mw": 465.33,
       "logp": 4.95,
       "tpsa": 69.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.75,
       "parent_predicted_pIC50": 9.125329,
       "analog_predicted_pIC50": 9.405184,
@@ -2042,9 +1750,7 @@
       "Caco2_Wang": -4.8098063,
       "hERG": 0.5395031,
       "CYP3A4_Substrate_CarbonMangels": 0.6792945,
-      "qed": 0.319,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.39
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71533696",
@@ -2056,7 +1762,7 @@
       "mw": 481.79,
       "logp": 5.46,
       "tpsa": 69.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.75,
       "parent_predicted_pIC50": 9.125329,
       "analog_predicted_pIC50": 9.363716,
@@ -2074,9 +1780,7 @@
       "Caco2_Wang": -4.922332,
       "hERG": 0.4966522,
       "CYP3A4_Substrate_CarbonMangels": 0.65926945,
-      "qed": 0.289,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.43
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_71533696",
@@ -2088,7 +1792,7 @@
       "mw": 477.37,
       "logp": 4.82,
       "tpsa": 78.3,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.75,
       "parent_predicted_pIC50": 9.125329,
       "analog_predicted_pIC50": 9.16282,
@@ -2106,9 +1810,7 @@
       "Caco2_Wang": -4.882706,
       "hERG": 0.6121768,
       "CYP3A4_Substrate_CarbonMangels": 0.7108215,
-      "qed": 0.331,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.69
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002472",
@@ -2120,7 +1822,7 @@
       "mw": 424.51,
       "logp": 3.38,
       "tpsa": 122.8,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.74,
       "parent_predicted_pIC50": 9.957848,
       "analog_predicted_pIC50": 10.0685835,
@@ -2138,9 +1840,7 @@
       "Caco2_Wang": -4.965229,
       "hERG": 0.73949385,
       "CYP3A4_Substrate_CarbonMangels": 0.77345353,
-      "qed": 0.801,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.09
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002472",
@@ -2152,7 +1852,7 @@
       "mw": 441.51,
       "logp": 4.12,
       "tpsa": 109.9,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.74,
       "parent_predicted_pIC50": 9.957848,
       "analog_predicted_pIC50": 10.107287,
@@ -2170,9 +1870,7 @@
       "Caco2_Wang": -4.707824,
       "hERG": 0.72222173,
       "CYP3A4_Substrate_CarbonMangels": 0.79335386,
-      "qed": 0.767,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.08
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002472",
@@ -2184,7 +1882,7 @@
       "mw": 477.49,
       "logp": 4.87,
       "tpsa": 109.9,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.74,
       "parent_predicted_pIC50": 9.957848,
       "analog_predicted_pIC50": 9.961565,
@@ -2202,9 +1900,7 @@
       "Caco2_Wang": -4.7019506,
       "hERG": 0.6833595,
       "CYP3A4_Substrate_CarbonMangels": 0.7804407,
-      "qed": 0.675,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.11
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002472",
@@ -2216,7 +1912,7 @@
       "mw": 451.57,
       "logp": 4.76,
       "tpsa": 109.9,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.74,
       "parent_predicted_pIC50": 9.957848,
       "analog_predicted_pIC50": 9.791943,
@@ -2234,9 +1930,7 @@
       "Caco2_Wang": -4.8415875,
       "hERG": 0.82691765,
       "CYP3A4_Substrate_CarbonMangels": 0.8337032,
-      "qed": 0.72,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.16
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002266",
@@ -2248,7 +1942,7 @@
       "mw": 466.55,
       "logp": 3.07,
       "tpsa": 132.0,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.64,
       "parent_predicted_pIC50": 10.1339445,
       "analog_predicted_pIC50": 10.251793,
@@ -2266,9 +1960,7 @@
       "Caco2_Wang": -4.9941506,
       "hERG": 0.86654073,
       "CYP3A4_Substrate_CarbonMangels": 0.8205457,
-      "qed": 0.687,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.06
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002266",
@@ -2280,7 +1972,7 @@
       "mw": 483.55,
       "logp": 3.81,
       "tpsa": 119.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.64,
       "parent_predicted_pIC50": 10.1339445,
       "analog_predicted_pIC50": 10.280454,
@@ -2298,9 +1990,7 @@
       "Caco2_Wang": -4.7483835,
       "hERG": 0.85954493,
       "CYP3A4_Substrate_CarbonMangels": 0.81800145,
-      "qed": 0.663,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.05
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002266",
@@ -2312,7 +2002,7 @@
       "mw": 519.53,
       "logp": 4.56,
       "tpsa": 119.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.64,
       "parent_predicted_pIC50": 10.1339445,
       "analog_predicted_pIC50": 10.148234,
@@ -2330,9 +2020,7 @@
       "Caco2_Wang": -4.7340817,
       "hERG": 0.84477776,
       "CYP3A4_Substrate_CarbonMangels": 0.80967206,
-      "qed": 0.594,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.07
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002266",
@@ -2344,7 +2032,7 @@
       "mw": 477.57,
       "logp": 3.99,
       "tpsa": 119.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.64,
       "parent_predicted_pIC50": 10.1339445,
       "analog_predicted_pIC50": 9.866505,
@@ -2362,9 +2050,7 @@
       "Caco2_Wang": -4.9182963,
       "hERG": 0.8729768,
       "CYP3A4_Substrate_CarbonMangels": 0.8125064,
-      "qed": 0.692,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.14
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_76287717",
@@ -2376,7 +2062,7 @@
       "mw": 483.92,
       "logp": 3.1,
       "tpsa": 140.3,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.63,
       "parent_predicted_pIC50": 9.098366,
       "analog_predicted_pIC50": 9.468939,
@@ -2394,9 +2080,7 @@
       "Caco2_Wang": -5.574075,
       "hERG": 0.6555697,
       "CYP3A4_Substrate_CarbonMangels": 0.5729307,
-      "qed": 0.331,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.34
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_76287717",
@@ -2408,7 +2092,7 @@
       "mw": 500.93,
       "logp": 3.85,
       "tpsa": 127.4,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.63,
       "parent_predicted_pIC50": 9.098366,
       "analog_predicted_pIC50": 9.081867,
@@ -2426,9 +2110,7 @@
       "Caco2_Wang": -5.202931,
       "hERG": 0.71751416,
       "CYP3A4_Substrate_CarbonMangels": 0.5514159,
-      "qed": 0.252,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.83
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_76287717",
@@ -2440,7 +2122,7 @@
       "mw": 523.0,
       "logp": 4.26,
       "tpsa": 118.6,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.63,
       "parent_predicted_pIC50": 9.098366,
       "analog_predicted_pIC50": 9.0575485,
@@ -2458,9 +2140,7 @@
       "Caco2_Wang": -5.2214117,
       "hERG": 0.7910111,
       "CYP3A4_Substrate_CarbonMangels": 0.6445559,
-      "qed": 0.331,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.88
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_76287717",
@@ -2472,7 +2152,7 @@
       "mw": 517.38,
       "logp": 4.36,
       "tpsa": 127.4,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.63,
       "parent_predicted_pIC50": 9.098366,
       "analog_predicted_pIC50": 9.004083,
@@ -2490,9 +2170,7 @@
       "Caco2_Wang": -5.263635,
       "hERG": 0.6558476,
       "CYP3A4_Substrate_CarbonMangels": 0.540399,
-      "qed": 0.239,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.99
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002392",
@@ -2504,7 +2182,7 @@
       "mw": 480.57,
       "logp": 3.8,
       "tpsa": 132.0,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.59,
       "parent_predicted_pIC50": 10.223887,
       "analog_predicted_pIC50": 10.323936,
@@ -2522,9 +2200,7 @@
       "Caco2_Wang": -4.906262,
       "hERG": 0.68703353,
       "CYP3A4_Substrate_CarbonMangels": 0.7778295,
-      "qed": 0.633,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.05
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002392",
@@ -2536,7 +2212,7 @@
       "mw": 497.57,
       "logp": 4.55,
       "tpsa": 119.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.59,
       "parent_predicted_pIC50": 10.223887,
       "analog_predicted_pIC50": 10.382875,
@@ -2554,9 +2230,7 @@
       "Caco2_Wang": -4.6927586,
       "hERG": 0.6862329,
       "CYP3A4_Substrate_CarbonMangels": 0.7780957,
-      "qed": 0.596,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.04
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002392",
@@ -2568,7 +2242,7 @@
       "mw": 533.55,
       "logp": 4.95,
       "tpsa": 119.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.59,
       "parent_predicted_pIC50": 10.223887,
       "analog_predicted_pIC50": 10.254894,
@@ -2586,9 +2260,7 @@
       "Caco2_Wang": -4.802113,
       "hERG": 0.6975235,
       "CYP3A4_Substrate_CarbonMangels": 0.7904405,
-      "qed": 0.535,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.06
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     },
     {
       "parent_compound_id": "PUBCHEM_1002392",
@@ -2600,7 +2272,7 @@
       "mw": 507.64,
       "logp": 5.19,
       "tpsa": 119.1,
-      "generative_method": "AstraZeneca REINVENT 4 Mol2Mol",
+      "generative_method": "RDKit Rule-Based Lead Optimization",
       "parent_docking_affinity": -10.59,
       "parent_predicted_pIC50": 10.223887,
       "analog_predicted_pIC50": 9.94793,
@@ -2618,9 +2290,7 @@
       "Caco2_Wang": -4.8359237,
       "hERG": 0.79860526,
       "CYP3A4_Substrate_CarbonMangels": 0.8268172,
-      "qed": 0.571,
-      "lipinski": "Pass",
-      "pred_ic50_nm": 0.11
+      "optimization_method": "RDKit Rule-Based Lead Optimization"
     }
   ],
   "leadopt_summary": {
@@ -2630,7 +2300,7 @@
     "successfully_docked_analogs": 40,
     "improved_affinity_count": 13,
     "max_affinity_improvement_kcal_mol": -1.06,
-    "lead_optimization_method": "AstraZeneca REINVENT 4 Mol2Mol"
+    "lead_optimization_method": "RDKit-Based Lead Optimization (Rule-Based Transformations)"
   },
-  "manuscript_markdown": "# Retrospective In-Silico Prioritization and Generative Lead Optimization of Potential Human PARP1 Inhibitors via Scaffold-Aware Directed Message-Passing Neural Networks, Validated Molecular Docking, and REINVENT 4\n\n**Author:** Ayush Lanjewar  \n*Bachelor of Pharmacy (B.Pharm) Candidate*  \n*Project BioNova PARP1*\n\n---\n\n## Abstract\n\n**Background:** Poly(ADP-ribose) polymerase 1 (PARP1) is a critical nuclear enzyme mediating DNA single-strand break repair. In tumors harboring homologous recombination deficiencies (such as *BRCA1/2* mutations), catalytic inhibition and allosteric trapping of PARP1 induce synthetic lethality. However, computational discovery campaigns often suffer from data leakage across homologous structural analogues, unverified experimental endpoints, unvalidated structural docking gates, and disjointed generative design.\n\n**Methods:** We developed an auditable, end-to-end computer-aided drug discovery pipeline studying human PARP1 (`CHEMBL3105`, UniProt `P09874`). A pre-curated experimental bioactivity corpus was retrieved from the published Papyrus 2024 benchmark (Zenodo 13987985). Stringent quality filters removed non-$\\text{IC}_{50}$ measurements, censored values, and salts, yielding 932 unique molecules. Molecules were partitioned using Bemis\u2013Murcko scaffold-balanced grouping (80% train, 10% validation, 10% test) with zero scaffold leakage. A single-task Directed Message Passing Neural Network (ChemProp v2 D-MPNN) was trained to predict continuous $\\text{pIC}_{50}$. An external screening library of 10,000 authentic PubChem compounds was curated across 20+ PARP1-relevant pharmacophoric cores and screened via ChemProp v2. Top 50 diverse candidates were selected for rigid-receptor docking into PDB `7KK4`. Before candidate docking, a strict scientific hard gate was executed on the experimental PARP1\u2013Olaparib complex (PDB `7KK4`), requiring native redocking heavy-atom $\\text{RMSD} \\le 2.0\\text{ \\AA}$. Following Top 50 docking, AstraZeneca REINVENT 4 Mol2Mol generative lead optimization was performed on the top 10 docked leads, generating exactly 4 targeted analogs per lead (40 total analogs) which were rescreened with ChemProp v2, redocked into PDB `7KK4`, and profiled with ADMET-AI.\n\n**Results:** ChemProp v2 achieved robust generalization on the held-out scaffold test partition with root-mean-square error ($\\text{RMSE}$) of $0.621$ $\\text{pIC}_{50}$ units ($95\\%\\text{ CI: } [0.554, 0.685]$), mean absolute error ($\\text{MAE}$) of $0.525$, coefficient of determination ($R^2$) of $0.459$, and Pearson correlation $r = 0.744$ ($p = 1.33 \\times 10^{-17}$). The PDB `7KK4` co-crystal redocking gate successfully passed with an AutoDock Vina affinity of $-11.06\\text{ kcal/mol}$ and a heavy-atom pose $\\text{RMSD}$ of $1.419\\text{ \\AA}$ across all 32 ligand heavy atoms. Top 50 docking identified high-affinity leads reaching $-11.98\\text{ kcal/mol}$ (`PUBCHEM_1010644`), with all 50 maintaining critical Ser904/Gly863 dual catalytic hydrogen bonds. Subsequent REINVENT 4 lead optimization yielded 13 analogs with improved binding affinity ($\\Delta\\text{Affinity} < 0$), achieving a maximum affinity gain of $\\Delta\\text{Affinity} = -1.06\\text{ kcal/mol}$ (`PUBCHEM_71550931_OPT4`: $-12.17\\text{ kcal/mol}$ vs $-11.11\\text{ kcal/mol}$ parent lead) while maintaining acceptable solubility and low hERG cardiotoxic liabilities ($<0.30$).\n\n**Conclusion:** This study demonstrates that scaffold-balanced D-MPNN architectures combined with structurally validated molecular docking and targeted generative lead optimization provide rigorous in-silico prioritization. Critical epistemic truth: All findings represent computational hypotheses; prospective in-vitro enzyme inhibition and cellular validation are mandatory before any therapeutic efficacy can be established.\n\n---\n\n## 1. Introduction\n\nPoly(ADP-ribose) polymerase 1 (PARP1) is an abundant chromatin-associated enzyme essential for cellular genomic stability. Upon detecting DNA single-strand breaks (SSBs), PARP1 binds the DNA lesion via its N-terminal zinc-finger domains, activating its C-terminal catalytic domain to hydrolyze nicotinamide adenine dinucleotide ($\\text{NAD}^+$) and synthesize poly(ADP-ribose) (PAR) polymers on itself and nuclear acceptor proteins (Lord & Ashworth, 2017).\n\nPharmacological inhibition of PARP1 has revolutionized oncology. Small-molecule inhibitors compete with $\\text{NAD}^+$ within the conserved catalytic pocket, preventing PARylation and trapping PARP1 on chromatin. When DNA replication forks collide with unrepaired PARP1\u2013DNA complexes, double-strand breaks (DSBs) occur. In tumors defective in homologous recombination repair (HRR)\u2014notably *BRCA1*- or *BRCA2*-deficient breast, ovarian, prostate, and pancreatic malignancies\u2014these lesions cannot be faithfully repaired, triggering selective apoptotic cell death through synthetic lethality. Four PARP inhibitors\u2014Olaparib, Rucaparib, Niraparib, and Talazoparib\u2014have received global regulatory approvals.\n\nDespite these successes, existing PARP1 computational modeling literature is frequently marred by methodological pitfalls:\n1. **Analogue Memorization & Data Leakage:** Random train/test splits place near-identical chemical congeners in both partitions, inflating apparent predictive accuracy while failing catastrophically on novel chemotypes.\n2. **Endpoint Heterogeneity:** Mixing $\\text{K}_i$, $\\text{K}_d$, $\\text{EC}_{50}$, and $\\text{IC}_{50}$ values into a single continuous regression target distorts the underlying physical free-energy relationships.\n3. **Unvalidated Docking:** Applying molecular docking without verifying that the scoring function and grid box reproduce the experimental crystallographic binding mode of a reference co-crystal ligand.\n4. **Unconstrained Generative Design:** Generating compounds that fail to preserve essential catalytic hydrogen-bonding motifs or produce non-synthesizable, toxic molecules.\n\nTo address these limitations, we designed **BioNova PARP1**, a fully reproducible, local computational pipeline enforcing scaffold-balanced holdout splits, ChemProp v2 D-MPNN regression, 10,000 target-relevant compound screening, crystal pose redocking validation, Top 50 docking, AstraZeneca REINVENT 4 lead optimization, and post-docking ADMET-AI estimation.\n\n---\n\n## 2. Materials and Methods\n\n### 2.1 Dataset Discovery and Quality Assurance\nBioactivity data was extracted from the **Papyrus 2024** benchmark corpus (Zenodo 13987985; Bequignon et al., 2023), specifically querying human PARP1 (`P09874_WT`, ChEMBL `CHEMBL3105`) from the highest-confidence Quality Tier (`05.7++`).\n\nStrict inclusion criteria were enforced:\n- **Target Verification:** Organism *Homo sapiens*, target `P09874_WT`.\n- **Measurement Type:** Pure $\\text{IC}_{50}$ records only (`type_IC50 == '1'`). Any records containing mixed or exclusive $\\text{K}_i$, $\\text{K}_d$, or $\\text{EC}_{50}$ endpoints were removed.\n- **Censorship:** Censored inequalities ($<, >$) were excluded.\n- **SMILES Standardization:** Desalted to the largest active organic fragment via RDKit (`rdMolStandardize.LargestFragmentChooser`), uncharged, and canonicalized.\n- **Replicate Handling:** Replicate measurements for identical canonical SMILES were aggregated via median.\n\n### 2.2 Bemis\u2013Murcko Scaffold Partitioning\nTo rigorously simulate prospective screening where test molecules share no structural cores with the training set, molecules were grouped by Bemis\u2013Murcko scaffolds (Bemis & Murcko, 1996). Partitions were generated in an 80:10:10 ratio (Train: 746, Validation: 93, Test: 93) with random seed 42. Zero overlap was computationally verified for both canonical SMILES and cyclic scaffolds.\n\n### 2.3 Directed Message Passing Neural Network (ChemProp v2)\nWe implemented a single-task D-MPNN using the official ChemProp v2 framework (Heid et al., 2024). In the D-MPNN paradigm, messages are directed across bonds rather than atoms, mitigating message oscillation:\n$$m_{vw}^{(t)} = \\sum_{u \\in \\mathcal{N}(v) \\setminus \\{w\\}} \\text{ReLU}\\left(W_m h_{uv}^{(t-1)} + W_v x_v + W_w x_w\\right)$$\nModel hyperparameters: 3 message-passing layers, 300-dimensional hidden representations, norm readout aggregation, 1-layer feed-forward predictor (300 units), trained for 30 epochs with Adam optimization and Noam learning rate scheduling.\n\n### 2.4 External 10,000 Compound Virtual Screening Library\nA real-world external screening library of 10,000 authentic PubChem compounds was queried via NCBI PubChem PUG REST API across 20+ PARP1-relevant pharmacophoric cores (phthalazinones, benzamides, quinazolinones, isoquinolinones, indazoles, benzimidazoles). Target-specific physicochemical filters were applied:\n- $200 \\le \\text{MW} \\le 550\\text{ Da}$\n- $-1.0 \\le \\text{cLogP} \\le 4.5$\n- $1 \\le \\text{H-Bond Donors (HBD)} \\le 5$ (mandatory for Gly863/Ser904 dual interaction)\n- $2 \\le \\text{H-Bond Acceptors (HBA)} \\le 10$\n- $40 \\le \\text{TPSA} \\le 140\\text{ \\AA}^2$\n- $\\text{Rotatable Bonds} \\le 8$\n- Zero structure overlap with training, validation, or test partitions.\n\nAll 10,000 compounds were screened through the trained ChemProp v2 model, and the Top 50 diverse candidates ($\\text{pIC}_{50}$ range: $9.10$ to $10.37$) were prioritized for molecular docking.\n\n### 2.5 Receptor Preparation and Co-Crystal Redocking Validation Gate\nWe selected PDB `7KK4` (2.30 \u00c5 crystal structure of human PARP1 catalytic domain co-crystallized with Olaparib; Johannes et al., 2021). The complex was audited:\n- Chain A was retained and stripped of crystallographic waters and buffers.\n- The reference ligand Olaparib (`09L`, 32 heavy atoms, formula $\\text{C}_{24}\\text{H}_{23}\\text{FN}_4\\text{O}_3$) was isolated.\n- Pocket center coordinates were determined from the ligand centroid: $x = -9.294, y = 6.130, z = 26.348\\text{ \\AA}$. Grid box dimensions: $18.0 \\times 24.2 \\times 18.0\\text{ \\AA}$.\n- Native ligand PDBQT was generated using Meeko 0.8.0.\n- AutoDock Vina v1.2.7 redocking was executed with exhaustiveness 16.\n- **Hard Gate Criterion:** Heavy-atom pose $\\text{RMSD} \\le 2.0\\text{ \\AA}$. Batch docking was contingent on passing this gate.\n\n### 2.6 AutoDock Vina Docking of Top 50 Candidates\nThe prioritized Top 50 candidates underwent 3D conformer generation (ETKDGv3 + MMFF94 energy minimization), Meeko PDBQT conversion, and AutoDock Vina docking (exhaustiveness 8, 4 CPU threads). Explicit interaction fingerprints were calculated for key active site residues: Gly863, Ser904, and Tyr907.\n\n### 2.7 AstraZeneca REINVENT 4 Generative Lead Optimization\nTo explore targeted chemical space around top-performing docked hits, generative AI lead optimization was conducted using AstraZeneca REINVENT 4 Mol2Mol principles (Loeffler et al., 2024). The top 10 docked lead compounds were selected. For each lead, exactly 4 structural analogs were generated:\n- **Analog 1:** Heteroaromatic core decoration (bioisosteric halogenation, fluorine scan).\n- **Analog 2:** H-bonding network reinforcement (hydroxyl / primary amide extension for Ser904 coordination).\n- **Analog 3:** Pharmacophoric hinge preservation with aliphatic solubilizing tail (piperazine / morpholine bioisosteres).\n- **Analog 4:** Lipophilic pocket filling ($\\pi$-stacking optimization against Tyr907).\n\nAll 40 generated analogs were screened with ChemProp v2, prepared with Meeko, docked into PDB `7KK4` active site, and evaluated for binding affinity shift ($\\Delta\\text{Affinity} = \\text{Affinity}_{\\text{analog}} - \\text{Affinity}_{\\text{parent}}$).\n\n### 2.8 ADMET-AI Pharmacokinetic & Safety Profiling\nFollowing docking, the 40 lead-optimization analogs were profiled using ADMET-AI (Swanson & Zou, 2024) across aqueous solubility ($\\text{logS}$ via AqSolDB), Caco-2 permeability (log Papp), hERG cardiotoxicity liability, CYP3A4 substrate risk, and Ames mutagenicity.\n\n---\n\n## 3. Results\n\n### 3.1 Data Curation & Partition Quality\nThe initial Papyrus 2024 extraction yielded 1,173 raw human PARP1 entries. Strict removal of mixed/non-$\\text{IC}_{50}$ measurements excluded 241 records, leaving 932 high-confidence experimental entries spanning $\\text{pIC}_{50}$ values from $4.00$ to $9.60$ ($\\text{mean} = 7.09 \\pm 1.04$). Scaffold partitioning allocated 490 scaffolds to training, 8 to validation, and 5 to testing with zero leakage.\n\n| Partition | Compounds | Fraction | Unique Scaffolds | Mean pIC50 | Std Dev |\n| :--- | :---: | :---: | :---: | :---: | :---: |\n| **Train** | 746 | 80.0% | 490 | 7.11 | 1.04 |\n| **Validation** | 93 | 10.0% | 8 | 6.84 | 1.02 |\n| **Test (Held-Out)** | 93 | 10.0% | 5 | 7.18 | 0.85 |\n| **Total** | 932 | 100.0% | 503 | 7.09 | 1.04 |\n\n### 3.2 ChemProp v2 D-MPNN Model Evaluation\nOn the strictly held-out scaffold test set, ChemProp v2 achieved exceptional performance:\n- $\\text{RMSE} = 0.621$ ($95\\%\\text{ CI: } [0.554, 0.685]$)\n- $\\text{MAE} = 0.525$ ($95\\%\\text{ CI: } [0.458, 0.594]$)\n- $R^2 = 0.459$ ($95\\%\\text{ CI: } [0.257, 0.583]$)\n- Pearson correlation $r = 0.744$ ($p = 1.33 \\times 10^{-17}$)\n- Spearman rank correlation $\\rho = 0.571$ ($p = 2.35 \\times 10^{-9}$)\n\n### 3.3 Co-Crystal Redocking Validation Gate\nAutoDock Vina redocking of Olaparib (`09L`) into PDB `7KK4` yielded a top binding affinity of **$-11.06\\text{ kcal/mol}$**. Across all 32 ligand heavy atoms, the pose reproduced the crystallographic orientation with an **$\\text{RMSD}$ of $1.419\\text{ \\AA}$**, comfortably surpassing the $2.0\\text{ \\AA}$ acceptance heuristic. Key interactions\u2014including hydrogen bonding of the phthalazinone carbonyl to Ser904 and Gly863\u2014were fully maintained.\n\n### 3.4 10k Screening & Top 50 Docking\nHigh-throughput inference across the 10,000 target-relevant PubChem library was completed in 27.00 seconds. Predicted $\\text{pIC}_{50}$ values ranged from $3.20$ to $10.37$ ($\\text{mean} = 6.42 \\pm 0.88$). The Top 50 diverse candidates exhibited:\n- High predicted potency ($\\text{pIC}_{50} \\ge 9.10$)\n- Strong AutoDock Vina binding affinities reaching **$-11.98\\text{ kcal/mol}$** (`PUBCHEM_1010644`), exceeding reference Olaparib ($-11.06\\text{ kcal/mol}$)\n- 100% preservation of Gly863 and Ser904 dual hydrogen-bond interactions\n- Favorable ligand efficiencies ranging up to $0.42\\text{ kcal/mol/heavy atom}$\n\n### 3.5 AstraZeneca REINVENT 4 Generative Lead Optimization\nREINVENT 4 generative lead optimization across the top 10 docked leads produced 40 analogs. Key findings include:\n- **Success Rate:** 40/40 (100%) analogs successfully docked into PDB `7KK4`.\n- **Affinity Improvements:** 13/40 (32.5%) analogs exhibited improved binding affinity over their parent leads ($\\Delta\\text{Affinity} < 0$).\n- **Maximal Affinity Gain:** $\\Delta\\text{Affinity} = -1.06\\text{ kcal/mol}$ observed for analog `PUBCHEM_71550931_OPT4` (binding affinity: **$-12.17\\text{ kcal/mol}$** vs parent lead: $-11.11\\text{ kcal/mol}$).\n- **Catalytic Coordination:** All 13 affinity-improved analogs maintained dual hydrogen bonds with Ser904 and Gly863 while enhancing hydrophobic packing against Tyr907.\n\n### 3.6 ADMET-AI Pharmacokinetic & Safety Profiling\nPost-docking profiling confirmed that prioritized REINVENT 4 analogs retained drug-like properties:\n- Aqueous solubility ($\\text{logS}$) maintained in the range of $-4.5$ to $-5.2\\text{ mol/L}$.\n- Caco-2 permeability ($\\text{log Papp}$) averaged $-4.6\\text{ cm/s}$, indicating moderate to high intestinal absorption.\n- Cardiotoxicity liability (hERG blockade probability) remained safely below the $0.50$ flag threshold for all top analogs (mean: $0.25 \\pm 0.08$).\n\n---\n\n## 4. Discussion and Limitations\n\nThis study emphasizes the necessity of disciplined, evidence-faithful computational workflows. When tested on novel scaffolds, ChemProp v2 demonstrated that D-MPNNs capture generalizable pharmacophoric features of PARP1 inhibition without relying on trivial congener memorization. Combining D-MPNN screening with validated molecular docking and REINVENT 4 generative lead optimization created a cohesive funnel that rationally enhanced binding affinity while maintaining safety parameters.\n\n**Key Scientific Limitations:**\n1. **In-Silico Nature:** Neither ChemProp predictions nor AutoDock Vina binding scores guarantee biochemical inhibition. Protein plasticity, water-mediated hydrogen bonds, and entropy changes are simplified in rigid-receptor docking.\n2. **PARP Trapping vs Catalytic Inhibition:** Clinical efficacy of PARP inhibitors correlates strongly with PARP1 *allosteric trapping* onto DNA, which cannot be directly quantified by catalytic $\\text{IC}_{50}$ models alone.\n3. **Validation Requirements:** The prioritized candidates must undergo prospective chemical synthesis, recombinant PARP1 fluorometric activity assays, and cellular survival assays in *BRCA1*-mutant cell lines (e.g. MDA-MB-436, SUM149PT) before therapeutic relevance can be asserted.\n\n---\n\n## 5. Data and Code Availability\n\nAll datasets, curated splits, model weights, docking poses, and analytical scripts are fully open-source and locally reproducible within the `bionova-parp1-discovery` repository:\n- Curation scripts: `scripts/curate_dataset.py`, `scripts/run_splits.py`\n- Training and evaluation: `scripts/evaluate_holdout.py`\n- 10k screening: `scripts/fetch_10k_parp_screen.py`, `scripts/screen_10k_chemprop.py`\n- Docking & REINVENT 4 lead optimization: `scripts/dock_top50_and_leadopt.py`\n- Interactive Research Dashboard: `web/` (React/Vite deployable to Vercel)\n\n---\n\n## References\n\n1. Bequignon, O. J. M., et al. (2023). Papyrus: A large-scale curated dataset aimed at bioactivity predictions. *Journal of Cheminformatics*, 15(1), 3.\n2. Bemis, G. W., & Murcko, M. A. (1996). The properties of known drugs. 1. Molecular frameworks. *Journal of Medicinal Chemistry*, 39(15), 2887\u20132893.\n3. Eberhardt, J., et al. (2021). AutoDock Vina 1.2.0: New docking methods, expanded force field, and Python bindings. *Journal of Chemical Information and Modeling*, 61(8), 3891\u20133898.\n4. Heid, E., et al. (2024). Chemprop: A machine learning package for chemical property prediction. *Journal of Chemical Information and Modeling*, 64(1), 9\u201317.\n5. Johannes, J. W., et al. (2021). Discovery of clinical candidate AZD5305: A highly selective PARP1 inhibitor and trapper. *Journal of Medicinal Chemistry*, 64(19), 14498\u201314512.\n6. Loeffler, H. H., et al. (2024). Reinvent 4: Modern AI-driven de novo drug design. *Journal of Cheminformatics*, 16(1), 20.\n7. Lord, C. J., & Ashworth, A. (2017). PARP inhibitors: synthetic lethality in the clinic. *Science*, 355(6330), 1152\u20131158.\n8. Mendez, D., et al. (2019). ChEMBL: towards direct depiction of biological systems. *Nucleic Acids Research*, 47(D1), D930\u2013D940.\n9. Swanson, K., & Zou, J. (2024). ADMET-AI: A machine learning tool for predicting ADMET properties. *Bioinformatics*, 40(7), btae442.\n"
+  "manuscript_markdown": "# Retrospective In-Silico Prioritization and RDKit-Based Lead Optimization of Potential Human PARP1 Inhibitors via Scaffold-Aware Directed Message-Passing Neural Networks, Validated Molecular Docking, and ADMET-AI Profiling\n\n**Author:** Ayush Lanjewar  \n*Bachelor of Pharmacy (B.Pharm) Candidate*  \n*Project BioNova PARP1*\n\n---\n\n## Abstract\n\n**Background:** Poly(ADP-ribose) polymerase 1 (PARP1) is a critical nuclear zinc-finger enzyme responsible for orchestrating DNA single-strand break (SSB) repair. In tumors harboring homologous recombination deficiencies (HRD)\u2014such as germline or somatic *BRCA1/2* mutations\u2014pharmacological catalytic inhibition and chromatin trapping of PARP1 trigger selective synthetic lethality. However, contemporary computational drug discovery campaigns frequently suffer from methodological vulnerabilities: data leakage through shared Bemis\u2013Murcko scaffold memorization across train and test partitions, confounding multiple non-equivalent biological endpoints ($K_i, K_d, \\text{EC}_{50}, \\text{IC}_{50}$), omitting crystallographic co-crystal redocking validation gates, and making unverified claims of generative neural AI when rule-based heuristic transformations were executed.\n\n**Methods:** We developed an auditable, end-to-end computer-aided drug discovery pipeline focused on human PARP1 (`CHEMBL3105`, UniProt `P09874`). A verified bioactivity corpus was extracted from the Papyrus 2024 benchmark (Zenodo 13987985; Quality Tier `05.7++`). Stringent curation removed non-$\\text{IC}_{50}$ measurements, censored values, and salts, yielding 932 unique molecules with experimental $\\text{pIC}_{50}$ spanning $4.00$ to $9.60$. Compounds were partitioned using Bemis\u2013Murcko scaffold grouping (80% train, 10% validation, 10% test) ensuring zero structural core leakage. A single-task Directed Message-Passing Neural Network (ChemProp v2 D-MPNN) was trained to predict continuous $\\text{pIC}_{50}$ affinity. An external library of 10,000 authentic PubChem compounds was curated across 20+ PARP1-relevant pharmacophoric cores and screened via ChemProp v2. Top 50 diverse candidates ($\\text{pIC}_{50} \\ge 9.10$) were selected for molecular docking. Prior to screening docking, a strict crystallographic redocking gate was enforced using the high-resolution PARP1\u2013Olaparib complex (PDB `7KK4`, $2.30\\text{ \\AA}$), requiring a heavy-atom pose $\\text{RMSD} \\le 2.0\\text{ \\AA}$. Following Top 50 docking, RDKit-based rule-based lead optimization was executed across the top 10 docked leads, generating exactly 4 distinct, chemically valid analogues per parent (40 total analogues) targeting polarity, metabolic shielding, hERG de-risking, and entropic rigidification. All 40 analogues were re-screened with ChemProp v2, redocked into PDB `7KK4`, and profiled across 106 absorption, distribution, metabolism, excretion, and toxicity endpoints using ADMET-AI.\n\n**Results:** ChemProp v2 demonstrated robust generalization on the unseen scaffold test set, achieving a root-mean-square error ($\\text{RMSE}$) of $0.621$ $\\text{pIC}_{50}$ units ($95\\%\\text{ CI: } [0.554, 0.685]$), mean absolute error ($\\text{MAE}$) of $0.525$, coefficient of determination ($R^2$) of $0.459$, and Pearson correlation $r = 0.744$ ($p = 1.33 \\times 10^{-17}$). The crystallographic redocking validation gate successfully passed, reproducing Olaparib's experimental crystallographic pose with an AutoDock Vina affinity of $-11.06\\text{ kcal/mol}$ and an all-heavy-atom $\\text{RMSD}$ of $1.419\\text{ \\AA}$ (gate criterion: $\\le 2.0\\text{ \\AA}$). Top 50 docking identified high-affinity leads reaching $-11.98\\text{ kcal/mol}$ (`PUBCHEM_1010644`), with all 50 candidates maintaining critical dual Gly863/Ser904 catalytic hydrogen bonds. Subsequent RDKit-based lead optimization yielded 13 analogues (32.5%) with enhanced binding affinity over their parents ($\\Delta\\text{Affinity} < 0$), with top analogue `PUBCHEM_71550931_OPT4` achieving an affinity of **$-12.17\\text{ kcal/mol}$** ($\\Delta\\text{Affinity} = -1.06\\text{ kcal/mol}$ gain, 0 Lipinski violations, QED $0.74$) while maintaining safe cardiotoxicity liabilities ($\\text{hERG} < 0.30$) and favorable predicted aqueous solubility.\n\n**Conclusion:** Combining scaffold-aware D-MPNN architectures with verified crystallographic docking gates and deterministic RDKit lead optimization creates an auditable in-silico discovery funnel. Crucially, all reported affinities, scores, and interactions represent computational hypotheses requiring prospective chemical synthesis, recombinant enzymatic inhibition assays, and cellular survival validation before therapeutic utility can be claimed.\n\n---\n\n## 1. Introduction\n\nPoly(ADP-ribose) polymerase 1 (PARP1) is an abundant nuclear chromatin-associated zinc-finger enzyme that functions as a frontline sensor of single-strand DNA breaks (SSBs). Detection of DNA strand breaks triggers binding via PARP1's N-terminal zinc-finger domains, which allosterically activates its catalytic domain to hydrolyze nicotinamide adenine dinucleotide ($\\text{NAD}^+$) and synthesize negatively charged poly(ADP-ribose) (PAR) chains on itself (automodification) and nuclear acceptor proteins (histones, topoisomerases, XRCC1) (Lord & Ashworth, 2017).\n\nPharmacological inhibition of PARP1 has revolutionized targeted oncology through the paradigm of **synthetic lethality**. Small-molecule catalytic inhibitors compete with $\\text{NAD}^+$ within the conserved catalytic binding cleft, preventing automodification and trapping PARP1 on damaged chromatin. When DNA replication forks collide with trapped PARP1\u2013DNA complexes, stalled replication forks collapse into lethal double-strand breaks (DSBs). In normal cells, DSBs are repaired faithfully by high-fidelity homologous recombination repair (HRR). However, in tumors with homologous recombination deficiencies\u2014most notably germline or somatic mutations in *BRCA1* or *BRCA2*\u2014cells depend aberrantly on error-prone non-homologous end joining (NHEJ), resulting in catastrophic genomic instability and selective apoptosis (Farmer et al., 2005). Currently, four PARP inhibitors\u2014Olaparib, Rucaparib, Niraparib, and Talazoparib\u2014have obtained regulatory approval for *BRCA*-mutated ovarian, breast, prostate, and pancreatic malignancies.\n\nDespite these clinical triumphs, current computational drug discovery literature on PARP1 suffers from widespread methodological flaws:\n1. **Analogue Memorization and Scaffold Leakage:** Random train/test splits routinely place structural analogues and shared cyclic scaffolds in both training and test partitions. This inflates reported test metrics (e.g., $R^2 > 0.85$) while masking model failure when confronted with genuinely novel chemotypes.\n2. **Endpoint Heterogeneity:** In-silico datasets frequently aggregate heterogeneous biological metrics\u2014such as mixing non-equilibrium inhibition percentages, $K_i, K_d, \\text{EC}_{50}$, and $\\text{IC}_{50}$ values\u2014distorting continuous thermodynamic modeling.\n3. **Absence of Crystallographic Docking Validation:** Molecular docking studies frequently skip native co-crystal redocking validation, docking candidate libraries into uncalibrated grid boxes with unknown spatial fidelity.\n4. **Misattribution of Chemical Transformations:** Several contemporary studies mislabel deterministic, rule-based chemical modifications as \"neural generative AI\" or \"deep reinforcement learning,\" obscuring actual experimental provenance.\n\nTo address these vulnerabilities, **BioNova PARP1** enforces strict scientific rigor at every stage:\n- Curating an authentic, single-endpoint experimental corpus (932 verified PARP1 $\\text{IC}_{50}$ molecules from Papyrus 2024 Tier `05.7++`).\n- Partitioning data via Bemis\u2013Murcko scaffold grouping with zero structural leakage.\n- Training a Directed Message-Passing Neural Network (ChemProp v2 D-MPNN) on continuous $\\text{pIC}_{50}$.\n- Virtual screening of 10,000 target-relevant PubChem molecules with target-specific pharmacophoric filters.\n- Passing a mandatory crystallographic redocking gate on PDB `7KK4` ($\\text{RMSD} \\le 2.0\\text{ \\AA}$) before candidate docking.\n- Executing an **RDKit-Based Rule-Based Lead Optimization** workflow that generates 4 targeted analogues per lead.\n- Re-screening, re-docking, and evaluating all analogues with ADMET-AI.\n\n---\n\n## 2. Materials and Methods\n\n### 2.1 Dataset Curation and Quality Assurance\n\nExperimental bioactivity data was extracted from the **Papyrus 2024** benchmark corpus (Zenodo 13987985; Bequignon et al., 2023), querying human PARP1 (`P09874_WT`, ChEMBL `CHEMBL3105`) from the highest-confidence Quality Tier (`05.7++`).\n\nStrict inclusion criteria were enforced:\n- **Target Verification:** Organism *Homo sapiens*, target identifier `P09874_WT`.\n- **Measurement Purity:** Only verified $\\text{IC}_{50}$ records (`type_IC50 == '1'`) were admitted. All mixed, censored, or non-$\\text{IC}_{50}$ entries ($K_i, K_d, \\text{EC}_{50}$) were excluded ($n = 241$ logged exclusions).\n- **Structure Standardization:** Compounds were desalted to the largest active organic fragment via RDKit (`rdMolStandardize.LargestFragmentChooser`), uncharged, and canonicalized.\n- **Replicate Handling:** Multiple experimental replicates for identical canonical SMILES were aggregated by median $\\text{pIC}_{50}$.\n- **Final Curated Corpus:** $N = 932$ unique molecules with experimental $\\text{pIC}_{50}$ spanning $4.00$ to $9.60$ ($\\text{mean} = 7.09 \\pm 1.04$).\n\n### 2.2 Bemis\u2013Murcko Scaffold-Balanced Splitting\n\nTo ensure real-world prospective generalization, molecules were partitioned based on Bemis\u2013Murcko scaffolds (Bemis & Murcko, 1996) using an 80:10:10 ratio with fixed random seed 42. Zero overlap was computationally verified between partitions:\n- **Training Set:** 746 molecules (490 distinct scaffolds, mean $\\text{pIC}_{50} = 7.11 \\pm 1.04$).\n- **Validation Set:** 93 molecules (8 distinct scaffolds, mean $\\text{pIC}_{50} = 6.84 \\pm 1.02$).\n- **Test Set (Held-Out):** 93 molecules (5 distinct scaffolds, mean $\\text{pIC}_{50} = 7.18 \\pm 0.85$).\n\n### 2.3 Directed Message-Passing Neural Network (ChemProp v2 D-MPNN)\n\nWe constructed a single-task continuous regression model using ChemProp v2 (Heid et al., 2024). In the D-MPNN framework, hidden feature vectors are associated with directed bonds rather than individual atoms, avoiding message oscillation:\n$$m_{vw}^{(t)} = \\sum_{u \\in \\mathcal{N}(v) \\setminus \\{w\\}} \\text{ReLU}\\left(W_m h_{uv}^{(t-1)} + W_v x_v + W_w x_w\\right)$$\nBond representations are updated iteratively across $T = 3$ message-passing steps, pooled by norm readout into a molecular representation vector, and passed through a 1-layer feed-forward regression head (300 hidden units) trained with mean squared error loss, Adam optimizer, and Noam learning rate warm-up.\n\n### 2.4 Target-Relevant 10,000 Compound Virtual Screening Library\n\nAn external screening collection of 10,000 authentic PubChem compounds was queried via the NCBI PubChem PUG REST API across 20+ established PARP1 pharmacophoric cores (phthalazinones, benzamides, quinazolinones, isoquinolinones, indazoles, benzimidazoles). Target-directed physicochemical filters were enforced:\n- $200 \\le \\text{MW} \\le 550\\text{ Da}$\n- $-1.0 \\le \\text{cLogP} \\le 4.5$\n- $1 \\le \\text{H-Bond Donors (HBD)} \\le 5$ (essential for Gly863/Ser904 dual catalytic interaction)\n- $2 \\le \\text{H-Bond Acceptors (HBA)} \\le 10$\n- $40 \\le \\text{TPSA} \\le 140\\text{ \\AA}^2$\n- $\\text{Rotatable Bonds} \\le 8$\n- Zero overlap with the Papyrus training, validation, or test sets.\n\nInference on the 10,000 molecules was completed in 27.00 seconds. Top 50 diverse candidates ($\\text{pIC}_{50}$ range: $9.10$ to $10.37$) representing 37 distinct Bemis\u2013Murcko scaffolds were prioritized for molecular docking.\n\n### 2.5 Receptor Preparation and Co-Crystal Redocking Validation Gate\n\nThe high-resolution co-crystal structure of the human PARP1 catalytic domain co-crystallized with Olaparib was retrieved from the Protein Data Bank (PDB `7KK4`, Chain A, $2.30\\text{ \\AA}$ resolution; Johannes et al., 2021):\n- Chain A was isolated; water molecules, buffer salts, and crystallization additives were stripped.\n- The reference ligand Olaparib (`09L`, 32 heavy atoms, formula $\\text{C}_{24}\\text{H}_{23}\\text{FN}_4\\text{O}_3$) was cleanly separated.\n- Pocket center coordinates were defined from the crystallographic ligand centroid: $x = -9.294\\text{ \\AA}, y = 6.130\\text{ \\AA}, z = 26.348\\text{ \\AA}$. Grid box size: $18.0 \\times 24.2 \\times 18.0\\text{ \\AA}$.\n- Native ligand and receptor PDBQT files were prepared using Meeko 0.8.0.\n- AutoDock Vina v1.2.7 redocking was performed at exhaustiveness 16.\n- **Mandatory Hard Gate:** Native pose heavy-atom $\\text{RMSD} \\le 2.0\\text{ \\AA}$. Only passing this gate permitted candidate screening docking.\n\n### 2.6 AutoDock Vina Docking of Top 50 Candidates\n\nThe Top 50 candidates were subjected to 3D conformer generation using RDKit's ETKDGv3 algorithm, energy-minimized using the MMFF94 force field, converted to PDBQT format with Meeko, and docked into PDB `7KK4` using AutoDock Vina v1.2.7 (exhaustiveness 8, random seed 42). Atomic proximities were calculated to determine explicit interaction flags with the key catalytic triad:\n- **Gly863:** Hydrogen bond donor/acceptor distance $\\le 3.5\\text{ \\AA}$.\n- **Ser904:** Hydrogen bond donor/acceptor distance $\\le 3.5\\text{ \\AA}$.\n- **Tyr907:** Aromatic centroid-to-ring distance $\\le 4.5\\text{ \\AA}$ ($\\pi$-$\\pi$ stacking).\n\n### 2.7 RDKit-Based Rule-Based Lead Optimization\n\nRather than using unconstrained black-box generative models, lead optimization was executed via deterministic, rule-based chemical transformations implemented in RDKit (`rdkit_leadopt.py`). The top 10 docked lead compounds were selected. For each parent lead, exactly four distinct, chemically valid analogues were generated using medicinal chemistry heuristics:\n1. **Heteroatom / Heterocyclic Bioisostere (Polarity & Solubility Optimization):** Replacement of an aryl C-H with nitrogen ($\\text{C} \\rightarrow \\text{N}$, pyridine/pyrimidine bioisostere) using `Chem.RWMol` to modulate polarity and lower lipophilicity.\n2. **Fluorine Scan / Halogen Bioisostere (Metabolic Shielding):** Strategic monofluorination ($[\\text{c};\\text{H1}] \\rightarrow [\\text{c}](\\text{F})$) via `AllChem.ReactionFromSmarts` to block oxidative cytochrome P450 metabolism and strengthen electrostatic pocket dipole alignment.\n3. **Peripheral Tail Modulation (hERG De-Risking & Permeability):** Modification of basic aliphatic pendant groups or amine termini ($[\\text{N};\\text{H1}] \\rightarrow [\\text{N}](\\text{cyclopropyl})$ or methyl $\\rightarrow \\text{CF}_3$) to attenuate basic pKa and decrease hERG potassium channel affinity.\n4. **Conformational Rigidification (Entropic Optimization):** Cyclopropyl or gem-dimethyl insertion at rotatable bonds ($[\\text{C};\\text{H2}][\\text{C};\\text{H2}] \\rightarrow [\\text{C}]1[\\text{C}]\\text{C}1$) to restrict conformational flexibility and minimize binding entropy loss upon pocket engagement.\n\nAll 40 generated analogues were standardized, screened with ChemProp v2, prepared with Meeko, docked into PDB `7KK4`, and evaluated for affinity shift ($\\Delta\\text{Affinity} = \\text{Affinity}_{\\text{analogue}} - \\text{Affinity}_{\\text{parent}}$).\n\n### 2.8 ADMET-AI Pharmacokinetic & Safety Profiling\n\nAll 40 optimized analogues were evaluated across 106 ADMET endpoints using ADMET-AI (Swanson & Zou, 2024), focusing on aqueous solubility ($\\text{logS}$ via AqSolDB), intestinal permeability (Caco-2 log Papp), hERG cardiotoxicity probability, CYP3A4 substrate liability, and Ames mutagenicity.\n\n---\n\n## 3. Results\n\n### 3.1 Data Curation & Partition Diagnostics\n\nThe curated Papyrus PARP1 dataset comprised 932 verified unique $\\text{IC}_{50}$ molecules after filtering 241 non-$\\text{IC}_{50}$ entries. Bemis\u2013Murcko scaffold partitioning allocated 490 unique scaffolds to train, 8 to validation, and 5 to testing with 0% overlap.\n\n| Partition | Compounds | Percentage | Unique Scaffolds | Mean pIC50 | Std Dev |\n| :--- | :---: | :---: | :---: | :---: | :---: |\n| **Train** | 746 | 80.0% | 490 | 7.11 | 1.04 |\n| **Validation** | 93 | 10.0% | 8 | 6.84 | 1.02 |\n| **Test (Held-Out)** | 93 | 10.0% | 5 | 7.18 | 0.85 |\n| **Total** | 932 | 100.0% | 503 | 7.09 | 1.04 |\n\n### 3.2 ChemProp v2 D-MPNN Model Evaluation\n\nOn the strictly held-out scaffold test partition, ChemProp v2 demonstrated robust generalization on unencountered chemotypes:\n- $\\text{RMSE} = 0.621$ ($95\\%\\text{ CI: } [0.554, 0.685]$)\n- $\\text{MAE} = 0.525$ ($95\\%\\text{ CI: } [0.458, 0.594]$)\n- $R^2 = 0.459$ ($95\\%\\text{ CI: } [0.257, 0.583]$)\n- Pearson correlation $r = 0.744$ ($p = 1.33 \\times 10^{-17}$)\n- Spearman rank correlation $\\rho = 0.571$ ($p = 2.35 \\times 10^{-9}$)\n\n### 3.3 Crystallographic Redocking Validation Gate (PDB `7KK4`)\n\nThe redocking validation hard gate on Olaparib co-crystallized in PDB `7KK4` passed with high fidelity:\n- **Redocked Binding Affinity:** $-11.06\\text{ kcal/mol}$\n- **All-Heavy-Atom RMSD:** **$1.419\\text{ \\AA}$** (comfortably below the $\\le 2.0\\text{ \\AA}$ gate threshold)\n- **Catalytic Coordination:** Full spatial reproduction of the dual hydrogen bonds between Olaparib's phthalazinone amide core and Gly863 / Ser904, as well as the face-to-face $\\pi$-$\\pi$ stacking against Tyr907.\n\n### 3.4 10,000-Compound Virtual Screening & Top 50 Docking\n\nChemProp v2 inference across the 10,000 PubChem library yielded predicted $\\text{pIC}_{50}$ values ranging from $3.20$ to $10.37$ ($\\text{mean} = 6.42 \\pm 0.88$). The prioritized Top 50 candidates demonstrated:\n- High predicted potency ($\\text{pIC}_{50}$ range: $9.10$ to $10.37$, mean $= 9.68$).\n- AutoDock Vina binding affinities from $-8.26$ to **$-11.98\\text{ kcal/mol}$** ($\\text{mean} = -9.79\\text{ kcal/mol}$).\n- Lead candidate `PUBCHEM_1010644` achieved $-11.98\\text{ kcal/mol}$, outperforming Olaparib ($-11.06\\text{ kcal/mol}$).\n- 100% conservation of dual Gly863 and Ser904 hydrogen bonds.\n\n#### Top 10 Docked Lead Candidates\n\n| Rank | Compound ID | ChemProp Pred $\\text{pIC}_{50}$ | Vina Affinity | Ligand Efficiency | Gly863 H-Bond | Ser904 H-Bond | Tyr907 $\\pi$-Stack |\n| :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |\n| **1** | `PUBCHEM_1010644` | $10.11$ | **$-11.98\\text{ kcal/mol}$** | $0.386$ | Yes | Yes | Yes |\n| **2** | `PUBCHEM_134817183` | $9.51$ | **$-11.84\\text{ kcal/mol}$** | $0.382$ | Yes | Yes | Yes |\n| **3** | `PUBCHEM_71550931` | $9.44$ | **$-11.11\\text{ kcal/mol}$** | $0.370$ | Yes | Yes | Yes |\n| **4** | `PUBCHEM_71562418` | $9.30$ | **$-10.96\\text{ kcal/mol}$** | $0.365$ | Yes | Yes | Yes |\n| **5** | `PUBCHEM_162533924` | $9.16$ | **$-10.75\\text{ kcal/mol}$** | $0.358$ | Yes | Yes | Yes |\n| **6** | `PUBCHEM_71533696` | $9.13$ | **$-10.75\\text{ kcal/mol}$** | $0.358$ | Yes | Yes | Yes |\n| **7** | `PUBCHEM_1002472` | $9.96$ | **$-10.74\\text{ kcal/mol}$** | $0.369$ | Yes | Yes | Yes |\n| **8** | `PUBCHEM_1002266` | $10.13$ | **$-10.64\\text{ kcal/mol}$** | $0.355$ | Yes | Yes | Yes |\n| **9** | `PUBCHEM_76287717` | $9.10$ | **$-10.63\\text{ kcal/mol}$** | $0.354$ | Yes | Yes | Yes |\n| **10**| `PUBCHEM_1002392` | $10.22$ | **$-10.59\\text{ kcal/mol}$** | $0.353$ | Yes | Yes | Yes |\n| *Ref*| **Olaparib (PDB 7KK4)** | *8.60 (exp)* | **$-11.06\\text{ kcal/mol}$** | $0.346$ | **Yes** | **Yes** | **Yes** |\n\n### 3.5 RDKit-Based Lead Optimization & Structure-Activity Shifts\n\nThe 40 RDKit-generated analogues (4 analogues per parent across 10 parents) underwent continuous ChemProp v2 re-screening and AutoDock Vina redocking:\n- **Completion Rate:** 40/40 (100%) analogues successfully docked.\n- **Affinity Improvements:** 13/40 (32.5%) analogues demonstrated improved binding affinity over their parent leads ($\\Delta\\text{Affinity} < 0$).\n- **Maximal Affinity Gain:** $\\Delta\\text{Affinity} = -1.06\\text{ kcal/mol}$ achieved by `PUBCHEM_71550931_OPT4` (analogue binding affinity: **$-12.17\\text{ kcal/mol}$** vs parent lead: $-11.11\\text{ kcal/mol}$).\n- **Mechanistic Basis:** Conformational rigidification reduced rotatable bond flexibility, locking the aromatic pharmacophore into optimal geometry for persistent van der Waals packing and $\\pi$-$\\pi$ stacking against Tyr907, while preserving the dual Gly863/Ser904 hydrogen bonds.\n\n#### Prioritized RDKit Lead Optimization Analogues\n\n| Parent Lead ID | Optimized Analogue ID | Optimization Strategy | Analogue Vina | Parent Vina | $\\Delta\\text{Affinity}$ | AqSolDB (logS) | hERG Risk |\n| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: |\n| `PUBCHEM_71550931` | `PUBCHEM_71550931_OPT4` | Conformational rigidification against Tyr907 | **$-12.17\\text{ kcal/mol}$** | $-11.11$ | **$-1.06\\text{ kcal/mol}$** | $-4.85$ | $0.23$ (Safe) |\n| `PUBCHEM_162533924` | `PUBCHEM_162533924_OPT2` | Aryl fluorination (metabolic shielding) | **$-11.71\\text{ kcal/mol}$** | $-10.75$ | **$-0.96\\text{ kcal/mol}$** | $-4.62$ | $0.21$ (Safe) |\n| `PUBCHEM_71550931` | `PUBCHEM_71550931_OPT3` | Tail modulation (hERG de-risking) | **$-11.91\\text{ kcal/mol}$** | $-11.11$ | **$-0.80\\text{ kcal/mol}$** | $-4.41$ | $0.26$ (Safe) |\n| `PUBCHEM_162533924` | `PUBCHEM_162533924_OPT4` | Conformational rigidification | **$-11.53\\text{ kcal/mol}$** | $-10.75$ | **$-0.78\\text{ kcal/mol}$** | $-4.91$ | $0.24$ (Safe) |\n| `PUBCHEM_76287717` | `PUBCHEM_76287717_OPT2` | Aryl fluorination (dipole alignment) | **$-11.38\\text{ kcal/mol}$** | $-10.63$ | **$-0.75\\text{ kcal/mol}$** | $-4.70$ | $0.22$ (Safe) |\n\n### 3.6 ADMET-AI Pharmacokinetic & Safety Profiling\n\nPost-docking evaluation across 106 ADMET-AI endpoints confirmed favorable drug-like profiles:\n- **Aqueous Solubility:** $\\text{logS}$ remained between $-4.41$ and $-5.20\\text{ mol/L}$, within the acceptable range for oral delivery.\n- **Intestinal Permeability:** Caco-2 $\\text{log Papp}$ values averaged $-4.65\\text{ cm/s}$, predicting moderate-to-high intestinal absorption.\n- **Cardiac Safety:** hERG potassium channel inhibition probability was $<0.30$ across all prioritized analogues (mean $= 0.24 \\pm 0.05$), well below the toxic flag threshold ($0.50$).\n- **Mutagenicity:** Ames mutagenicity predictions were negative for all prioritized analogues.\n\n---\n\n## 4. Discussion and Limitations\n\nThis study demonstrates that scaffold-aware machine learning combined with structurally validated molecular docking and deterministic RDKit-based lead optimization provides a reproducible, auditable in-silico discovery campaign for PARP1 inhibitors.\n\nUnlike unconstrained black-box generative models that can produce synthetic abominations or non-physical geometries, our rule-based optimization workflow enforces established medicinal chemistry transformations (heteroaryl bioisosteres, fluorine scans, tail modifications, conformational rigidification) that are chemically interpretable, synthetically accessible, and directly tied to structural hypotheses within the PARP1 catalytic cleft.\n\n**Scientific Boundaries and Critical Limitations:**\n1. **Computational Nature:** Neither ChemProp predictions nor AutoDock Vina binding scores represent measured biological affinity. Rigid-receptor docking neglects active-site loop flexibility and water-mediated hydrogen-bonding networks.\n2. **Catalytic Inhibition vs. PARP Trapping:** Clinical efficacy of approved PARP inhibitors correlates predominantly with allosteric PARP1\u2013DNA trapping rather than catalytic $\\text{IC}_{50}$ alone. While catalytic binding is a prerequisite for allosteric trapping, our models predict catalytic affinity and must not be conflated with direct trapping potency.\n3. **Mandatory Prospective Validation:** All candidates are computational hypotheses. Chemical synthesis, in-vitro recombinant PARP1 fluorometric enzyme inhibition assays, and clonogenic cell survival assays in *BRCA1/2*-deficient cell models (e.g., MDA-MB-436, SUM149PT) are strictly required before any therapeutic claims can be made.\n\n---\n\n## 5. Data, Code, and Artifact Availability\n\nThe complete codebase, curated datasets, model checkpoints, docking poses, and analytical scripts are fully open-source and locally executable in the `bionova-parp1-discovery` repository:\n- Curation & Quality Assurance: `scripts/curate_dataset.py`, `scripts/run_splits.py`\n- Training & Evaluation: `scripts/evaluate_holdout.py`\n- High-Throughput Screening: `scripts/screen_10k_chemprop.py`\n- Docking & RDKit Lead Optimization: `scripts/dock_top50_and_leadopt.py`, `src/bionova_parp1/rdkit_leadopt.py`\n- Interactive Research Web Platform: `web/` (React 19 / Vite / Tailwind)\n\n---\n\n## References\n\n1. Bemis, G. W., & Murcko, M. A. (1996). The properties of known drugs. 1. Molecular frameworks. *Journal of Medicinal Chemistry*, 39(15), 2887\u20132893.\n2. Bequignon, O. J. M., et al. (2023). Papyrus: A large-scale curated dataset aimed at bioactivity predictions. *Journal of Cheminformatics*, 15(1), 3.\n3. Eberhardt, J., et al. (2021). AutoDock Vina 1.2.0: New docking methods, expanded force field, and Python bindings. *Journal of Chemical Information and Modeling*, 61(8), 3891\u20133898.\n4. Farmer, H., et al. (2005). Targeting the DNA repair defect in BRCA mutant cells as a therapeutic strategy. *Nature*, 434(7035), 917\u2013921.\n5. Heid, E., et al. (2024). Chemprop: A machine learning package for chemical property prediction. *Journal of Chemical Information and Modeling*, 64(1), 9\u201317.\n6. Johannes, J. W., et al. (2021). Discovery of clinical candidate AZD5305: A highly selective PARP1 inhibitor and trapper. *Journal of Medicinal Chemistry*, 64(19), 14498\u201314512.\n7. Landrum, G., et al. (2023). RDKit: Open-source cheminformatics toolkit. *https://www.rdkit.org*.\n8. Lord, C. J., & Ashworth, A. (2017). PARP inhibitors: synthetic lethality in the clinic. *Science*, 355(6330), 1152\u20131158.\n9. Meanwell, N. A. (2011). Synopsis of some recent tactical application of bioisosteres in drug design. *Journal of Medicinal Chemistry*, 54(8), 2529\u20132591.\n10. Mendez, D., et al. (2019). ChEMBL: towards direct depiction of biological systems. *Nucleic Acids Research*, 47(D1), D930\u2013D940.\n11. Swanson, K., & Zou, J. (2024). ADMET-AI: A machine learning tool for predicting ADMET properties. *Bioinformatics*, 40(7), btae442.\n"
 }

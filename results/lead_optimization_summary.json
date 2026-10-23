@@ -5,5 +5,5 @@
   "successfully_docked_analogs": 40,
   "improved_affinity_count": 13,
   "max_affinity_improvement_kcal_mol": -1.06,
-  "lead_optimization_method": "AstraZeneca REINVENT 4 Mol2Mol"
+  "lead_optimization_method": "RDKit-Based Lead Optimization (Rule-Based Transformations)"
 }

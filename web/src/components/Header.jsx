@@ -1,28 +1,30 @@
 import React from 'react';
 import { 
-  Crosshair, 
+  Compass, 
+  Database, 
+  Brain, 
   Filter, 
-  Wrench, 
-  Shield, 
   Anchor, 
-  Handshake, 
-  Scale, 
-  FileText,
-  Dna,
-  Sun,
-  Moon
+  Wrench, 
+  ShieldCheck, 
+  FileText, 
+  ShieldAlert, 
+  Dna, 
+  Sun, 
+  Moon 
 } from 'lucide-react';
 
 export default function Header({ activeTab, setActiveTab, theme, toggleTheme }) {
   const tabs = [
-    { id: 'target', label: 'Target Overview', icon: Crosshair },
-    { id: 'screening', label: 'Screening', icon: Filter },
-    { id: 'leadopt', label: 'Lead Optimization', icon: Wrench },
-    { id: 'admet', label: 'ADMET', icon: Shield },
-    { id: 'docking', label: 'Docking', icon: Anchor },
-    { id: 'interactions', label: 'Interactions', icon: Handshake },
-    { id: 'compare', label: 'Hit vs Optimized', icon: Scale },
-    { id: 'manuscript', label: 'Manuscript & Methods', icon: FileText }
+    { id: 'overview', label: 'Research Overview', icon: Compass },
+    { id: 'dataset', label: 'Dataset & Preparation', icon: Database },
+    { id: 'predictive-ai', label: 'Predictive AI (ChemProp)', icon: Brain },
+    { id: 'screening', label: 'Molecular Screening', icon: Filter },
+    { id: 'docking', label: 'Molecular Docking', icon: Anchor },
+    { id: 'leadopt', label: 'RDKit Lead Optimization', icon: Wrench },
+    { id: 'admet', label: 'ADMET-AI Analysis', icon: ShieldCheck },
+    { id: 'paper', label: 'Research Paper', icon: FileText },
+    { id: 'integrity', label: 'Scientific Integrity', icon: ShieldAlert }
   ];
 
   return (
@@ -34,7 +36,7 @@ export default function Header({ activeTab, setActiveTab, theme, toggleTheme }) 
         <div className="logo-text">
           <div className="flex items-center gap-2">
             <h1>BioNova PARP1 Discovery Platform</h1>
-            <span className="badge badge-optimized text-[10px] hidden sm:inline-block">REINVENT 4 Mol2Mol</span>
+            <span className="badge badge-optimized text-[10px] hidden sm:inline-block">RDKit Lead Optimization</span>
           </div>
           <p>
             Target: <span className="text-cyan-600 [data-theme='dark']:text-cyan-300 font-medium">Synthetic Lethality in BRCA-Deficient Cancers</span> &bull; Co-Crystal: <span className="font-medium">PDB 7KK4</span> &bull; Lead: <span className="font-semibold">Ayush Lanjewar</span> (B.Pharm)
@@ -53,6 +55,7 @@ export default function Header({ activeTab, setActiveTab, theme, toggleTheme }) 
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`tab-btn ${isActive ? 'active' : ''}`}
+                title={tab.label}
               >
                 <Icon className="w-4 h-4" />
                 <span>{tab.label}</span>
@@ -65,7 +68,7 @@ export default function Header({ activeTab, setActiveTab, theme, toggleTheme }) 
         <button
           onClick={toggleTheme}
           title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
-          className="p-2 rounded-full border border-slate-700/60 [data-theme='light']:border-slate-300 bg-slate-800/50 [data-theme='light']:bg-white text-slate-300 [data-theme='light']:text-slate-700 hover:text-cyan-500 hover:border-cyan-500/40 transition-all flex items-center justify-center shadow-sm"
+          className="p-2 rounded-full border border-slate-700/60 [data-theme='light']:border-slate-300 bg-slate-800/50 [data-theme='light']:bg-white text-slate-300 [data-theme='light']:text-slate-700 hover:text-cyan-500 hover:border-cyan-500/40 transition-all flex items-center justify-center shadow-sm shrink-0"
         >
           {theme === 'dark' ? (
             <Sun className="w-4 h-4 text-amber-400" />

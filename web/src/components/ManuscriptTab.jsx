@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
-import { FileText, Copy, Check, ExternalLink, Award } from 'lucide-react';
+import { 
+  FileText, 
+  Copy, 
+  Check, 
+  Download, 
+  Award, 
+  ExternalLink, 
+  BookOpen, 
+  User, 
+  Calendar,
+  Layers,
+  Sparkles
+} from 'lucide-react';
+import NonTechnicalExplainer from './NonTechnicalExplainer';
 
 export default function ManuscriptTab({ data }) {
   const [copied, setCopied] = useState(false);
   const manuscript = data?.manuscript_markdown || '';
 
   const bibtex = `@article{lanjewar2026parp1,
-  title={Retrospective In-Silico Prioritization and Generative Lead Optimization of Human PARP1 Inhibitors via Scaffold-Aware D-MPNN, Validated Molecular Docking, and REINVENT 4},
+  title={Retrospective In-Silico Prioritization and RDKit-Based Lead Optimization of Potential Human PARP1 Inhibitors via Scaffold-Aware Directed Message-Passing Neural Networks, Validated Molecular Docking, and ADMET-AI Profiling},
   author={Lanjewar, Ayush},
   journal={BioNova In-Silico Research Pre-print},
   year={2026},
@@ -19,66 +32,85 @@ export default function ManuscriptTab({ data }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const downloadManuscript = () => {
+    const blob = new Blob([manuscript], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'BioNova_PARP1_Research_Manuscript.md';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="space-y-6">
-      {/* Authorship & Publication Metadata */}
-      <div className="glass-panel p-6 border-l-4 border-l-sky-500 flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div className="animate-fade-in space-y-6">
+      {/* Non-Technical Guide for Manuscript */}
+      <NonTechnicalExplainer 
+        stageNumber="8"
+        title="Scientific Research Manuscript & Publication Draft"
+        what="We drafted a complete, formal scientific research manuscript detailing our methodology, validation gates, benchmark numbers, and discoveries, written according to the highest standards of peer-reviewed computational chemistry journals."
+        why="Scientific research has no value if it cannot be audited and verified by other scientists. Writing a formal manuscript communicates our findings, documents our exact code and data sources, and upholds academic integrity by transparently stating the boundaries of what computers can and cannot prove."
+        tools="Evidence-faithful Markdown documentation, BibTeX academic indexing, Papyrus benchmark citations, and reproducible GitHub repository links."
+        results="A comprehensive 15-section pre-print manuscript documenting our curated 932 IC50 dataset, ChemProp D-MPNN test metrics (RMSE 0.621, r = 0.744), 1.419 Å Olaparib redocking validation, Top 50 docking leads (-11.98 kcal/mol), and RDKit lead optimization reaching -12.17 kcal/mol."
+        meaning="Anyone in the scientific or pharmaceutical world—including university professors, journal reviewers, and biotech recruiters—can read, audit, and reproduce our entire study from scratch."
+      />
+
+      {/* Authorship & Publication Metadata Card */}
+      <div className="card p-6 border-l-4 border-l-cyan-500 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-sky-400" />
-            <h2 className="text-base font-bold text-white">Scientific Manuscript & Pre-Print Draft</h2>
+            <Award className="w-5 h-5 text-cyan-500" />
+            <h2 className="text-base font-bold text-[var(--text-primary)]">Scientific Manuscript &amp; Pre-Print Draft</h2>
           </div>
-          <p className="text-xs text-slate-300 mt-1">
-            Author: <span className="font-semibold text-white">Ayush Lanjewar</span> (B.Pharm Candidate) &bull; Project BioNova PARP1
+          <p className="text-xs text-[var(--text-secondary)] mt-1 flex items-center gap-2 flex-wrap">
+            <span>Author &amp; Principal Investigator: <strong className="text-[var(--text-primary)]">Ayush Lanjewar</strong> (B.Pharm Candidate)</span>
+            <span>&bull;</span>
+            <span>Project: <strong>BioNova PARP1</strong></span>
           </p>
-          <p className="text-[11px] text-slate-400 mt-0.5">
-            Peer-Review Status: <em>Academic In-Silico Pre-Print Draft</em> (No synthetic wet-lab data fabricated)
+          <p className="text-[11px] text-[var(--text-muted)] mt-0.5">
+            Peer-Review Category: <em>Computational Cheminformatics &amp; In-Silico Oncology Pre-Print</em> &bull; Zero synthetic data fabricated
           </p>
         </div>
 
-        <button
-          onClick={copyBibtex}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-200 transition shrink-0"
-        >
-          {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-sky-400" />}
-          {copied ? 'Copied BibTeX!' : 'Copy BibTeX Citation'}
-        </button>
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            onClick={downloadManuscript}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[var(--sub-card-bg)] hover:bg-[var(--card-border)] border border-[var(--sub-card-border)] text-xs font-medium text-[var(--text-primary)] transition"
+          >
+            <Download className="w-4 h-4 text-emerald-500" />
+            Download (.md)
+          </button>
+
+          <button
+            onClick={copyBibtex}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[var(--sub-card-bg)] hover:bg-[var(--card-border)] border border-[var(--sub-card-border)] text-xs font-mono text-[var(--text-primary)] transition"
+          >
+            {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4 text-cyan-500" />}
+            {copied ? 'Copied BibTeX!' : 'Copy BibTeX'}
+          </button>
+        </div>
       </div>
 
       {/* Manuscript Content Rendered */}
-      <div className="glass-panel p-8 space-y-6">
-        <div className="prose prose-invert max-w-none text-slate-300 text-xs leading-relaxed space-y-4 font-sans">
-          <div className="border-b border-slate-800 pb-4 mb-4">
-            <h1 className="text-xl font-bold text-white mb-2">
-              Retrospective In-Silico Prioritization and Generative Lead Optimization of Potential Human PARP1 Inhibitors via Scaffold-Aware Directed Message-Passing Neural Networks, Validated Molecular Docking, and REINVENT 4
-            </h1>
-            <div className="text-xs text-slate-400 font-mono">
-              <strong>Ayush Lanjewar</strong> &bull; Bachelor of Pharmacy (B.Pharm) Candidate &bull; BioNova PARP1
+      <div className="card p-6 sm:p-8 space-y-6">
+        {manuscript ? (
+          <div className="prose max-w-none text-xs leading-relaxed space-y-4 font-sans text-[var(--text-secondary)]">
+            <div className="whitespace-pre-wrap font-mono text-[11px] leading-relaxed p-4 rounded-xl bg-[var(--sub-card-bg)] border border-[var(--sub-card-border)] text-[var(--text-primary)] overflow-x-auto max-h-[750px] overflow-y-auto">
+              {manuscript}
             </div>
           </div>
-
-          <div className="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
-            <h3 className="text-xs font-bold text-sky-300 uppercase tracking-wider">Abstract</h3>
-            <p className="text-slate-300 text-[11px] leading-relaxed">
-              <strong>Background:</strong> Poly(ADP-ribose) polymerase 1 (PARP1) coordinates DNA repair. Pharmacological inhibition and allosteric trapping on damaged DNA induce synthetic lethality in homologous recombination-deficient tumors. In-silico discovery campaigns frequently suffer from structural congener leakage and unvalidated docking gates.
-              <br /><br />
-              <strong>Methods:</strong> An end-to-end reproducible computational discovery pipeline was constructed targeting human PARP1 (UniProt P09874, ChEMBL CHEMBL3105). High-confidence experimental IC50 values (932 unique molecules) from Papyrus 2024 Tier ++ were split into Bemis-Murcko scaffold partitions (zero leakage). A single-task ChemProp v2 D-MPNN regression model was trained and evaluated on held-out scaffolds. A target-relevant library of 10,000 authentic PubChem compounds was screened. Prior to batch docking, PDB 7KK4 co-crystal Olaparib redocking was validated (&le;2.0 &Aring; heavy-atom RMSD hard gate). Top 50 candidates were docked, and the highest-affinity leads were subjected to AstraZeneca REINVENT 4 Mol2Mol generative lead optimization (4 analogs per lead), followed by post-docking ADMET-AI safety profiling.
-              <br /><br />
-              <strong>Results:</strong> ChemProp v2 demonstrated robust generalization on held-out scaffolds (RMSE = 0.621, MAE = 0.525, R&sup2; = 0.459, Pearson r = 0.744, p = 1.33 &times; 10<sup>-17</sup>). Co-crystal redocking passed the hard gate (RMSD = 1.419 &Aring;, Vina affinity = -11.06 kcal/mol). Virtual screening identified candidates with binding energies reaching -11.98 kcal/mol, maintaining key Ser904/Gly863 dual hydrogen bonds. REINVENT 4 generative lead optimization produced 40 analogs across heteroatom bioisosteres, fluorine scans, tail modifications, and rigidification, with multiple analogs demonstrating superior binding energy and improved aqueous solubility.
+        ) : (
+          <div className="p-4 rounded-xl bg-[var(--sub-card-bg)] border border-[var(--sub-card-border)] text-xs text-[var(--text-secondary)] space-y-3">
+            <h3 className="text-base font-bold text-[var(--text-primary)]">
+              Retrospective In-Silico Prioritization and RDKit-Based Lead Optimization of Potential Human PARP1 Inhibitors via Scaffold-Aware Directed Message-Passing Neural Networks, Validated Molecular Docking, and ADMET-AI Profiling
+            </h3>
+            <p className="leading-relaxed">
+              <strong>Abstract:</strong> An end-to-end reproducible computational discovery pipeline was constructed targeting human PARP1 (UniProt P09874, ChEMBL CHEMBL3105). High-confidence experimental IC50 values (932 unique molecules) from Papyrus 2024 Tier ++ were split into Bemis-Murcko scaffold partitions (zero leakage). A single-task ChemProp v2 D-MPNN regression model was trained and evaluated on held-out scaffolds (RMSE = 0.621, Pearson r = 0.744, p = 1.33 × 10⁻¹⁷). Virtual screening of 10,000 PubChem compounds prioritized 50 leads for docking into PDB 7KK4. Olaparib redocking passed the hard gate (RMSD = 1.419 Å). RDKit rule-based lead optimization generated 40 targeted analogues, with top analogue PUBCHEM_71550931_OPT4 achieving -12.17 kcal/mol (ΔAffinity = -1.06 kcal/mol gain).
             </p>
           </div>
-
-          <div className="space-y-3 pt-2">
-            <h2 className="text-sm font-bold text-white border-b border-slate-800 pb-1">Key Scientific Conclusions</h2>
-            <p className="text-slate-300 text-xs leading-relaxed">
-              1. <strong>Scaffold Integrity:</strong> Scaffold-balanced D-MPNNs capture generalizable features of the nicotinamide-binding pocket without trivial memory effects.
-              <br />
-              2. <strong>Redocking Prerequisite:</strong> The 1.419 &Aring; Olaparib redocking gate proves that the rigid-receptor grid faithfully recapitulates crystallographic binding geometry.
-              <br />
-              3. <strong>Generative AI Lead Optimization:</strong> AstraZeneca REINVENT 4 Mol2Mol successfully generates bioisosteric variants that de-risk hERG liabilities and optimize aqueous solubility while preserving essential catalytic pocket coordination.
-            </p>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

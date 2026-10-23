@@ -15,7 +15,7 @@ def build_data():
     data = {
         "project": {
             "name": "BioNova PARP1",
-            "title": "Computer-Aided In-Silico Prioritization & Generative Lead Optimization of Human PARP1 Inhibitors",
+            "title": "Computer-Aided In-Silico Prioritization & RDKit-Based Lead Optimization of Human PARP1 Inhibitors",
             "investigator": "Ayush Lanjewar",
             "role": "Principal Investigator (B.Pharm Candidate)",
             "target": {
@@ -34,8 +34,8 @@ def build_data():
             {"id": 2, "name": "Scaffold Splits & ChemProp v2", "status": "COMPLETED", "summary": "Bemis-Murcko 80/10/10 split. Single-task D-MPNN: Test RMSE = 0.621, Pearson r = 0.744."},
             {"id": 3, "name": "10,000 Target-Relevant Screening", "status": "COMPLETED", "summary": "10k authentic PubChem compounds with target pharmacophores screened via ChemProp v2."},
             {"id": 4, "name": "Validated PDB 7KK4 Docking", "status": "COMPLETED", "summary": "Olaparib redocking RMSD = 1.419 Å (Passed <=2.0 Å gate). Top 50 candidates docked."},
-            {"id": 5, "name": "REINVENT 4 Generative Lead Opt", "status": "COMPLETED", "summary": "AstraZeneca REINVENT 4 Mol2Mol generative AI: 4 analogs per docked lead screened & docked."},
-            {"id": 6, "name": "ADMET-AI & Research Reporting", "status": "COMPLETED", "summary": "106 ADMET endpoints profiled post-docking, manuscript drafted, Vercel web app ready."}
+            {"id": 5, "name": "RDKit-Based Lead Optimization", "status": "COMPLETED", "summary": "Rule-based molecular optimization: 4 target-directed analogues per lead screened via ChemProp v2 & redocked into PDB 7KK4."},
+            {"id": 6, "name": "ADMET-AI & Research Reporting", "status": "COMPLETED", "summary": "ADMET-AI profiling post-docking, research manuscript, interactive research dashboard."}
         ]
     }
     
@@ -102,8 +102,10 @@ def build_data():
             "tyr907_pi_stack_count": int(df_d50["pi_stack_tyr907"].sum()) if "pi_stack_tyr907" in df_d50.columns else 0
         }
         
-    # 6. REINVENT 4 Lead Optimization Results
-    leadopt_csv = Path("results/reinvent_lead_optimization.csv")
+    # 6. RDKit-Based Lead Optimization Results
+    leadopt_csv = Path("results/rdkit_lead_optimization.csv")
+    if not leadopt_csv.exists():
+        leadopt_csv = Path("results/reinvent_lead_optimization.csv")
     if leadopt_csv.exists():
         df_lo = pd.read_csv(leadopt_csv)
         data["lead_optimization"] = df_lo.to_dict(orient="records")

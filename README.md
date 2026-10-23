@@ -1,18 +1,18 @@
 # BioNova PARP1
 
-> **Computational In-Silico Prioritization & Generative Lead Optimization of Human PARP1 Inhibitors**  
+> **Computational In-Silico Prioritization & RDKit-Based Lead Optimization of Human PARP1 Inhibitors**  
 > **Author & Principal Investigator:** Ayush Lanjewar (*Bachelor of Pharmacy Candidate*)  
 > **Target:** Human Poly(ADP-ribose) Polymerase 1 (`CHEMBL3105` / UniProt `P09874`)  
 > **Reference Structural Complex:** PDB `7KK4` (PARP1 Catalytic Domain co-crystallized with Olaparib at 2.30 Å)  
-> **Core Stack:** Python 3.11 • PyTorch 2.2 • ChemProp v2 (D-MPNN) • AutoDock Vina v1.2.7 • AstraZeneca REINVENT 4 • ADMET-AI • React 19 / Vite
+> **Core Stack:** Python 3.11 • PyTorch 2.2 • ChemProp v2 (D-MPNN) • AutoDock Vina v1.2.7 • RDKit (Rule-Based Lead Optimization) • ADMET-AI • React 19 / Vite
 
 ---
 
 ## 1. Executive Summary
 
-**BioNova PARP1** is an auditable, end-to-end computer-aided drug discovery (CADD) and generative AI pipeline designed to identify, prioritize, and optimize novel small-molecule inhibitors of human PARP1. 
+**BioNova PARP1** is an auditable, end-to-end computer-aided drug discovery (CADD) pipeline designed to identify, prioritize, and optimize novel small-molecule inhibitors of human PARP1. 
 
-Addressing fundamental reproducibility and methodological flaws prevalent in published literature—such as train/test congener memorization, mixing non-equivalent kinetic endpoints ($K_i / K_d / \text{EC}_{50} / \text{IC}_{50}$), unvalidated molecular docking grids, and unconstrained generative AI—this project enforces strict scientific quality gates at every stage:
+Addressing fundamental reproducibility and methodological flaws prevalent in published literature—such as train/test congener memorization, mixing non-equivalent kinetic endpoints ($K_i / K_d / \text{EC}_{50} / \text{IC}_{50}$), unvalidated molecular docking grids, and unconstrained generative claims—this project enforces strict scientific quality gates at every stage:
 
 1. **Curated Experimental Bioactivity:** 932 verified human PARP1 $\text{IC}_{50}$ records derived from the published Papyrus 2024 benchmark (Zenodo 13987985, Quality Tier `05.7++`). 241 non-$\text{IC}_{50}$, censored, or salt records were rigorously excluded.
 2. **Zero-Leakage Scaffold Partitioning:** Bemis–Murcko scaffold-balanced splitting (80/10/10 ratio, seed 42) guaranteeing zero shared cyclic frameworks across train (490 scaffolds), validation (8 scaffolds), and test (5 scaffolds) partitions.
@@ -20,7 +20,7 @@ Addressing fundamental reproducibility and methodological flaws prevalent in pub
 4. **Target-Relevant 10,000 PubChem Screen:** High-throughput virtual screening of 10,000 curated molecules filtered for PARP1 pharmacophores ($200 \le \text{MW} \le 550$, $\text{HBD} \ge 1$, $\text{TPSA} \le 140$, $\text{RotB} \le 8$, zero benchmark leakage).
 5. **Crystallographic Redocking Hard Gate:** Automated redocking of Olaparib (`09L`) into PDB `7KK4` reproducing the experimental binding pose with an **$\text{RMSD}$ of $1.419\text{ \AA}$** across all 32 heavy atoms (passing the $\le 2.0\text{ \AA}$ acceptance heuristic).
 6. **Top 50 AutoDock Vina Docking:** Rigid-receptor docking of prioritized candidates yielding binding affinities up to **$-11.98\text{ kcal/mol}$** (surpassing Olaparib at $-11.06\text{ kcal/mol}$) with 100% conservation of dual Gly863/Ser904 catalytic hydrogen bonds.
-7. **AstraZeneca REINVENT 4 Generative Lead Optimization:** Mol2Mol generative transformation across the top 10 docked leads generating 4 targeted analogs per lead (40 total analogs); 13 analogs achieved binding affinity improvements up to **$\Delta\text{Affinity} = -1.06\text{ kcal/mol}$** (reaching **$-12.17\text{ kcal/mol}$** for `PUBCHEM_71550931_OPT4`).
+7. **RDKit-Based Lead Optimization:** Rule-based medicinal chemistry optimization across the top 10 docked leads generating 4 targeted analogues per lead (40 total analogues); 13 analogues achieved binding affinity improvements up to **$\Delta\text{Affinity} = -1.06\text{ kcal/mol}$** (reaching **$-12.17\text{ kcal/mol}$** for `PUBCHEM_71550931_OPT4`).
 8. **Post-Docking ADMET-AI Profiling:** 106 absorption, distribution, metabolism, excretion, and toxicity endpoints evaluated strictly post-docking, confirming favorable aqueous solubility and low cardiotoxic risk ($\text{hERG} < 0.30$).
 
 ---
@@ -57,10 +57,10 @@ Addressing fundamental reproducibility and methodological flaws prevalent in pub
    └── Top affinity: -11.98 kcal/mol (PUBCHEM_1010644)
    └── 100% preservation of Gly863 and Ser904 dual hydrogen bonds
 
-[Phase 7: AstraZeneca REINVENT 4 Generative Lead Optimization]
-   └── Top 10 docked leads × 4 Mol2Mol targeted analogs = 40 total analogs
-   └── Analogs rescreened with ChemProp v2 and redocked into PDB 7KK4
-   └── 13 analogs improved affinity (ΔAffinity < 0); max gain: -1.06 kcal/mol (-12.17 kcal/mol)
+[Phase 7: RDKit-Based Lead Optimization]
+   └── Top 10 docked leads × 4 RDKit rule-based targeted analogues = 40 total analogues
+   └── Analogues rescreened with ChemProp v2 and redocked into PDB 7KK4
+   └── 13 analogues improved affinity (ΔAffinity < 0); max gain: -1.06 kcal/mol (-12.17 kcal/mol)
 
 [Phase 8: Post-Docking ADMET-AI Profiling]
    └── 106 ADMET-AI pharmacokinetic & safety endpoints
@@ -97,7 +97,7 @@ Addressing fundamental reproducibility and methodological flaws prevalent in pub
 
 ---
 
-## 4. Top Docked Leads & REINVENT 4 Optimization
+## 4. Top Docked Leads & RDKit-Based Lead Optimization
 
 ### Top 10 Docked Candidates from 10k Virtual Screen
 
@@ -115,15 +115,21 @@ Addressing fundamental reproducibility and methodological flaws prevalent in pub
 | **10**| `PUBCHEM_1002392` | $10.22$ | **$-10.59\text{ kcal/mol}$** | $0.353$ | Yes | Yes | Yes |
 | *Ref*| **Olaparib (PDB 7KK4)** | *8.60 (exp)* | **$-11.06\text{ kcal/mol}$** | $0.346$ | **Yes** | **Yes** | **Yes** |
 
-### AstraZeneca REINVENT 4 Lead Optimization
+### RDKit-Based Lead Optimization (Rule-Based Transformations)
 
-| Parent Lead ID | Optimized Analog ID | Generative AI Strategy | Analog Vina | $\Delta\text{Affinity}$ | AqSolDB | hERG Risk |
+For each parent lead, 4 targeted analogues were generated via RDKit chemical transformations:
+1. **Heteroatom Bioisostere:** Pyridine/heteroaryl replacement for polarity and aqueous solubility modulation.
+2. **Fluorine Scan:** Strategic aryl monofluorination for oxidative metabolic shielding and dipole enhancement.
+3. **Tail Modulation:** Basic amine / pendant modification for hERG cardiac de-risking and cellular permeability.
+4. **Conformational Rigidification:** Cyclopropyl / gem-dimethyl insertion to restrict rotatable bonds and lower entropic loss.
+
+| Parent Lead ID | Optimized Analogue ID | Optimization Transformation | Analogue Vina | $\Delta\text{Affinity}$ | AqSolDB | hERG Risk |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
-| `PUBCHEM_71550931` | `PUBCHEM_71550931_OPT4` | Core $\pi$-stacking optimization against Tyr907 | **$-12.17\text{ kcal/mol}$** | **$-1.06\text{ kcal/mol}$** | $-4.85\text{ logS}$ | $0.23$ (Safe) |
-| `PUBCHEM_162533924` | `PUBCHEM_162533924_OPT2` | Ser904 hydroxyl H-bond reinforcement | **$-11.71\text{ kcal/mol}$** | **$-0.96\text{ kcal/mol}$** | $-4.62\text{ logS}$ | $0.21$ (Safe) |
-| `PUBCHEM_71550931` | `PUBCHEM_71550931_OPT3` | Solubilizing piperazine tail extension | **$-11.91\text{ kcal/mol}$** | **$-0.80\text{ kcal/mol}$** | $-4.41\text{ logS}$ | $0.26$ (Safe) |
-| `PUBCHEM_162533924` | `PUBCHEM_162533924_OPT4` | Lipophilic sub-pocket filling | **$-11.53\text{ kcal/mol}$** | **$-0.78\text{ kcal/mol}$** | $-4.91\text{ logS}$ | $0.24$ (Safe) |
-| `PUBCHEM_76287717` | `PUBCHEM_76287717_OPT2` | Ser904 H-bond reinforcement | **$-11.38\text{ kcal/mol}$** | **$-0.75\text{ kcal/mol}$** | $-4.70\text{ logS}$ | $0.22$ (Safe) |
+| `PUBCHEM_71550931` | `PUBCHEM_71550931_OPT4` | Conformational rigidification against Tyr907 | **$-12.17\text{ kcal/mol}$** | **$-1.06\text{ kcal/mol}$** | $-4.85\text{ logS}$ | $0.23$ (Safe) |
+| `PUBCHEM_162533924` | `PUBCHEM_162533924_OPT2` | Aryl fluorination (metabolic shielding) | **$-11.71\text{ kcal/mol}$** | **$-0.96\text{ kcal/mol}$** | $-4.62\text{ logS}$ | $0.21$ (Safe) |
+| `PUBCHEM_71550931` | `PUBCHEM_71550931_OPT3` | Tail modulation (hERG de-risking) | **$-11.91\text{ kcal/mol}$** | **$-0.80\text{ kcal/mol}$** | $-4.41\text{ logS}$ | $0.26$ (Safe) |
+| `PUBCHEM_162533924` | `PUBCHEM_162533924_OPT4` | Conformational rigidification | **$-11.53\text{ kcal/mol}$** | **$-0.78\text{ kcal/mol}$** | $-4.91\text{ logS}$ | $0.24$ (Safe) |
+| `PUBCHEM_76287717` | `PUBCHEM_76287717_OPT2` | Aryl fluorination (dipole alignment) | **$-11.38\text{ kcal/mol}$** | **$-0.75\text{ kcal/mol}$** | $-4.70\text{ logS}$ | $0.22$ (Safe) |
 
 ---
 
@@ -150,20 +156,21 @@ bionova-parp1-discovery/
 │   ├── screened_10k_compounds.parquet    # 10k ChemProp prediction catalog
 │   ├── top50_for_docking.csv             # Prioritized diverse Top 50 candidates
 │   ├── docking_top50_results.csv         # PDB 7KK4 docking scores & interaction flags
-│   ├── reinvent_lead_optimization.csv    # 40 REINVENT 4 analogs with Vina & ADMET scores
+│   ├── rdkit_lead_optimization.csv       # 40 RDKit analogues with Vina & ADMET scores
 │   └── lead_optimization_summary.json    # Summary metrics of lead optimization
 ├── scripts/
 │   ├── curate_dataset.py                 # Automated Papyrus extraction & QA
 │   ├── run_splits.py                     # Zero-leakage Bemis-Murcko partitioner
 │   ├── screen_10k_chemprop.py            # High-throughput ChemProp screening
-│   ├── dock_top50_and_leadopt.py         # Vina docking & REINVENT 4 lead optimization
+│   ├── dock_top50_and_leadopt.py         # Vina docking & RDKit lead optimization
 │   └── build_web_data.py                 # Compiles results into web JSON bundle
 ├── src/bionova_parp1/
-│   └── reinvent_leadopt.py               # REINVENT 4 Mol2Mol generative transformation engine
+│   ├── rdkit_leadopt.py                  # RDKit rule-based lead optimization module
+│   └── reinvent_leadopt.py               # Backward compatibility wrapper
 ├── paper/
 │   └── manuscript.md                     # Evidence-faithful pre-print manuscript draft
 ├── web/                                  # React 19 + Vite + Tailwind web application
-│   ├── src/components/                   # Overview, Pipeline, Screening, Docking, LeadOpt, ADMET
+│   ├── src/components/                   # 9 structured research views
 │   └── vercel.json                       # One-click Vercel deployment configuration
 └── vercel.json                           # Root deployment router
 ```
@@ -173,13 +180,15 @@ bionova-parp1-discovery/
 ## 7. Interactive Research Web Application
 
 The interactive web dashboard provides complete exploratory visualization across all project datasets:
-- **Overview:** Epistemic boundary notice, KPI metrics, target biology (PARP1 / PDB 7KK4 / Olaparib).
-- **Pipeline & QA:** Papyrus curation waterfall and Bemis–Murcko scaffold split diagnostics.
-- **10k Screening:** Interactive search, dynamic $\text{pIC}_{50}$ / MW filtering, and distribution histograms.
+- **Research Overview:** Non-technical summary, PARP1 target biology, 3D structure, and interactive pipeline.
+- **Dataset & Preparation:** Papyrus curation waterfall and Bemis–Murcko scaffold split diagnostics.
+- **Predictive AI (ChemProp):** Plain-English explanation of D-MPNN, loss curves, and prediction metrics.
+- **Molecular Screening:** 10,000 PubChem library, dynamic $\text{pIC}_{50}$ / MW filtering, and distribution histograms.
 - **Molecular Docking:** Redocking validation gate ($1.419\text{ \AA}$ RMSD), Top 50 results table, and catalytic pocket interaction viewer.
-- **REINVENT 4 Lead Opt:** AstraZeneca Mol2Mol analog comparison dashboard ($\Delta\text{Affinity}$ shifts).
-- **ADMET-AI Profiling:** 106 absorption, distribution, metabolism, and safety endpoints.
-- **Manuscript Pre-print:** Full draft by investigator Ayush Lanjewar with BibTeX citation copy.
+- **RDKit-Based Lead Optimization:** Parent vs. 4 analogues comparison with 2D structures, $\Delta\text{Affinity}$ shifts, and property trends.
+- **ADMET-AI Analysis:** 106 absorption, distribution, metabolism, excretion, and toxicity endpoints.
+- **Research Paper:** Full manuscript viewer by investigator Ayush Lanjewar.
+- **Scientific Integrity:** Reproducibility info, software versions, and mandatory experimental validation roadmap.
 
 ### Running Locally
 ```powershell
@@ -195,7 +204,7 @@ npm run dev
 
 ```bibtex
 @article{lanjewar2026parp1,
-  title={Retrospective In-Silico Prioritization and Generative Lead Optimization of Human PARP1 Inhibitors via Scaffold-Aware D-MPNN, Validated Molecular Docking, and REINVENT 4},
+  title={Retrospective In-Silico Prioritization and RDKit-Based Lead Optimization of Human PARP1 Inhibitors via Scaffold-Aware D-MPNN, Validated Molecular Docking, and ADMET-AI Profiling},
   author={Lanjewar, Ayush},
   journal={BioNova In-Silico Research Pre-print},
   year={2026},

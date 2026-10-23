@@ -1,9 +1,9 @@
 """
-BioNova PARP1: AutoDock Vina Docking of Top 50 Candidates & AstraZeneca REINVENT 4 Generative Lead Optimization.
+BioNova PARP1: AutoDock Vina Docking of Top 50 Candidates & RDKit-Based Lead Optimization.
 1. Docks the top 50 ChemProp-prioritized candidates into PDB 7KK4.
 2. Analyzes explicit residue binding interactions (Gly863, Ser904, Tyr907).
-3. Applies AstraZeneca REINVENT 4 Mol2Mol generative lead optimization (4 analogs per lead).
-4. Screens, docks, and evaluates ADMET-AI profiles for all generated analogs.
+3. Applies RDKit-based rule-based lead optimization (4 analogues per lead).
+4. Screens, docks, and evaluates ADMET-AI profiles for all generated analogues.
 """
 
 import os
@@ -22,7 +22,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem, Descriptors
 from meeko import MoleculePreparation, PDBQTWriterLegacy
 
-from bionova_parp1.reinvent_leadopt import generate_reinvent4_analogs
+from bionova_parp1.rdkit_leadopt import generate_rdkit_analogs
 
 
 def analyze_interactions(pose_pdbqt_path: Path, box_center: Tuple[float, float, float]) -> Dict:
@@ -223,28 +223,28 @@ def run_pipeline():
     print(f"Docking complete. Saved {len(df_docked)} records to {dock_results_csv}")
     
     # -------------------------------------------------------------
-    # 2. AstraZeneca REINVENT 4 Generative Lead Optimization
+    # 2. RDKit-Based Lead Optimization (Rule-Based Transformations)
     # -------------------------------------------------------------
-    print(f"\n=== ASTRAZENECA REINVENT 4 GENERATIVE LEAD OPTIMIZATION ===")
+    print(f"\n=== RDKIT-BASED LEAD OPTIMIZATION ===")
     # Pick top 10 best docked leads
     succ_dock = df_docked[df_docked["docking_status"] == "COMPLETED"].sort_values(
         by=["catalytic_interaction_score", "docking_affinity_kcal_mol"], ascending=[False, True]
     ).head(10)
     
-    print(f"Selected top {len(succ_dock)} docked lead compounds for REINVENT 4 lead optimization.")
+    print(f"Selected top {len(succ_dock)} docked lead compounds for RDKit lead optimization.")
     all_analogs = []
     for _, lead in succ_dock.iterrows():
         parent_id = lead["compound_id"]
         parent_smi = lead["smiles"]
-        print(f"Generating 4 REINVENT 4 analogs for lead {parent_id}...")
-        analogs = generate_reinvent4_analogs(parent_smi, parent_id)
+        print(f"Generating 4 RDKit-based analogues for lead {parent_id}...")
+        analogs = generate_rdkit_analogs(parent_smi, parent_id)
         for a in analogs:
             a["parent_docking_affinity"] = lead["docking_affinity_kcal_mol"]
             a["parent_predicted_pIC50"] = lead["predicted_pIC50"]
         all_analogs.extend(analogs)
         
     df_analogs = pd.DataFrame(all_analogs)
-    print(f"Total REINVENT 4 Analogs Generated: {len(df_analogs)}")
+    print(f"Total RDKit Analogues Generated: {len(df_analogs)}")
     
     # -------------------------------------------------------------
     # 3. Screen Analogs with ChemProp v2
@@ -326,13 +326,16 @@ def run_pipeline():
         for col in ["Solubility_AqSolDB", "Caco2_Wang", "hERG", "CYP3A4_Substrate_CarbonMangels", "Ames"]:
             if col in admet_preds.columns:
                 df_opt[col] = admet_preds[col].values
-        print("ADMET-AI profiling complete on all REINVENT 4 analogs.")
+        print("ADMET-AI profiling complete on all RDKit analogues.")
     except Exception as e:
         print(f"ADMET-AI warning: {e}")
         
     leadopt_csv = results_dir / "reinvent_lead_optimization.csv"
+    rdkit_leadopt_csv = results_dir / "rdkit_lead_optimization.csv"
+    df_opt["optimization_method"] = "RDKit-Based Lead Optimization (Rule-Based Transformations)"
     df_opt.to_csv(leadopt_csv, index=False)
-    print(f"\nSaved full REINVENT 4 lead optimization results to {leadopt_csv}")
+    df_opt.to_csv(rdkit_leadopt_csv, index=False)
+    print(f"\nSaved full RDKit lead optimization results to {leadopt_csv} and {rdkit_leadopt_csv}")
     
     summary = {
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -341,7 +344,7 @@ def run_pipeline():
         "successfully_docked_analogs": int((df_opt["analog_docking_status"] == "COMPLETED").sum()),
         "improved_affinity_count": int(df_opt["affinity_improved"].sum()),
         "max_affinity_improvement_kcal_mol": float(df_opt["delta_affinity_kcal_mol"].dropna().min()) if not df_opt["delta_affinity_kcal_mol"].dropna().empty else None,
-        "lead_optimization_method": "AstraZeneca REINVENT 4 Mol2Mol"
+        "lead_optimization_method": "RDKit-Based Lead Optimization (Rule-Based Transformations)"
     }
     with open(results_dir / "lead_optimization_summary.json", "w") as f:
         json.dump(summary, f, indent=2)

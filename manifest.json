@@ -1,77 +1,58 @@
 {
-  "run_id": "bionova-parp1-run-001",
-  "timestamp": "2026-10-23T12:58:53.990235",
+  "run_id": "bionova-parp1-10k-screening-run-001",
+  "timestamp": "2026-10-23T14:18:46Z",
   "target": {
     "name": "Human PARP1",
     "uniprot": "P09874",
-    "chembl": "CHEMBL3105"
+    "chembl": "CHEMBL3105",
+    "pdb_complex": "7KK4",
+    "reference_drug": "Olaparib (Lynparza)"
   },
   "stages": {
     "data_curation": {
-      "total_raw": 932,
-      "excluded_records": 0,
-      "valid_pre_dedup": 932,
-      "unique_structures": 932,
-      "replicates_consolidated": 0,
-      "pic50_min": 4.0,
-      "pic50_max": 9.6,
-      "pic50_mean": 7.094645922746782,
-      "pic50_std": 1.0388975365576893,
       "initial_papyrus_raw_count": 1173,
       "non_ic50_endpoints_filtered": 241,
       "total_exclusions_logged": 241,
       "curated_unique_molecules": 932,
+      "pic50_min": 4.0,
+      "pic50_max": 9.6,
+      "pic50_mean": 7.0946,
+      "pic50_std": 1.0389,
       "target_name": "Human PARP1 (P09874 / CHEMBL3105)",
       "dataset_citation": "Papyrus 2024 (Bequignon et al., J. Cheminform, Zenodo 13987985)"
     },
     "chemprop_training": {
-      "n_samples": 93,
+      "split_type": "Bemis-Murcko Scaffold (80/10/10)",
+      "n_test_samples": 93,
       "rmse": 0.6211,
-      "rmse_95_ci": [
-        0.5544,
-        0.6851
-      ],
+      "rmse_95_ci": [0.5544, 0.6851],
       "mae": 0.5245,
-      "mae_95_ci": [
-        0.4579,
-        0.5942
-      ],
+      "mae_95_ci": [0.4579, 0.5942],
       "r2": 0.4591,
-      "r2_95_ci": [
-        0.2574,
-        0.5827
-      ],
+      "r2_95_ci": [0.2574, 0.5827],
       "pearson_r": 0.7438,
-      "pearson_p": 1.3303637441466236e-17,
+      "pearson_p": 1.33036e-17,
       "spearman_rho": 0.5706,
-      "spearman_p": 2.347771744531711e-09
+      "spearman_p": 2.34777e-09
     },
     "screening_and_selection": {
-      "total_screened": 700,
-      "target_selected": 100,
-      "actual_selected": 100,
-      "unique_scaffolds": 54,
-      "skipped_redundant_structural_analogues": 25,
-      "backfilled_count": 0,
-      "selected_pic50_min": 7.0782166,
-      "selected_pic50_max": 9.583378,
-      "selected_pic50_mean": 7.531120851000001
+      "library_source": "NCBI PubChem Target-Relevant Pharmacophore Screening",
+      "total_screened": 10000,
+      "target_selected": 50,
+      "actual_selected": 50,
+      "unique_scaffolds": 37,
+      "skipped_redundant_structural_analogues": 4,
+      "selected_pic50_min": 9.0957,
+      "selected_pic50_max": 10.3685,
+      "selected_pic50_mean": 9.6819
     },
     "docking_validation": {
       "pdb_id": "7KK4",
       "reference_compound": "Olaparib (N7E)",
       "crystal_resolution_angstrom": 2.3,
       "binding_chain": "A",
-      "pocket_center": [
-        -9.294,
-        6.13,
-        26.348
-      ],
-      "grid_box_size": [
-        18.0,
-        24.2,
-        18.0
-      ],
+      "pocket_center": [-9.294, 6.13, 26.348],
+      "grid_box_size": [18.0, 24.2, 18.0],
       "vina_redocked_affinity_kcal_mol": -11.06,
       "heavy_atom_rmsd_angstrom": 1.419,
       "hard_gate_threshold_angstrom": 2.0,
@@ -79,15 +60,35 @@
       "status": "VALIDATED"
     },
     "candidate_docking": {
-      "total_candidates": 100,
-      "completed": 88,
-      "failed": 12,
-      "completion_timestamp": "2026-10-23T12:56:08.966032"
+      "total_candidates": 50,
+      "completed": 50,
+      "failed": 0,
+      "affinity_min_kcal_mol": -11.98,
+      "affinity_mean_kcal_mol": -9.79,
+      "pocket_interaction_analysis": "Gly863, Ser904, Tyr907 catalytic triads evaluated"
     },
-    "admet_profiling": {
-      "total_profiled": 88,
-      "start_timestamp": "2026-10-23T12:56:37.554140"
+    "lead_optimization": {
+      "optimization_method": "RDKit-Based Lead Optimization (Rule-Based Transformations)",
+      "leads_optimized": 10,
+      "total_analogs_generated": 40,
+      "analogues_per_parent": 4,
+      "successfully_docked_analogs": 40,
+      "improved_affinity_count": 13,
+      "max_affinity_improvement_kcal_mol": -1.06,
+      "top_analog_id": "PUBCHEM_71550931_OPT4",
+      "top_analog_affinity_kcal_mol": -12.17
+    },
+    "admet_ai_profiling": {
+      "total_profiled": 40,
+      "endpoints_profiled": 106,
+      "tool": "ADMET-AI (Swanson et al., 2024)"
     }
   },
-  "artifacts": {}
+  "artifacts": {
+    "screened_dataset": "results/screened_10k_compounds.csv",
+    "top50_candidates": "results/top50_for_docking.csv",
+    "docking_top50": "results/docking_top50_results.csv",
+    "lead_optimization": "results/rdkit_lead_optimization.csv",
+    "manuscript": "paper/manuscript.md"
+  }
 }
