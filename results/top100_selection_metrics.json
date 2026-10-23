@@ -1,0 +1,11 @@
+{
+  "total_screened": 700,
+  "target_selected": 100,
+  "actual_selected": 100,
+  "unique_scaffolds": 54,
+  "skipped_redundant_structural_analogues": 25,
+  "backfilled_count": 0,
+  "selected_pic50_min": 7.0782166,
+  "selected_pic50_max": 9.583378,
+  "selected_pic50_mean": 7.531120851000001
+}

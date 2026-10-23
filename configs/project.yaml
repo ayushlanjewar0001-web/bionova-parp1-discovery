@@ -1,0 +1,24 @@
+project_name: "bionova-parp1-discovery"
+version: "0.1.0"
+investigator: "Ayush Lanjewar"
+target:
+  name: "Human Poly(ADP-ribose) polymerase 1 (PARP1)"
+  chembl_target_id: "CHEMBL3105"
+  uniprot_accession: "P09874"
+  organism: "Homo sapiens"
+
+random_seed: 42
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  splits: "splits"
+  models: "models"
+  checkpoints: "checkpoints"
+  results: "results"
+  figures: "figures"
+  poses: "poses"
+  logs: "logs"
+  reports: "reports"
+  paper: "paper"
+  app: "app"

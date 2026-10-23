@@ -1,0 +1,21 @@
+screening:
+  source: "PubChem"
+  library_name: "BioNova Curated PubChem Diverse Screening Subset"
+  batch_sizes:
+    pilot: 100
+    intermediate: 10000
+    target_scale: 100000
+  
+  filters:
+    molecular_weight: [150.0, 650.0]
+    logp: [-2.0, 5.5]
+    rotatable_bonds: [0, 12]
+    hbd: [0, 6]
+    hba: [1, 12]
+    tpsa: [20.0, 160.0]
+  
+  selection:
+    top_candidates_count: 100
+    diversity_algorithm: "MaxMin_Butina_BemisMurcko"
+    potency_weight: 0.70
+    novelty_weight: 0.30

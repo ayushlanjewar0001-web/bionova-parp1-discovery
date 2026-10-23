@@ -1,0 +1,28 @@
+model:
+  framework: "chemprop"
+  version: "v2"
+  task_type: "regression"
+  metric: "rmse"
+  extra_metrics: ["mae", "r2", "spearman"]
+
+architecture:
+  depth: 3
+  message_hidden_dim: 300
+  ffn_hidden_dim: 300
+  ffn_num_layers: 2
+  dropout: 0.1
+  aggregation: "mean"
+
+training:
+  epochs: 50
+  batch_size: 64
+  learning_rate: 0.0001
+  warmup_epochs: 2
+  patience: 10
+  seed: 42
+  device: "auto"
+
+splits:
+  method: "scaffold_balanced"
+  ratios: [0.80, 0.10, 0.10]
+  seed: 42

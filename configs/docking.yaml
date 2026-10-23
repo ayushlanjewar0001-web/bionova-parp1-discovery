@@ -1,0 +1,25 @@
+docking:
+  engine: "AutoDock Vina"
+  receptor:
+    pdb_id: "7KK4"
+    organism: "Homo sapiens"
+    target: "PARP1 catalytic domain in complex with Olaparib"
+    resolution_angstrom: 2.30
+    binding_chain: "A"
+    reference_ligand_id: "09L"  # Olaparib ligand code in 7KK4 (32 heavy atoms, C24 H23 F N4 O3)
+  
+  grid_box:
+    center: [-12.2, -14.4, 18.5] # Will be dynamically calibrated from co-crystal ligand coordinates
+    size: [22.0, 22.0, 22.0]
+    spacing: 0.375
+  
+  vina_parameters:
+    exhaustiveness: 8
+    num_modes: 9
+    energy_range: 3.0
+    seed: 42
+    cpu: 4
+
+  redocking_validation:
+    max_rmsd_angstrom: 2.0
+    reference_compound: "Olaparib"

@@ -1,0 +1,22 @@
+admet:
+  engine: "ADMET-AI"
+  version: "latest"
+  execution_policy: "strictly_post_docking"
+  target_candidates: 100
+  endpoints_of_interest:
+    - name: "Solubility (logS)"
+      type: "physicochemical"
+    - name: "Caco-2 Permeability"
+      type: "absorption"
+    - name: "Blood-Brain Barrier (BBB)"
+      type: "distribution"
+    - name: "CYP3A4 Inhibition"
+      type: "metabolism"
+    - name: "CYP2D6 Inhibition"
+      type: "metabolism"
+    - name: "hERG Inhibition (cardiotoxicity)"
+      type: "toxicity"
+    - name: "Ames Mutagenicity"
+      type: "toxicity"
+    - name: "Half-Life (t1/2)"
+      type: "pharmacokinetics"

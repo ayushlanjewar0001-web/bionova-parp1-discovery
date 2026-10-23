@@ -1,0 +1,21 @@
+{
+  "pdb_id": "7KK4",
+  "reference_compound": "Olaparib (N7E)",
+  "crystal_resolution_angstrom": 2.3,
+  "binding_chain": "A",
+  "pocket_center": [
+    -9.294,
+    6.13,
+    26.348
+  ],
+  "grid_box_size": [
+    18.0,
+    24.2,
+    18.0
+  ],
+  "vina_redocked_affinity_kcal_mol": -11.06,
+  "heavy_atom_rmsd_angstrom": 1.419,
+  "hard_gate_threshold_angstrom": 2.0,
+  "gate_passed": true,
+  "status": "VALIDATED"
+}

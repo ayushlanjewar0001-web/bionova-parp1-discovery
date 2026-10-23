@@ -1,0 +1,10 @@
+{
+  "source": "PubChem PUG REST API",
+  "sample_strategy": "Spaced authentic CID sampling across diverse chemical space",
+  "total_fetched": 1000,
+  "excluded_known_training_overlap": 0,
+  "excluded_physicochemical_filters": 300,
+  "excluded_invalid_molecules": 0,
+  "eligible_screening_compounds": 700,
+  "saved_path": "data\\raw\\pubchem_screen_library.csv"
+}

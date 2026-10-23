@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-23T12:58:41.134176",
+  "os": "Windows-10-10.0.26200-SP0",
+  "python_version": "3.11.16 (main, Sep  1 2026, 14:15:24) [MSC v.1944 64 bit (AMD64)]",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "packages": {
+    "torch": "2.14.1+cpu",
+    "rdkit": "2026.03.6",
+    "chemprop": "2.3.1",
+    "meeko": "0.8.0",
+    "admet_ai": "2.0.1",
+    "pandas": "3.1.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.1",
+    "streamlit": "1.66.1",
+    "plotly": "7.1.0"
+  },
+  "vina_executable": "C:\\Users\\Ayush\\Desktop\\prj1\\bionova-parp1-discovery\\bin\\vina.exe",
+  "cuda_available": false
+}

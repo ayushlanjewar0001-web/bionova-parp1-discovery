@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bionova-parp1"
+version = "0.1.0"
+description = "Computer-Aided Drug Discovery and Retrospective Prioritization of Human PARP1 Inhibitors"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Ayush Lanjewar" }
+]
+dependencies = [
+    "torch>=2.2.0",
+    "rdkit>=2023.9.1",
+    "chemprop>=2.0.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+    "scikit-learn>=1.3.0",
+    "pyarrow>=14.0.0",
+    "requests>=2.31.0",
+    "tqdm>=4.66.0",
+    "pyyaml>=6.0",
+    "streamlit>=1.30.0",
+    "plotly>=5.18.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+]
+docking = [
+    "meeko",
+    "vina",
+]
+admet = [
+    "admet-ai",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

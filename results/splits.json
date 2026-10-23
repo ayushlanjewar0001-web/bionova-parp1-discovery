@@ -1,0 +1,15 @@
+{
+  "total_compounds": 932,
+  "total_scaffolds": 503,
+  "train_count": 746,
+  "val_count": 93,
+  "test_count": 93,
+  "train_fraction": 0.8004,
+  "val_fraction": 0.0998,
+  "test_fraction": 0.0998,
+  "train_scaffolds": 490,
+  "val_scaffolds": 8,
+  "test_scaffolds": 5,
+  "leakage_smiles_count": 0,
+  "leakage_scaffold_count": 0
+}
