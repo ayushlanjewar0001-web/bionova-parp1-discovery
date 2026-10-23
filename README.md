@@ -2,12 +2,15 @@
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fayushlanjewar0001-web%2Fbionova-parp1-discovery)
-[![Target](https://img.shields.io/badge/Target-Human%20PARP1%20(P09874)-0d9488?style=for-the-badge&logo=dna&logoColor=white)](https://www.uniprot.org/uniprotkb/P09874)
-[![PDB Structure](https://img.shields.io/badge/PDB%20Complex-7KK4%20(2.30%20%C3%85)-10b981?style=for-the-badge&logo=protein&logoColor=white)](https://www.rcsb.org/structure/7KK4)
-[![Python](https://img.shields.io/badge/Python-3.11-3776ab?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![ChemProp](https://img.shields.io/badge/D--MPNN-ChemProp%20v2-7c3aed?style=for-the-badge)](https://chemprop.readthedocs.io/)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![Vercel Deploy](https://img.shields.io/badge/Vercel-Deploy_Live-black?logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fayushlanjewar0001-web%2Fbionova-parp1-discovery)
+[![Target](https://img.shields.io/badge/Target-PARP1_(P09874)-0d9488?logo=dna&logoColor=white)](https://www.uniprot.org/uniprotkb/P09874)
+[![PDB Complex](https://img.shields.io/badge/PDB-7KK4_(2.30%C3%85)-10b981)](https://www.rcsb.org/structure/7KK4)
+[![Python](https://img.shields.io/badge/Python-3.11-3776ab?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.2-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![ChemProp](https://img.shields.io/badge/ChemProp-v2.0-7c3aed)](https://chemprop.readthedocs.io/)
+[![RDKit](https://img.shields.io/badge/RDKit-2023.09-0284c7)](https://www.rdkit.org/)
+[![AutoDock Vina](https://img.shields.io/badge/Vina-1.2.7-0369a1)](https://vina.scripps.edu/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-gray.svg)](LICENSE)
 
 **Retrospective In-Silico Prioritization & RDKit-Based Lead Optimization of Human PARP1 Inhibitors via Scaffold-Aware Directed Message-Passing Neural Networks, Validated Molecular Docking, and ADMET-AI Profiling**
 
@@ -57,7 +60,7 @@ Instead of relying on unverified claims or simulated shortcuts, **BioNova PARP1*
 
 ## 2. 🌐 Live Interactive Research Platform
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fayushlanjewar0001-web%2Fbionova-parp1-discovery)
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy_with-Vercel-black?logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fayushlanjewar0001-web%2Fbionova-parp1-discovery)
 
 The interactive research platform is designed for researchers, biotech recruiters, investors, and pharmacy students. It features a clean, high-contrast **Biotech Light Theme** (with an instant Dark Mode toggle) and delivers full exploratory transparency across the entire investigation:
 
