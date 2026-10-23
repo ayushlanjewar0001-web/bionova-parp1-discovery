@@ -56,14 +56,14 @@ export default function IntegrityTab({ data }) {
       />
 
       {/* Primary Epistemic Truth Banner */}
-      <div className="card p-6 border-l-4 border-l-amber-500 bg-gradient-to-r from-amber-950/20 via-slate-900/30 to-slate-900/40">
+      <div className="card p-6 border-l-4 border-l-amber-500 bg-amber-50/75 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-900/40">
         <div className="flex items-start gap-3.5">
-          <ShieldAlert className="w-6 h-6 text-amber-500 shrink-0 mt-0.5" />
+          <ShieldAlert className="w-6 h-6 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
           <div className="space-y-1.5">
-            <h3 className="text-base font-bold text-[var(--text-primary)]">
+            <h3 className="text-base font-bold text-amber-950 dark:text-amber-200">
               The Scientific Truth In-Silico: A Mandatory Pre-Clinical Boundary
             </h3>
-            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-xs text-amber-900/90 dark:text-amber-300/80 leading-relaxed">
               No matter how advanced the neural network or how low the docking free energy score, <strong>in-silico models produce computational hypotheses, not drugs</strong>. A negative docking score does not guarantee protein trapping, cellular permeability, or tumor shrinkage. Prospective wet-lab experimental synthesis and biochemical validation are mandatory prerequisites before any clinical or therapeutic claims can be made.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function IntegrityTab({ data }) {
         <div className="card space-y-4">
           <div className="card-header">
             <span className="card-title">
-              <Database className="w-5 h-5 text-cyan-500" /> Data Provenance &amp; Public Repositories
+              <Database className="w-5 h-5 text-emerald-600 dark:text-emerald-400" /> Data Provenance &amp; Public Repositories
             </span>
             <span className="badge badge-active text-[11px]">Traceable Accessions</span>
           </div>
@@ -89,7 +89,7 @@ export default function IntegrityTab({ data }) {
                   <span className="badge badge-intermediate text-[10px] font-mono">{ds.accession}</span>
                 </div>
                 <p className="text-[11px] text-[var(--text-secondary)] leading-relaxed">{ds.usage}</p>
-                <div className="text-[10px] text-cyan-500 font-semibold">{ds.tier}</div>
+                <div className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">{ds.tier}</div>
               </div>
             ))}
           </div>
@@ -99,7 +99,7 @@ export default function IntegrityTab({ data }) {
         <div className="card space-y-4">
           <div className="card-header">
             <span className="card-title">
-              <Cpu className="w-5 h-5 text-cyan-500" /> Software Stack &amp; Locked Versions
+              <Cpu className="w-5 h-5 text-emerald-600 dark:text-emerald-400" /> Software Stack &amp; Locked Versions
             </span>
             <span className="badge badge-optimized text-[11px]">Reproducible Environment</span>
           </div>
@@ -111,7 +111,7 @@ export default function IntegrityTab({ data }) {
                   <strong className="text-[var(--text-primary)]">{t.name}</strong>
                   <span className="text-[11px] text-[var(--text-muted)] block">{t.role}</span>
                 </div>
-                <span className="font-mono text-cyan-500 font-semibold bg-[var(--card-bg)] px-2 py-0.5 rounded border border-[var(--card-border)] text-[11px]">
+                <span className="font-mono text-emerald-700 dark:text-emerald-400 font-semibold bg-[var(--card-bg)] px-2 py-0.5 rounded border border-[var(--card-border)] text-[11px]">
                   v{t.version}
                 </span>
               </div>
@@ -121,13 +121,13 @@ export default function IntegrityTab({ data }) {
           {/* Reproducibility Commands Box */}
           <div className="p-3.5 rounded-xl border border-[var(--card-border)] bg-[var(--card-bg)] space-y-2">
             <span className="text-xs font-bold text-[var(--text-primary)] flex items-center gap-1.5">
-              <Terminal className="w-4 h-4 text-cyan-500" /> Exact Verification Commands:
+              <Terminal className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> Exact Verification Commands:
             </span>
-            <div className="font-mono text-[10px] bg-slate-950 p-2.5 rounded border border-slate-800 text-slate-300 space-y-1">
+            <div className="font-mono text-[10px] bg-slate-900 dark:bg-slate-950 p-2.5 rounded-lg border border-slate-700/60 dark:border-slate-800 text-slate-200 space-y-1">
               <div># Run automated scientific contracts</div>
-              <div className="text-cyan-400">pytest tests/ -v</div>
+              <div className="text-emerald-400 font-semibold">pytest tests/ -v</div>
               <div className="mt-1"># Re-run docking &amp; RDKit lead optimization</div>
-              <div className="text-cyan-400">python scripts/dock_top50_and_leadopt.py</div>
+              <div className="text-emerald-400 font-semibold">python scripts/dock_top50_and_leadopt.py</div>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function IntegrityTab({ data }) {
         </div>
 
         <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-          To transition the top computational leads (notably <strong className="text-cyan-500 font-mono">PUBCHEM_71550931_OPT4</strong> and <strong className="text-cyan-500 font-mono">PUBCHEM_1010644</strong>) from in-silico candidates to validated chemical biological probes, the following five experimental assays must be executed:
+          To transition the top computational leads (notably <strong className="text-emerald-600 dark:text-emerald-400 font-mono font-bold">PUBCHEM_71550931_OPT4</strong> and <strong className="text-emerald-600 dark:text-emerald-400 font-mono font-bold">PUBCHEM_1010644</strong>) from in-silico candidates to validated chemical biological probes, the following five experimental assays must be executed:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">

@@ -22,7 +22,6 @@ export default function LeadOptTab({ data }) {
   const [selectedParentId, setSelectedParentId] = useState('PUBCHEM_71550931');
 
   const analogs = data?.lead_optimization || [];
-  const leadoptSummary = data?.leadopt_summary || {};
 
   // Group analogues by parent compound
   const parentGroups = useMemo(() => {
@@ -65,7 +64,7 @@ export default function LeadOptTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Wrench className="w-5 h-5 text-cyan-500" /> RDKit-Generated Analogues
+              <Wrench className="w-4 h-4 text-emerald-600" /> RDKit-Generated Analogues
             </span>
             <span className="badge badge-optimized text-[11px]">Rule-Based Optimization</span>
           </div>
@@ -79,12 +78,12 @@ export default function LeadOptTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <TrendingUp className="w-5 h-5 text-cyan-500" /> Maximum Affinity Gain (ΔAffinity)
+              <TrendingUp className="w-4 h-4 text-emerald-600" /> Maximum Affinity Gain (ΔAffinity)
             </span>
             <span className="badge badge-active text-[11px]">Δ -1.06 kcal/mol</span>
           </div>
           <div className="metric-value font-mono" style={{ fontSize: '1.75rem', lineHeight: '2.1rem' }}>
-            -11.11 <span className="text-[var(--text-muted)] text-base">&rarr;</span> <span className="text-emerald-500 font-bold">-12.17</span>
+            -11.11 <span className="text-[var(--text-muted)] text-base">&rarr;</span> <span className="text-emerald-600 font-bold">-12.17</span>
           </div>
           <div className="metric-unit">Parent vs Optimized Lead (kcal/mol)</div>
           <div className="metric-subtitle">
@@ -95,11 +94,11 @@ export default function LeadOptTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Sparkles className="w-5 h-5 text-cyan-500" /> Champion Optimized Lead
+              <Sparkles className="w-4 h-4 text-emerald-600" /> Champion Optimized Lead
             </span>
             <span className="badge badge-active text-[11px]">Zero Violations &bull; QED 0.74</span>
           </div>
-          <div className="metric-value font-mono text-cyan-600 [data-theme='dark']:text-cyan-300" style={{ fontSize: '1.25rem', lineHeight: '2rem' }}>
+          <div className="metric-value font-mono text-emerald-600" style={{ fontSize: '1.25rem', lineHeight: '2rem' }}>
             PUBCHEM_71550931_OPT4
           </div>
           <div className="metric-unit">-12.17 kcal/mol &bull; Pred pIC50: 10.25</div>
@@ -113,10 +112,10 @@ export default function LeadOptTab({ data }) {
       <div className="card p-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
           <span className="text-xs font-bold text-[var(--text-primary)] uppercase tracking-wider flex items-center gap-2">
-            <GitBranch className="w-4 h-4 text-cyan-500" /> Select Parent Lead to Inspect its 4 Analogues:
+            <GitBranch className="w-4 h-4 text-emerald-600" /> Select Parent Lead to Inspect its 4 Analogues:
           </span>
           <span className="text-xs text-[var(--text-muted)]">
-            Active: <strong className="text-cyan-500 font-mono">{selectedParentId}</strong> (Parent Vina: {activeParent.parent_docking_affinity || '-11.11'} kcal/mol)
+            Active Parent: <strong className="text-emerald-700 [data-theme='dark']:text-emerald-300 font-mono">{selectedParentId}</strong> (Parent Vina: {activeParent.parent_docking_affinity || '-11.11'} kcal/mol)
           </span>
         </div>
 
@@ -127,8 +126,8 @@ export default function LeadOptTab({ data }) {
               onClick={() => setSelectedParentId(pId)}
               className={`px-3 py-1.5 rounded-lg font-mono text-xs font-medium transition-all ${
                 selectedParentId === pId
-                  ? 'bg-cyan-500/20 text-cyan-500 border border-cyan-500/50 shadow-sm font-bold'
-                  : 'bg-[var(--sub-card-bg)] text-[var(--text-secondary)] border border-[var(--sub-card-border)] hover:border-cyan-500/30'
+                  ? 'bg-emerald-600 text-white shadow-xs font-bold'
+                  : 'bg-[var(--sub-card-bg)] text-[var(--text-secondary)] border border-[var(--sub-card-border)] hover:border-emerald-500/30'
               }`}
             >
               {pId}
@@ -141,8 +140,8 @@ export default function LeadOptTab({ data }) {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-bold text-[var(--text-primary)] flex items-center gap-2">
-            <Layers className="w-4 h-4 text-cyan-500" /> 
-            4 Optimized Analogues for <span className="font-mono text-cyan-500">{selectedParentId}</span>
+            <Layers className="w-4 h-4 text-emerald-600" /> 
+            4 Optimized Analogues for <span className="font-mono text-emerald-700 [data-theme='dark']:text-emerald-300">{selectedParentId}</span>
           </h3>
           <span className="text-xs text-[var(--text-muted)]">
             Workflow: RDKit Generation &rarr; ChemProp Re-screen &rarr; Vina Redock &rarr; ADMET-AI
@@ -159,22 +158,22 @@ export default function LeadOptTab({ data }) {
               <div 
                 key={a.analog_id || idx}
                 className={`card p-4 flex flex-col justify-between space-y-3 relative ${
-                  isTopLead ? 'border-cyan-500 shadow-md shadow-cyan-500/10' : ''
+                  isTopLead ? 'border-emerald-500 shadow-md shadow-emerald-500/10' : ''
                 }`}
               >
                 {isTopLead && (
-                  <span className="absolute -top-2.5 right-3 bg-cyan-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm">
-                    TOP OPTIMIZED LEAD
+                  <span className="absolute -top-2.5 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-xs">
+                    CHAMPION LEAD
                   </span>
                 )}
 
                 <div>
                   <div className="flex items-center justify-between border-b border-[var(--card-border)] pb-2 mb-2">
                     <span className="font-mono text-xs font-bold text-[var(--text-primary)]">{a.analog_id}</span>
-                    <span className="text-[10px] uppercase font-bold text-cyan-500">OPT {idx + 1}</span>
+                    <span className="text-[10px] uppercase font-bold text-emerald-600">OPT {idx + 1}</span>
                   </div>
 
-                  <span className="text-xs font-semibold text-cyan-600 [data-theme='dark']:text-cyan-400 block mb-1">
+                  <span className="text-xs font-semibold text-emerald-700 [data-theme='dark']:text-emerald-300 block mb-1">
                     {a.analog_type || 'Rule-Based Transformation'}
                   </span>
                   <p className="text-[11px] text-[var(--text-secondary)] leading-relaxed mb-3">
@@ -182,10 +181,10 @@ export default function LeadOptTab({ data }) {
                   </p>
 
                   {/* Affinity & Score Changes */}
-                  <div className="p-2.5 rounded-lg bg-[var(--sub-card-bg)] border border-[var(--sub-card-border)] space-y-1.5 text-xs">
+                  <div className="p-2.5 rounded-xl bg-[var(--sub-card-bg)] border border-[var(--sub-card-border)] space-y-1.5 text-xs">
                     <div className="flex items-center justify-between">
                       <span className="text-[var(--text-muted)]">Vina Affinity:</span>
-                      <strong className="text-emerald-500 font-mono font-bold">
+                      <strong className="text-emerald-700 [data-theme='dark']:text-emerald-300 font-mono font-bold">
                         {a.analog_docking_affinity} kcal/mol
                       </strong>
                     </div>
@@ -194,8 +193,8 @@ export default function LeadOptTab({ data }) {
                       <span className="text-[var(--text-muted)]">ΔAffinity Shift:</span>
                       <span className={`font-mono font-bold text-[11px] px-1.5 py-0.5 rounded ${
                         isImproved 
-                          ? 'bg-emerald-500/15 text-emerald-500' 
-                          : 'bg-rose-500/15 text-rose-400'
+                          ? 'bg-emerald-500/15 text-emerald-700 [data-theme="dark"]:text-emerald-300' 
+                          : 'bg-rose-500/15 text-rose-600 [data-theme="dark"]:text-rose-400'
                       }`}>
                         {delta !== null ? (delta > 0 ? `+${delta}` : delta) : 'N/A'} kcal/mol
                         {isImproved ? ' (IMPROVED)' : ' (HIGHER)'}
@@ -204,7 +203,7 @@ export default function LeadOptTab({ data }) {
 
                     <div className="flex items-center justify-between">
                       <span className="text-[var(--text-muted)]">Pred pIC50:</span>
-                      <span className="font-mono text-cyan-500 font-semibold">
+                      <span className="font-mono text-teal-700 [data-theme='dark']:text-teal-300 font-semibold">
                         {a.analog_predicted_pIC50 ? a.analog_predicted_pIC50.toFixed(2) : 'N/A'}
                       </span>
                     </div>
@@ -244,7 +243,7 @@ export default function LeadOptTab({ data }) {
       <div className="card space-y-4">
         <div className="card-header">
           <span className="card-title">
-            <Wrench className="w-5 h-5 text-cyan-500" /> Complete RDKit Lead Optimization Catalog
+            <Wrench className="w-4 h-4 text-emerald-600" /> Complete RDKit Lead Optimization Catalog
           </span>
           <span className="badge badge-active text-[11px]">{analogs.length} Analogues Evaluated</span>
         </div>
@@ -254,7 +253,7 @@ export default function LeadOptTab({ data }) {
           placeholder="Filter by analog ID, parent compound ID, or SMILES..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-box text-xs"
+          className="search-box text-xs mb-3"
         />
 
         <div className="table-container" style={{ maxHeight: '360px', overflowY: 'auto' }}>
@@ -277,10 +276,10 @@ export default function LeadOptTab({ data }) {
                 const isTop = a.analog_id === 'PUBCHEM_71550931_OPT4';
                 const isImp = a.delta_affinity_kcal_mol !== null && a.delta_affinity_kcal_mol < 0;
                 return (
-                  <tr key={a.analog_id || idx} className={isTop ? 'bg-cyan-500/10 font-medium' : ''}>
+                  <tr key={a.analog_id || idx} className={isTop ? 'bg-emerald-500/10 font-medium' : ''}>
                     <td className="font-mono text-xs font-semibold text-[var(--text-primary)]">
                       {a.analog_id}
-                      {isTop && <span className="ml-1 text-[10px] text-cyan-500 font-bold">(TOP LEAD)</span>}
+                      {isTop && <span className="ml-1 text-[10px] text-emerald-600 font-bold">(TOP LEAD)</span>}
                     </td>
                     <td className="font-mono text-xs text-[var(--text-secondary)]">{a.parent_compound_id}</td>
                     <td className="text-xs">{a.analog_type}</td>
@@ -290,7 +289,7 @@ export default function LeadOptTab({ data }) {
                     <td className="text-[var(--text-muted)]">{a.parent_docking_affinity}</td>
                     <td>
                       <span className={`px-1.5 py-0.5 rounded text-[10px] font-mono font-bold ${
-                        isImp ? 'bg-emerald-500/15 text-emerald-500' : 'bg-rose-500/15 text-rose-400'
+                        isImp ? 'bg-emerald-500/15 text-emerald-700 [data-theme="dark"]:text-emerald-300' : 'bg-rose-500/15 text-rose-600 [data-theme="dark"]:text-rose-400'
                       }`}>
                         {a.delta_affinity_kcal_mol ? (a.delta_affinity_kcal_mol > 0 ? `+${a.delta_affinity_kcal_mol}` : a.delta_affinity_kcal_mol) : 'N/A'}
                       </span>
@@ -299,7 +298,7 @@ export default function LeadOptTab({ data }) {
                       {a.analog_predicted_pIC50 ? a.analog_predicted_pIC50.toFixed(2) : 'N/A'}
                     </td>
                     <td>
-                      <span className="text-emerald-500 font-mono text-xs">
+                      <span className="text-emerald-700 [data-theme='dark']:text-emerald-300 font-mono text-xs">
                         {a.hERG ? a.hERG.toFixed(2) : '0.23'} (Safe)
                       </span>
                     </td>

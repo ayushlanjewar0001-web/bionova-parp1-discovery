@@ -10,7 +10,6 @@ import {
   Sparkles, 
   Layers, 
   Filter,
-  Handshake,
   Check,
   X
 } from 'lucide-react';
@@ -48,11 +47,11 @@ export default function DockingTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Flame className="w-5 h-5 text-cyan-500" /> Top Docking Affinity
+              <Flame className="w-4 h-4 text-emerald-600" /> Top Docking Affinity
             </span>
             <span className="badge badge-active text-[11px]">AutoDock Vina v1.2.7</span>
           </div>
-          <div className="metric-value text-emerald-500 font-mono">-11.98</div>
+          <div className="metric-value text-emerald-600 font-mono">-11.98</div>
           <div className="metric-unit">kcal/mol (Lead: PUBCHEM_1010644)</div>
           <div className="metric-subtitle">
             Surpasses FDA-approved Olaparib co-crystal reference (-11.06 kcal/mol)
@@ -62,12 +61,12 @@ export default function DockingTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <ShieldCheck className="w-5 h-5 text-cyan-500" /> Redocking Hard Gate
+              <ShieldCheck className="w-4 h-4 text-emerald-600" /> Redocking Hard Gate
             </span>
             <span className="badge badge-optimized text-[11px]">RMSD &le; 2.0 Å Gate</span>
           </div>
           <div className="metric-value font-mono" style={{ fontSize: '1.75rem', lineHeight: '2.1rem' }}>
-            1.419 Å <span className="text-emerald-500 text-sm font-bold">(PASSED)</span>
+            1.419 Å <span className="text-emerald-600 text-xs font-bold">(PASSED)</span>
           </div>
           <div className="metric-unit">All-Heavy-Atom RMSD</div>
           <div className="metric-subtitle">
@@ -78,11 +77,11 @@ export default function DockingTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Box className="w-5 h-5 text-cyan-500" /> Catalytic Triad Fidelity
+              <Box className="w-4 h-4 text-emerald-600" /> Catalytic Triad Fidelity
             </span>
             <span className="badge badge-active text-[11px]">100% Dual H-Bonds</span>
           </div>
-          <div className="metric-value font-mono text-cyan-600 [data-theme='dark']:text-cyan-300" style={{ fontSize: '1.65rem', lineHeight: '2.1rem' }}>
+          <div className="metric-value font-mono text-emerald-600" style={{ fontSize: '1.65rem', lineHeight: '2.1rem' }}>
             50 / 50 Leads
           </div>
           <div className="metric-unit">Gly863 &amp; Ser904 Coordination</div>
@@ -98,7 +97,7 @@ export default function DockingTab({ data }) {
         <div className="card space-y-4">
           <div className="card-header">
             <span className="card-title">
-              <CircleDot className="w-5 h-5 text-cyan-500" /> Molecular Docking Protocol &amp; Validation Gate
+              <CircleDot className="w-4 h-4 text-emerald-600" /> Molecular Docking Protocol &amp; Validation Gate
             </span>
             <span className="badge badge-active text-[11px]">PDB 7KK4 Audit</span>
           </div>
@@ -109,11 +108,11 @@ export default function DockingTab({ data }) {
             </p>
 
             <p>
-              <strong className="text-[var(--text-primary)]">Grid Box Definition:</strong> Search space centered at the centroid of crystallographically resolved Olaparib (<span className="font-mono text-cyan-500">x = -9.294, y = 6.130, z = 26.348 Å</span>) with box dimensions of <strong className="text-[var(--text-primary)] font-mono">18.0 &times; 24.2 &times; 18.0 Å</strong> (total search volume: 7,840.8 Å³).
+              <strong className="text-[var(--text-primary)]">Grid Box Definition:</strong> Search space centered at the centroid of crystallographically resolved Olaparib (<span className="font-mono text-emerald-600">x = -9.294, y = 6.130, z = 26.348 Å</span>) with box dimensions of <strong className="text-[var(--text-primary)] font-mono">18.0 &times; 24.2 &times; 18.0 Å</strong> (total search volume: 7,840.8 Å³).
             </p>
 
             <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/5 text-xs text-[var(--text-secondary)] space-y-1.5">
-              <div className="flex items-center gap-1.5 font-bold text-emerald-600 [data-theme='dark']:text-emerald-400">
+              <div className="flex items-center gap-1.5 font-bold text-emerald-800 [data-theme='dark']:text-emerald-200">
                 <ShieldCheck className="w-4 h-4" /> Native Co-Crystal Redocking Gate (PDB 7KK4):
               </div>
               <p className="text-[11px]">
@@ -127,15 +126,15 @@ export default function DockingTab({ data }) {
               </strong>
               <ul className="space-y-1 text-[11px] pl-1">
                 <li className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                   <span><strong>Ser904:</strong> Sidechain OH acts as H-bond donor/acceptor to the inhibitor's amide/phthalazinone carbonyl (&le; 3.5 Å).</span>
                 </li>
                 <li className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                   <span><strong>Gly863:</strong> Backbone NH provides a crucial H-bond donor to the heterocyclic core (&le; 3.5 Å).</span>
                 </li>
                 <li className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                   <span><strong>Tyr907:</strong> Phenolic ring forms planar aromatic face-to-face &pi;-&pi; stacking (&le; 4.5 Å).</span>
                 </li>
               </ul>
@@ -147,7 +146,7 @@ export default function DockingTab({ data }) {
         <div className="card space-y-4">
           <div className="card-header">
             <span className="card-title">
-              <Anchor className="w-5 h-5 text-cyan-500" /> Top 50 Candidate Docking Results
+              <Anchor className="w-4 h-4 text-emerald-600" /> Top 50 Candidate Docking Results
             </span>
             <span className="badge badge-optimized text-[11px]">{top50.length} Candidates Docked</span>
           </div>
@@ -157,7 +156,7 @@ export default function DockingTab({ data }) {
             placeholder="Search candidate ID or SMILES..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="search-box text-xs"
+            className="search-box text-xs mb-3"
           />
 
           <div className="table-container" style={{ maxHeight: '380px', overflowY: 'auto' }}>
@@ -181,24 +180,24 @@ export default function DockingTab({ data }) {
                     <tr 
                       key={d.compound_id || idx}
                       onClick={() => setSelectedCandidate(d)}
-                      className={`cursor-pointer transition-colors ${isSelected ? 'bg-cyan-500/15 font-semibold' : isLead ? 'bg-emerald-500/10' : 'hover:bg-[var(--table-hover)]'}`}
+                      className={`cursor-pointer transition-colors ${isSelected ? 'bg-emerald-500/10 font-semibold' : isLead ? 'bg-emerald-500/5' : 'hover:bg-[var(--table-hover)]'}`}
                     >
                       <td className="font-mono text-xs font-semibold text-[var(--text-primary)]">
                         {d.compound_id}
-                        {isLead && <span className="ml-1 text-[10px] text-emerald-500 font-bold">(TOP HIT)</span>}
+                        {isLead && <span className="ml-1 text-[10px] text-emerald-600 font-bold">(TOP HIT)</span>}
                       </td>
                       <td style={{ color: 'var(--accent-emerald)', fontWeight: 600 }}>
                         {d.docking_affinity_kcal_mol}
                       </td>
                       <td>{d.ligand_efficiency || '0.36'}</td>
                       <td className="text-center">
-                        {d.hbond_gly863 ? <Check className="w-3.5 h-3.5 text-emerald-500 inline" /> : <X className="w-3.5 h-3.5 text-rose-400 inline" />}
+                        {d.hbond_gly863 ? <Check className="w-3.5 h-3.5 text-emerald-600 inline" /> : <X className="w-3.5 h-3.5 text-rose-500 inline" />}
                       </td>
                       <td className="text-center">
-                        {d.hbond_ser904 ? <Check className="w-3.5 h-3.5 text-emerald-500 inline" /> : <X className="w-3.5 h-3.5 text-rose-400 inline" />}
+                        {d.hbond_ser904 ? <Check className="w-3.5 h-3.5 text-emerald-600 inline" /> : <X className="w-3.5 h-3.5 text-rose-500 inline" />}
                       </td>
                       <td className="text-center">
-                        {d.pi_stack_tyr907 ? <Check className="w-3.5 h-3.5 text-emerald-500 inline" /> : <X className="w-3.5 h-3.5 text-rose-400 inline" />}
+                        {d.pi_stack_tyr907 ? <Check className="w-3.5 h-3.5 text-emerald-600 inline" /> : <X className="w-3.5 h-3.5 text-rose-500 inline" />}
                       </td>
                       <td style={{ color: 'var(--accent-teal)' }}>
                         {d.predicted_pIC50 ? d.predicted_pIC50.toFixed(2) : '9.50'}

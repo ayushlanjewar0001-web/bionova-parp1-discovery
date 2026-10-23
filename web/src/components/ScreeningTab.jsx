@@ -38,9 +38,9 @@ export default function ScreeningTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Database className="w-5 h-5 text-cyan-500" /> Virtual Library Size
+              <Database className="w-4 h-4 text-emerald-600" /> Virtual Library Size
             </span>
-            <span className="badge badge-optimized text-[11px]">Target-Focused</span>
+            <span className="badge badge-active text-[11px]">Target-Focused</span>
           </div>
           <div className="metric-value font-mono">10,000</div>
           <div className="metric-unit">Molecules Screened</div>
@@ -52,9 +52,9 @@ export default function ScreeningTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <TrendingUp className="w-5 h-5 text-cyan-500" /> Model Validation
+              <TrendingUp className="w-4 h-4 text-emerald-600" /> Model Validation
             </span>
-            <span className="badge badge-active text-[11px]">ChemProp v2 D-MPNN</span>
+            <span className="badge badge-optimized text-[11px]">ChemProp v2 D-MPNN</span>
           </div>
           <div className="metric-value" style={{ fontSize: '1.75rem', lineHeight: '2.1rem' }}>
             R² = {modelMetrics.r2 ? modelMetrics.r2.toFixed(3) : '0.459'}<br />
@@ -69,7 +69,7 @@ export default function ScreeningTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Zap className="w-5 h-5 text-cyan-500" /> Screening Top Hit
+              <Zap className="w-4 h-4 text-emerald-600" /> Screening Top Hit
             </span>
             <span className="badge badge-active text-[11px]">Nanomolar Potency</span>
           </div>
@@ -90,14 +90,14 @@ export default function ScreeningTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <span className="text-cyan-500 font-mono">#</span> Top Screened PARP1 Candidates
+              <span className="text-emerald-600 font-mono">#</span> Top Screened PARP1 Candidates
             </span>
             <div className="flex items-center gap-2">
               <span className="text-xs text-[var(--text-secondary)]">Lipinski:</span>
               <select
                 value={filterLipinski}
                 onChange={(e) => setFilterLipinski(e.target.value)}
-                className="bg-[var(--card-bg)] border border-[var(--input-border)] text-xs rounded px-2.5 py-1 text-[var(--text-primary)] outline-none cursor-pointer"
+                className="bg-[var(--card-bg)] border border-[var(--input-border)] text-xs rounded-lg px-2.5 py-1 text-[var(--text-primary)] outline-none cursor-pointer"
               >
                 <option value="ALL">All ({hits.length})</option>
                 <option value="Pass">Pass ({hits.filter(h => h.lipinski === 'Pass').length})</option>
@@ -111,7 +111,7 @@ export default function ScreeningTab({ data }) {
             placeholder="Search compound ID or SMILES..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="search-box text-xs"
+            className="search-box text-xs mb-3"
           />
 
           <div className="table-container" style={{ maxHeight: '420px', overflowY: 'auto' }}>
@@ -135,16 +135,16 @@ export default function ScreeningTab({ data }) {
                     <tr 
                       key={hit.compound_id || idx}
                       onClick={() => setSelectedCandidate(hit)}
-                      className={`cursor-pointer transition-colors ${isSelected ? 'bg-cyan-500/15 font-semibold' : 'hover:bg-[var(--table-hover)]'}`}
+                      className={`cursor-pointer transition-colors ${isSelected ? 'bg-emerald-500/10 font-semibold' : 'hover:bg-[var(--table-hover)]'}`}
                     >
                       <td><strong>{idx + 1}</strong></td>
                       <td className="font-mono text-xs font-semibold text-[var(--text-primary)]">
                         {hit.compound_id}
                       </td>
-                      <td style={{ color: 'var(--accent-teal)', fontWeight: 600 }}>
+                      <td style={{ color: 'var(--accent-emerald)', fontWeight: 600 }}>
                         {hit.predicted_pIC50 ? hit.predicted_pIC50.toFixed(3) : '9.80'}
                       </td>
-                      <td style={{ color: 'var(--accent-emerald)', fontWeight: 600 }}>
+                      <td style={{ color: 'var(--accent-teal)', fontWeight: 600 }}>
                         {hit.docking_affinity_kcal_mol ? `${hit.docking_affinity_kcal_mol} kcal/mol` : '-10.50'}
                       </td>
                       <td>{hit.mw ? hit.mw.toFixed(1) : '380.0'}</td>
@@ -162,7 +162,7 @@ export default function ScreeningTab({ data }) {
             </table>
           </div>
           <div className="text-[11px] text-[var(--text-muted)] mt-2 flex justify-between">
-            <span>Showing {Math.min(filteredHits.length, 30)} of {filteredHits.length} filtered compounds (Click row to inspect)</span>
+            <span>Showing {Math.min(filteredHits.length, 30)} of {filteredHits.length} filtered compounds</span>
             <span>Empirical ChemProp v2 D-MPNN predictions</span>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function ScreeningTab({ data }) {
         <div className="card flex flex-col justify-between">
           <div className="card-header">
             <span className="card-title">
-              <Sparkles className="w-5 h-5 text-cyan-500" /> {selectedCandidate ? `Selected: ${selectedCandidate.compound_id}` : '10k Screening Distribution'}
+              <Sparkles className="w-4 h-4 text-emerald-600" /> {selectedCandidate ? `Selected: ${selectedCandidate.compound_id}` : '10k Screening Distribution'}
             </span>
             <span className="badge badge-optimized text-[11px]">
               {selectedCandidate ? 'Candidate Detail' : 'Library Profile'}
@@ -181,14 +181,14 @@ export default function ScreeningTab({ data }) {
           <div className="space-y-4">
             {selectedCandidate ? (
               <div className="space-y-3 animate-fade-in text-xs">
-                <div className="p-3.5 rounded-xl border border-cyan-500/30 bg-cyan-500/5 space-y-2">
+                <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/5 space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="font-mono font-bold text-sm text-[var(--text-primary)]">{selectedCandidate.compound_id}</span>
                     <span className="badge badge-active">{selectedCandidate.docking_affinity_kcal_mol || '-10.50'} kcal/mol</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-[11px] text-[var(--text-secondary)]">
-                    <div>&bull; Predicted pIC50: <strong className="text-cyan-500">{selectedCandidate.predicted_pIC50?.toFixed(3)}</strong></div>
-                    <div>&bull; Ligand Efficiency: <strong className="text-emerald-500">{selectedCandidate.ligand_efficiency || '0.36'}</strong></div>
+                    <div>&bull; Predicted pIC50: <strong className="text-emerald-700 [data-theme='dark']:text-emerald-300">{selectedCandidate.predicted_pIC50?.toFixed(3)}</strong></div>
+                    <div>&bull; Ligand Efficiency: <strong className="text-teal-700 [data-theme='dark']:text-teal-300">{selectedCandidate.ligand_efficiency || '0.36'}</strong></div>
                     <div>&bull; Molecular Weight: <strong className="text-[var(--text-primary)]">{selectedCandidate.mw} g/mol</strong></div>
                     <div>&bull; LogP: <strong className="text-[var(--text-primary)]">{selectedCandidate.logp}</strong></div>
                   </div>
@@ -206,19 +206,19 @@ export default function ScreeningTab({ data }) {
                   <div className="grid grid-cols-3 gap-1 text-[11px]">
                     <div className="p-1.5 rounded bg-[var(--card-bg)] text-center">
                       <span className="block text-[10px] text-[var(--text-muted)]">Gly863 H-Bond</span>
-                      <strong className={selectedCandidate.hbond_gly863 ? 'text-emerald-500' : 'text-rose-400'}>
+                      <strong className={selectedCandidate.hbond_gly863 ? 'text-emerald-600' : 'text-rose-500'}>
                         {selectedCandidate.hbond_gly863 ? 'YES' : 'NO'}
                       </strong>
                     </div>
                     <div className="p-1.5 rounded bg-[var(--card-bg)] text-center">
                       <span className="block text-[10px] text-[var(--text-muted)]">Ser904 H-Bond</span>
-                      <strong className={selectedCandidate.hbond_ser904 ? 'text-emerald-500' : 'text-rose-400'}>
+                      <strong className={selectedCandidate.hbond_ser904 ? 'text-emerald-600' : 'text-rose-500'}>
                         {selectedCandidate.hbond_ser904 ? 'YES' : 'NO'}
                       </strong>
                     </div>
                     <div className="p-1.5 rounded bg-[var(--card-bg)] text-center">
                       <span className="block text-[10px] text-[var(--text-muted)]">Tyr907 π-Stack</span>
-                      <strong className={selectedCandidate.pi_stack_tyr907 ? 'text-emerald-500' : 'text-rose-400'}>
+                      <strong className={selectedCandidate.pi_stack_tyr907 ? 'text-emerald-600' : 'text-rose-500'}>
                         {selectedCandidate.pi_stack_tyr907 ? 'YES' : 'NO'}
                       </strong>
                     </div>
@@ -226,13 +226,13 @@ export default function ScreeningTab({ data }) {
                 </div>
               </div>
             ) : (
-              <div className="p-3.5 rounded-lg bg-[var(--sub-card-bg)] border border-[var(--sub-card-border)] text-xs space-y-2">
+              <div className="p-3.5 rounded-xl border border-[var(--sub-card-border)] bg-[var(--sub-card-bg)] text-xs space-y-2">
                 <span className="text-[var(--text-primary)] font-semibold block">10,000 Screened Library Physicochemical Means:</span>
                 <div className="grid grid-cols-2 gap-2 text-[var(--text-secondary)]">
-                  <div>&bull; Mean MW: <span className="font-mono text-cyan-600 [data-theme='dark']:text-cyan-300 font-semibold">341.92 g/mol</span></div>
-                  <div>&bull; Mean LogP: <span className="font-mono text-cyan-600 [data-theme='dark']:text-cyan-300 font-semibold">2.63</span></div>
-                  <div>&bull; Mean TPSA: <span className="font-mono text-cyan-600 [data-theme='dark']:text-cyan-300 font-semibold">83.49 Å²</span></div>
-                  <div>&bull; Mean RotB: <span className="font-mono text-cyan-600 [data-theme='dark']:text-cyan-300 font-semibold">4.24</span></div>
+                  <div>&bull; Mean MW: <span className="font-mono text-emerald-700 [data-theme='dark']:text-emerald-300 font-semibold">341.92 g/mol</span></div>
+                  <div>&bull; Mean LogP: <span className="font-mono text-emerald-700 [data-theme='dark']:text-emerald-300 font-semibold">2.63</span></div>
+                  <div>&bull; Mean TPSA: <span className="font-mono text-emerald-700 [data-theme='dark']:text-emerald-300 font-semibold">83.49 Å²</span></div>
+                  <div>&bull; Mean RotB: <span className="font-mono text-emerald-700 [data-theme='dark']:text-emerald-300 font-semibold">4.24</span></div>
                 </div>
               </div>
             )}
@@ -247,9 +247,9 @@ export default function ScreeningTab({ data }) {
                     return (
                       <div key={i} className="flex items-center gap-2">
                         <span className="font-mono text-[11px] text-[var(--text-secondary)] w-16">{bin.bin}</span>
-                        <div className="flex-1 bg-slate-200 [data-theme='dark']:bg-slate-900 rounded-full h-3 overflow-hidden">
+                        <div className="flex-1 bg-slate-200 [data-theme='dark']:bg-slate-800 rounded-full h-2.5 overflow-hidden">
                           <div 
-                            className="bg-gradient-to-r from-cyan-500 to-emerald-400 h-full rounded-full transition-all duration-500"
+                            className="bg-gradient-to-r from-emerald-500 to-teal-500 h-full rounded-full transition-all duration-500"
                             style={{ width: `${Math.max(pct, 3)}%` }}
                           />
                         </div>
@@ -263,7 +263,7 @@ export default function ScreeningTab({ data }) {
               )}
             </div>
 
-            <div className="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-700 [data-theme='dark']:text-emerald-300">
+            <div className="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-800 [data-theme='dark']:text-emerald-200">
               <span className="font-semibold block mb-0.5">Scaffold Enrichment Insight:</span>
               Compounds in the upper tail (pIC50 &gt; 9.5) possess rigid aromatic fused bi-/tricyclic systems capable of planar insertion between Tyr907 and Tyr896 with simultaneous donor-acceptor interactions at Ser904/Gly863.
             </div>

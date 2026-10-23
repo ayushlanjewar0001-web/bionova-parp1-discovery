@@ -9,21 +9,18 @@ import {
   Layers, 
   PieChart, 
   Activity, 
-  HelpCircle,
-  FileCheck2,
-  Trash2,
-  GitBranch
+  GitBranch,
+  ArrowRight
 } from 'lucide-react';
 import NonTechnicalExplainer from './NonTechnicalExplainer';
 
 export default function DatasetPrepTab({ data }) {
   const dq = data?.data_quality || {};
-  const mm = data?.model_metrics || {};
 
   const partitions = [
-    { name: 'Training Set', count: 746, percent: '80.0%', scaffolds: 490, meanPic50: '7.11', color: 'text-sky-500', bg: 'bg-sky-500/10' },
-    { name: 'Validation Set', count: 93, percent: '10.0%', scaffolds: 8, meanPic50: '6.84', color: 'text-purple-500', bg: 'bg-purple-500/10' },
-    { name: 'Test Set (Held-Out)', count: 93, percent: '10.0%', scaffolds: 5, meanPic50: '7.18', color: 'text-emerald-500', bg: 'bg-emerald-500/10' }
+    { name: 'Training Partition', count: 746, percent: '80.0%', scaffolds: 490, meanPic50: '7.11', color: 'text-emerald-700 [data-theme="dark"]:text-emerald-300', barColor: 'bg-emerald-600' },
+    { name: 'Validation Partition', count: 93, percent: '10.0%', scaffolds: 8, meanPic50: '6.84', color: 'text-teal-700 [data-theme="dark"]:text-teal-300', barColor: 'bg-teal-600' },
+    { name: 'Test Partition (Held-Out)', count: 93, percent: '10.0%', scaffolds: 5, meanPic50: '7.18', color: 'text-emerald-800 [data-theme="dark"]:text-emerald-200', barColor: 'bg-emerald-800' }
   ];
 
   return (
@@ -44,9 +41,9 @@ export default function DatasetPrepTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Database className="w-5 h-5 text-cyan-500" /> Experimental Corpus
+              <Database className="w-4 h-4 text-emerald-600" /> Experimental Corpus
             </span>
-            <span className="badge badge-active text-[11px]">Papyrus 2024 Tier ++</span>
+            <span className="badge badge-active text-[11px]">Papyrus Tier ++</span>
           </div>
           <div className="metric-value font-mono">932</div>
           <div className="metric-unit">Curated Unique Molecules</div>
@@ -58,7 +55,7 @@ export default function DatasetPrepTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <GitBranch className="w-5 h-5 text-cyan-500" /> Scaffold Partitions
+              <GitBranch className="w-4 h-4 text-emerald-600" /> Scaffold Partitions
             </span>
             <span className="badge badge-optimized text-[11px]">Bemis-Murcko Split</span>
           </div>
@@ -72,9 +69,9 @@ export default function DatasetPrepTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Activity className="w-5 h-5 text-cyan-500" /> Bioactivity Dynamic Range
+              <Activity className="w-4 h-4 text-emerald-600" /> Bioactivity Dynamic Range
             </span>
-            <span className="badge badge-intermediate text-[11px]">4.00 &ndash; 9.60 pIC50</span>
+            <span className="badge badge-active text-[11px]">4.00 &ndash; 9.60 pIC50</span>
           </div>
           <div className="metric-value font-mono" style={{ fontSize: '1.65rem', lineHeight: '2.2rem' }}>
             Mean: 7.09 &plusmn; 1.04
@@ -92,7 +89,7 @@ export default function DatasetPrepTab({ data }) {
         <div className="card space-y-4">
           <div className="card-header">
             <span className="card-title">
-              <Filter className="w-5 h-5 text-cyan-500" /> Bioactivity Curation Waterfall
+              <Filter className="w-4 h-4 text-emerald-600" /> Bioactivity Curation Waterfall
             </span>
             <span className="badge badge-active text-[11px]">Data Cleaning Audit</span>
           </div>
@@ -110,40 +107,40 @@ export default function DatasetPrepTab({ data }) {
               <span className="text-sm font-mono font-bold text-[var(--text-primary)]">1,173</span>
             </div>
 
-            <div className="p-3.5 rounded-xl border border-rose-500/30 bg-rose-500/5 flex items-center justify-between">
+            <div className="p-3.5 rounded-xl border border-rose-500/20 bg-rose-500/5 flex items-center justify-between">
               <div>
-                <span className="text-xs font-bold text-rose-500 block">Excluded Non-IC50 &amp; Censored Entries</span>
+                <span className="text-xs font-bold text-rose-600 [data-theme='dark']:text-rose-400 block">Excluded Non-IC50 &amp; Censored Entries</span>
                 <span className="text-[11px] text-[var(--text-muted)]">Removed Ki, Kd, EC50, inequalities (&lt;, &gt;), and salts</span>
               </div>
-              <span className="text-sm font-mono font-bold text-rose-500">-241</span>
+              <span className="text-sm font-mono font-bold text-rose-600 [data-theme='dark']:text-rose-400">-241</span>
             </div>
 
             <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/5 flex items-center justify-between">
               <div>
-                <span className="text-xs font-bold text-emerald-500 block">Final Curated Unique IC50 Molecules</span>
+                <span className="text-xs font-bold text-emerald-700 [data-theme='dark']:text-emerald-300 block">Final Curated Unique IC50 Molecules</span>
                 <span className="text-[11px] text-[var(--text-muted)]">Desalted to largest parent, neutral uncharged, median-replicates</span>
               </div>
-              <span className="text-sm font-mono font-bold text-emerald-500">932</span>
+              <span className="text-sm font-mono font-bold text-emerald-700 [data-theme='dark']:text-emerald-300">932</span>
             </div>
           </div>
 
           {/* Quality Gates List */}
           <div className="p-4 rounded-xl border border-[var(--card-border)] bg-[var(--sub-card-bg)] text-xs space-y-2">
             <span className="font-semibold text-[var(--text-primary)] flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-500" />
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
               Quality Assurance Checks Applied:
             </span>
             <ul className="space-y-1.5 text-[11px] text-[var(--text-secondary)] pl-1">
               <li className="flex items-start gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                 <span><strong>Desalting &amp; Neutralization:</strong> Counter-ions (HCl, TFA, Na⁺) stripped via RDKit LargestFragmentChooser.</span>
               </li>
               <li className="flex items-start gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                 <span><strong>Median Replicate Consolidation:</strong> Repeated experimental assays for identical canonical SMILES aggregated by median pIC50.</span>
               </li>
               <li className="flex items-start gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                 <span><strong>Zero-Leakage Enforcement:</strong> Zero SMILES or Murcko scaffolds shared between train and test partitions.</span>
               </li>
             </ul>
@@ -154,7 +151,7 @@ export default function DatasetPrepTab({ data }) {
         <div className="card space-y-4">
           <div className="card-header">
             <span className="card-title">
-              <Layers className="w-5 h-5 text-cyan-500" /> Scaffold Partition Breakdown
+              <Layers className="w-4 h-4 text-emerald-600" /> Scaffold Partition Diagnostics
             </span>
             <span className="badge badge-optimized text-[11px]">80 / 10 / 10 Split</span>
           </div>
@@ -172,7 +169,7 @@ export default function DatasetPrepTab({ data }) {
                 </div>
                 <div className="w-full bg-[var(--card-border)] h-2 rounded-full overflow-hidden">
                   <div 
-                    className={`h-full ${p.bg.replace('/10', '')}`} 
+                    className={`h-full ${p.barColor}`} 
                     style={{ width: p.percent }}
                   ></div>
                 </div>
@@ -184,7 +181,7 @@ export default function DatasetPrepTab({ data }) {
             ))}
           </div>
 
-          <div className="p-3.5 rounded-xl border border-cyan-500/20 bg-cyan-500/5 text-xs text-[var(--text-secondary)]">
+          <div className="p-3.5 rounded-xl border border-emerald-500/20 bg-emerald-500/5 text-xs text-[var(--text-secondary)]">
             <strong className="text-[var(--text-primary)] block mb-1">Scaffold Holdout Guarantee:</strong>
             The 93 molecules in the test partition represent 5 distinct Bemis–Murcko scaffolds completely absent from the training set. A high test score proves true generalization across novel chemical space.
           </div>

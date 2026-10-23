@@ -52,7 +52,7 @@ export default function ADMETTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Droplet className="w-5 h-5 text-cyan-500" /> Solubility (AqSolDB LogS)
+              <Droplet className="w-4 h-4 text-emerald-600" /> Solubility (AqSolDB LogS)
             </span>
             <span className="badge badge-active text-[11px]">Oral Drug-Like</span>
           </div>
@@ -66,11 +66,11 @@ export default function ADMETTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Cookie className="w-5 h-5 text-cyan-500" /> GI Intestinal Absorption
+              <Cookie className="w-4 h-4 text-emerald-600" /> GI Intestinal Absorption
             </span>
             <span className="badge badge-active text-[11px]">&gt;88% Predicted</span>
           </div>
-          <div className="metric-value text-emerald-500 font-mono">High</div>
+          <div className="metric-value text-emerald-600 font-mono">High</div>
           <div className="metric-unit">Caco-2 Permeability: -4.62 log cm/s</div>
           <div className="metric-subtitle">
             Ideal TPSA (78.2 Å²) &amp; LogP (2.45) for systemic oral delivery
@@ -80,11 +80,11 @@ export default function ADMETTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <HeartPulse className="w-5 h-5 text-cyan-500" /> hERG Cardiac Safety Margin
+              <HeartPulse className="w-4 h-4 text-emerald-600" /> hERG Cardiac Safety Margin
             </span>
             <span className="badge badge-active text-[11px]">0.16 (Safe &lt; 0.50)</span>
           </div>
-          <div className="metric-value text-emerald-500 font-mono">Low Risk</div>
+          <div className="metric-value text-emerald-600 font-mono">Low Risk</div>
           <div className="metric-unit">QT Prolongation Liability: 0.16</div>
           <div className="metric-subtitle">
             Strategic de-risking avoids dangerous cardiac potassium channel blockade
@@ -102,8 +102,8 @@ export default function ADMETTab({ data }) {
               onClick={() => setActivePillar(pillar)}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 activePillar.toLowerCase() === pillar.toLowerCase()
-                  ? 'bg-cyan-500/20 text-cyan-500 border border-cyan-500/40 shadow-sm font-bold'
-                  : 'bg-[var(--sub-card-bg)] text-[var(--text-secondary)] border border-[var(--sub-card-border)] hover:border-cyan-500/30'
+                  ? 'bg-emerald-600 text-white font-bold shadow-xs'
+                  : 'bg-[var(--sub-card-bg)] text-[var(--text-secondary)] border border-[var(--sub-card-border)] hover:border-emerald-500/30'
               }`}
             >
               {pillar.toUpperCase()}
@@ -118,7 +118,7 @@ export default function ADMETTab({ data }) {
         <div className="card space-y-4">
           <div className="card-header">
             <span className="card-title">
-              <ShieldCheck className="w-5 h-5 text-cyan-500" /> Preclinical ADMET Comparison
+              <ShieldCheck className="w-4 h-4 text-emerald-600" /> Preclinical ADMET Comparison
             </span>
             <span className="badge badge-optimized text-[11px]">Parent vs Optimized Lead</span>
           </div>
@@ -139,7 +139,7 @@ export default function ADMETTab({ data }) {
                   <tr key={i}>
                     <td className="font-medium text-[var(--text-primary)] text-xs">{row.endpoint}</td>
                     <td className="text-[var(--text-secondary)] text-xs font-mono">{row.parent}</td>
-                    <td className="text-cyan-600 [data-theme='dark']:text-cyan-300 text-xs font-mono font-semibold">{row.lead}</td>
+                    <td className="text-emerald-700 [data-theme='dark']:text-emerald-300 text-xs font-mono font-semibold">{row.lead}</td>
                     <td>
                       <span className={`badge ${
                         row.status === 'Optimal' || row.status === 'Improved' || row.status === 'Pass'
@@ -165,7 +165,7 @@ export default function ADMETTab({ data }) {
         <div className="card space-y-4">
           <div className="card-header">
             <span className="card-title">
-              <ShieldAlert className="w-5 h-5 text-cyan-500" /> Safety Risks, Liabilities &amp; Uncertainty
+              <ShieldAlert className="w-4 h-4 text-emerald-600" /> Safety Risks, Liabilities &amp; Uncertainty
             </span>
             <span className="badge badge-active text-[11px]">Safety Audit</span>
           </div>
@@ -174,27 +174,27 @@ export default function ADMETTab({ data }) {
             <div className="p-3.5 rounded-xl border border-[var(--sub-card-border)] bg-[var(--sub-card-bg)] space-y-1.5">
               <span className="text-[var(--text-primary)] font-bold block">1. Gastrointestinal Absorption &amp; Oral Bioavailability:</span>
               <p className="text-[11px]">
-                High predicted Caco-2 permeability (<span className="font-mono text-cyan-500">-4.62 cm/s</span>) and an ideal octanol-water partition coefficient (<span className="font-mono text-cyan-500">LogP = 2.45</span>) ensure solid oral dosage feasibility without needing complex nanoparticle formulation.
+                High predicted Caco-2 permeability (<span className="font-mono text-emerald-700 [data-theme='dark']:text-emerald-300">-4.62 cm/s</span>) and an ideal octanol-water partition coefficient (<span className="font-mono text-emerald-700 [data-theme='dark']:text-emerald-300">LogP = 2.45</span>) ensure solid oral dosage feasibility without needing complex formulation.
               </p>
             </div>
 
             <div className="p-3.5 rounded-xl border border-[var(--sub-card-border)] bg-[var(--sub-card-bg)] space-y-1.5">
               <span className="text-[var(--text-primary)] font-bold block">2. Blood-Brain Barrier (BBB) Restriction:</span>
               <p className="text-[11px]">
-                Low predicted central penetration (<span className="font-mono text-rose-500">LogBB = -0.85</span>). The polar lactam/carboxamide core confines the drug predominantly to peripheral circulation and solid tumors, reducing neurotoxicity and off-target central sedation.
+                Low predicted central penetration (<span className="font-mono text-rose-600 [data-theme='dark']:text-rose-400">LogBB = -0.85</span>). The polar lactam/carboxamide core confines the drug predominantly to peripheral circulation and solid tumors, reducing neurotoxicity and off-target sedation.
               </p>
             </div>
 
             <div className="p-3.5 rounded-xl border border-[var(--sub-card-border)] bg-[var(--sub-card-bg)] space-y-1.5">
               <span className="text-[var(--text-primary)] font-bold block">3. Cardiotoxicity (hERG Channel De-Risking):</span>
               <p className="text-[11px]">
-                Many nitrogenous heterocyclic drugs cause fatal cardiac arrhythmias (Torsades de Pointes) by accidentally blocking the hERG potassium channel. Our rule-based tail modifications keep hERG probability at <strong className="text-emerald-500 font-mono">0.16</strong>, well below the dangerous 0.50 threshold.
+                Many nitrogenous heterocyclic drugs cause fatal cardiac arrhythmias (Torsades de Pointes) by accidentally blocking the hERG potassium channel. Our rule-based tail modifications keep hERG probability at <strong className="text-emerald-700 [data-theme='dark']:text-emerald-300 font-mono">0.16</strong>, well below the dangerous 0.50 threshold.
               </p>
             </div>
 
             <div className="p-3.5 rounded-xl border border-amber-500/20 bg-amber-500/5 text-xs text-[var(--text-secondary)]">
               <strong className="text-[var(--text-primary)] flex items-center gap-1 mb-1">
-                <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />
+                <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
                 Scientific Uncertainty in AI ADMET Predictions:
               </strong>
               Machine learning ADMET models are statistical approximations. While our predictions demonstrate high confidence and clean safety margins, empirical in-vitro microsomal stability, patch-clamp hERG electrophysiology, and animal pharmacokinetic studies remain mandatory.
