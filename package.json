@@ -1,0 +1,9 @@
+{
+  "name": "bionova-parp1-discovery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BioNova PARP1: In-Silico Prioritization & Generative Lead Optimization Web Application",
+  "scripts": {
+    "build": "cd web && npm install && npm run build"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-10-23T13:51:42Z",
+  "target": "Human PARP1 (P09874 / CHEMBL3105)",
+  "source": "NCBI PubChem PUG REST",
+  "total_screened_compounds": 10000,
+  "target_physicochemical_ranges": {
+    "mw": [
+      200.0,
+      550.0
+    ],
+    "logp": [
+      -1.0,
+      4.5
+    ],
+    "hbd": [
+      1,
+      5
+    ],
+    "hba": [
+      2,
+      10
+    ],
+    "tpsa": [
+      40.0,
+      140.0
+    ],
+    "rotatable_bonds_max": 8
+  },
+  "zero_leakage_enforced": true
+}

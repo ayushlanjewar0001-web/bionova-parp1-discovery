@@ -12,6 +12,8 @@ ENV/
 dist/
 build/
 *.egg-info/
+node_modules/
+web/node_modules/
 
 # Unit test / coverage
 .coverage
