@@ -19,7 +19,7 @@
 **Principal Investigator:** **Ayush Lanjewar** *(Bachelor of Pharmacy Candidate)*  
 **Institution / Focus:** Computational Medicinal Chemistry & In-Silico Drug Discovery  
 **GitHub Repository:** [ayushlanjewar0001-web/bionova-parp1-discovery](https://github.com/ayushlanjewar0001-web/bionova-parp1-discovery)  
-**Live Research Platform:** [https://bionova-parp1-discovery.vercel.app](https://bionova-parp1-discovery.vercel.app) *(Deploy with 1-click via the Vercel button above)*
+**Live Research Platform:** [https://bionova-parp1-discovery.vercel.app](https://express-sitar-2b0apzk-ayushlanjewar0001-6428s-projects.vercel.app) *(Deploy with 1-click via the Vercel button above)*
 
 </div>
 
@@ -64,7 +64,7 @@ Instead of relying on unverified claims or simulated shortcuts, **BioNova PARP1*
 
 The interactive research platform is designed for researchers, biotech recruiters, investors, and pharmacy students. It features a clean, high-contrast **Biotech Light Theme** (with an instant Dark Mode toggle) and delivers full exploratory transparency across the entire investigation:
 
-- **Live Production URL:** [https://bionova-parp1-discovery.vercel.app](https://bionova-parp1-discovery.vercel.app) *(Once deployed via Vercel)*
+- **Live Production URL:** [https://bionova-parp1-discovery.vercel.app](https://express-sitar-2b0apzk-ayushlanjewar0001-6428s-projects.vercel.app) *(Once deployed via Vercel)*
 - **Instant 1-Click Deployment:** Click the **Deploy with Vercel** button above to connect your GitHub repository and go live in ~30 seconds.
 - **Local Interactive App:** Run `cd web; npm install; npm run dev` to launch locally at `http://localhost:5173`.
 
