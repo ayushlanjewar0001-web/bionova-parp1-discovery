@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldAlert, Award, FileSpreadsheet, Binary, Microscope, Sparkles, ArrowRight, ExternalLink, Activity } from 'lucide-react';
+import { ShieldAlert, Award, FileSpreadsheet, Binary, Microscope, Sparkles, ArrowRight, ExternalLink, Activity, Dna } from 'lucide-react';
 
 export default function OverviewTab({ data, setActiveTab }) {
   const phases = data?.pipeline_phases || [];
