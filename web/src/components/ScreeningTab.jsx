@@ -25,21 +25,21 @@ export default function ScreeningTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Database className="w-5 h-5 text-cyan-400" /> Virtual Library Size
+              <Database className="w-5 h-5 text-cyan-500" /> Virtual Library Size
             </span>
             <span className="badge badge-optimized text-[11px]">Target-Focused</span>
           </div>
           <div className="metric-value">10,000</div>
           <div className="metric-unit">Molecules Screened</div>
           <div className="metric-subtitle">
-            Curated PubChem PARP / NAD⁺-mimetic library with Lipinski & Veber rules
+            Curated PubChem PARP / NAD⁺-mimetic library with Lipinski &amp; Veber rules
           </div>
         </div>
 
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <TrendingUp className="w-5 h-5 text-cyan-400" /> Model Validation
+              <TrendingUp className="w-5 h-5 text-cyan-500" /> Model Validation
             </span>
             <span className="badge badge-active text-[11px]">ChemProp v2 D-MPNN</span>
           </div>
@@ -56,7 +56,7 @@ export default function ScreeningTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <Zap className="w-5 h-5 text-cyan-400" /> Screening Top Hit
+              <Zap className="w-5 h-5 text-cyan-500" /> Screening Top Hit
             </span>
             <span className="badge badge-active text-[11px]">Nanomolar Potency</span>
           </div>
@@ -77,14 +77,14 @@ export default function ScreeningTab({ data }) {
         <div className="card">
           <div className="card-header">
             <span className="card-title">
-              <span className="text-cyan-400 font-mono">#</span> Top Screened PARP1 Hits
+              <span className="text-cyan-500 font-mono">#</span> Top Screened PARP1 Hits
             </span>
             <div className="flex items-center gap-2">
-              <span className="text-xs text-slate-400">Lipinski:</span>
+              <span className="text-xs text-[var(--text-secondary)]">Lipinski:</span>
               <select
                 value={filterLipinski}
                 onChange={(e) => setFilterLipinski(e.target.value)}
-                className="bg-slate-900 border border-slate-700 text-xs rounded px-2 py-1 text-slate-200 outline-none"
+                className="bg-[var(--card-bg)] border border-[var(--input-border)] text-xs rounded px-2.5 py-1 text-[var(--text-primary)] outline-none cursor-pointer"
               >
                 <option value="ALL">All ({hits.length})</option>
                 <option value="Pass">Pass ({hits.filter(h => h.lipinski === 'Pass').length})</option>
@@ -119,7 +119,7 @@ export default function ScreeningTab({ data }) {
                 {filteredHits.slice(0, 25).map((hit, idx) => (
                   <tr key={hit.compound_id || idx}>
                     <td><strong>{idx + 1}</strong></td>
-                    <td className="font-mono text-xs font-semibold text-white">
+                    <td className="font-mono text-xs font-semibold text-[var(--text-primary)]">
                       {hit.compound_id}
                     </td>
                     <td style={{ color: 'var(--accent-teal)', fontWeight: 600 }}>
@@ -139,7 +139,7 @@ export default function ScreeningTab({ data }) {
               </tbody>
             </table>
           </div>
-          <div className="text-[11px] text-slate-500 mt-2 flex justify-between">
+          <div className="text-[11px] text-[var(--text-muted)] mt-2 flex justify-between">
             <span>Showing {Math.min(filteredHits.length, 25)} of {filteredHits.length} filtered compounds</span>
             <span>Empirical ChemProp v2 D-MPNN predictions</span>
           </div>
@@ -155,18 +155,18 @@ export default function ScreeningTab({ data }) {
           </div>
 
           <div className="space-y-4">
-            <div className="p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 text-xs space-y-2">
-              <span className="text-white font-semibold block">10,000 Screened Library Physicochemical Means:</span>
-              <div className="grid grid-cols-2 gap-2 text-slate-300">
-                <div>&bull; Mean MW: <span className="font-mono text-cyan-300">341.92 g/mol</span></div>
-                <div>&bull; Mean LogP: <span className="font-mono text-cyan-300">2.63</span></div>
-                <div>&bull; Mean TPSA: <span className="font-mono text-cyan-300">83.49 Å²</span></div>
-                <div>&bull; Mean RotB: <span className="font-mono text-cyan-300">4.24</span></div>
+            <div className="p-3.5 rounded-lg bg-[var(--sub-card-bg)] border border-[var(--sub-card-border)] text-xs space-y-2">
+              <span className="text-[var(--text-primary)] font-semibold block">10,000 Screened Library Physicochemical Means:</span>
+              <div className="grid grid-cols-2 gap-2 text-[var(--text-secondary)]">
+                <div>&bull; Mean MW: <span className="font-mono text-cyan-600 [data-theme='dark']:text-cyan-300 font-semibold">341.92 g/mol</span></div>
+                <div>&bull; Mean LogP: <span className="font-mono text-cyan-600 [data-theme='dark']:text-cyan-300 font-semibold">2.63</span></div>
+                <div>&bull; Mean TPSA: <span className="font-mono text-cyan-600 [data-theme='dark']:text-cyan-300 font-semibold">83.49 Å²</span></div>
+                <div>&bull; Mean RotB: <span className="font-mono text-cyan-600 [data-theme='dark']:text-cyan-300 font-semibold">4.24</span></div>
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <span className="text-xs font-semibold text-slate-300 block">Predicted pIC50 Frequency Distribution:</span>
+              <span className="text-xs font-semibold text-[var(--text-primary)] block">Predicted pIC50 Frequency Distribution:</span>
               {screeningStats.pic50_histogram ? (
                 <div className="space-y-1 text-xs">
                   {screeningStats.pic50_histogram.slice(3, 11).map((bin, i) => {
@@ -174,31 +174,31 @@ export default function ScreeningTab({ data }) {
                     const pct = Math.round((bin.count / maxCount) * 100);
                     return (
                       <div key={i} className="flex items-center gap-2">
-                        <span className="font-mono text-[11px] text-slate-400 w-16">{bin.bin}</span>
-                        <div className="flex-1 bg-slate-900 rounded-full h-3 overflow-hidden">
+                        <span className="font-mono text-[11px] text-[var(--text-secondary)] w-16">{bin.bin}</span>
+                        <div className="flex-1 bg-slate-200 [data-theme='dark']:bg-slate-900 rounded-full h-3 overflow-hidden">
                           <div 
                             className="bg-gradient-to-r from-cyan-500 to-emerald-400 h-full rounded-full transition-all duration-500"
                             style={{ width: `${Math.max(pct, 3)}%` }}
                           />
                         </div>
-                        <span className="font-mono text-[11px] text-slate-400 w-12 text-right">{bin.count}</span>
+                        <span className="font-mono text-[11px] text-[var(--text-secondary)] w-12 text-right">{bin.count}</span>
                       </div>
                     );
                   })}
                 </div>
               ) : (
-                <p className="text-xs text-slate-500">Distribution loading...</p>
+                <p className="text-xs text-[var(--text-muted)]">Distribution loading...</p>
               )}
             </div>
 
-            <div className="p-3 rounded-lg bg-emerald-950/20 border border-emerald-800/30 text-xs text-emerald-300">
+            <div className="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-700 [data-theme='dark']:text-emerald-300">
               <span className="font-semibold block mb-0.5">Scaffold Enrichment Insight:</span>
               Compounds in the upper tail (pIC50 &gt; 9.5) possess rigid aromatic fused bi-/tricyclic systems capable of planar insertion between Tyr907 and Tyr896 with simultaneous donor-acceptor interactions at Ser904/Gly863.
             </div>
           </div>
 
-          <div className="text-[11px] text-slate-500 text-center mt-3">
-            Derived from NCBI PubChem targeted query & ChemProp v2 graph neural network
+          <div className="text-[11px] text-[var(--text-muted)] text-center mt-3">
+            Derived from NCBI PubChem targeted query &amp; ChemProp v2 graph neural network
           </div>
         </div>
       </div>
