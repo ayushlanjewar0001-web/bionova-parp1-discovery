@@ -246,7 +246,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.32,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.3684635
+      "predicted_pIC50": 10.3684635,
+      "mw": 379.41,
+      "logp": 3.1,
+      "qed": 0.87,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.04
     },
     {
       "compound_id": "PUBCHEM_1002304",
@@ -263,7 +268,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.23,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.315493
+      "predicted_pIC50": 10.315493,
+      "mw": 398.3,
+      "logp": 3.74,
+      "qed": 0.818,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.05
     },
     {
       "compound_id": "PUBCHEM_1002274",
@@ -280,7 +290,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.43,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.280724
+      "predicted_pIC50": 10.280724,
+      "mw": 474.57,
+      "logp": 1.76,
+      "qed": 0.655,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.05
     },
     {
       "compound_id": "PUBCHEM_1002392",
@@ -297,7 +312,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.8,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.223887
+      "predicted_pIC50": 10.223887,
+      "mw": 479.58,
+      "logp": 4.41,
+      "qed": 0.625,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.06
     },
     {
       "compound_id": "PUBCHEM_1002469",
@@ -314,7 +334,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.17,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.202009
+      "predicted_pIC50": 10.202009,
+      "mw": 439.95,
+      "logp": 4.31,
+      "qed": 0.764,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.06
     },
     {
       "compound_id": "PUBCHEM_1002285",
@@ -331,7 +356,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.49,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.166494
+      "predicted_pIC50": 10.166494,
+      "mw": 431.54,
+      "logp": 3.62,
+      "qed": 0.7,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.07
     },
     {
       "compound_id": "PUBCHEM_1002391",
@@ -348,7 +378,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.96,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.159033
+      "predicted_pIC50": 10.159033,
+      "mw": 370.24,
+      "logp": 3.01,
+      "qed": 0.79,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.07
     },
     {
       "compound_id": "PUBCHEM_1002464",
@@ -365,7 +400,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.84,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.152843
+      "predicted_pIC50": 10.152843,
+      "mw": 403.49,
+      "logp": 2.84,
+      "qed": 0.803,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.07
     },
     {
       "compound_id": "PUBCHEM_1002435",
@@ -382,7 +422,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.2,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.147057
+      "predicted_pIC50": 10.147057,
+      "mw": 436.48,
+      "logp": 3.14,
+      "qed": 0.779,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.07
     },
     {
       "compound_id": "PUBCHEM_1002266",
@@ -399,7 +444,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.27,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.1339445
+      "predicted_pIC50": 10.1339445,
+      "mw": 465.56,
+      "logp": 3.67,
+      "qed": 0.691,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.07
     },
     {
       "compound_id": "PUBCHEM_1010644",
@@ -416,7 +466,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.08,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.1123
+      "predicted_pIC50": 10.1123,
+      "mw": 417.52,
+      "logp": 5.41,
+      "qed": 0.602,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.08
     },
     {
       "compound_id": "PUBCHEM_1002346",
@@ -433,7 +488,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.6,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.094841
+      "predicted_pIC50": 10.094841,
+      "mw": 403.49,
+      "logp": 2.84,
+      "qed": 0.803,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.08
     },
     {
       "compound_id": "PUBCHEM_1002492",
@@ -450,7 +510,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.36,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.088511
+      "predicted_pIC50": 10.088511,
+      "mw": 389.42,
+      "logp": 1.78,
+      "qed": 0.81,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.08
     },
     {
       "compound_id": "PUBCHEM_1002448",
@@ -467,7 +532,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.99,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.0793295
+      "predicted_pIC50": 10.0793295,
+      "mw": 423.52,
+      "logp": 3.98,
+      "qed": 0.796,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.08
     },
     {
       "compound_id": "PUBCHEM_1002264",
@@ -484,7 +554,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.44,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.078019
+      "predicted_pIC50": 10.078019,
+      "mw": 411.53,
+      "logp": 3.72,
+      "qed": 0.826,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.08
     },
     {
       "compound_id": "PUBCHEM_1002389",
@@ -501,7 +576,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.64,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.058318
+      "predicted_pIC50": 10.058318,
+      "mw": 445.57,
+      "logp": 4.01,
+      "qed": 0.673,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.09
     },
     {
       "compound_id": "PUBCHEM_1002432",
@@ -518,7 +598,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.78,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.049738
+      "predicted_pIC50": 10.049738,
+      "mw": 465.51,
+      "logp": 3.76,
+      "qed": 0.726,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.09
     },
     {
       "compound_id": "PUBCHEM_1002451",
@@ -535,7 +620,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.02,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 10.009853
+      "predicted_pIC50": 10.009853,
+      "mw": 453.5,
+      "logp": 3.73,
+      "qed": 0.747,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.1
     },
     {
       "compound_id": "PUBCHEM_1002472",
@@ -552,7 +642,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.04,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.957848
+      "predicted_pIC50": 9.957848,
+      "mw": 423.52,
+      "logp": 3.98,
+      "qed": 0.799,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.11
     },
     {
       "compound_id": "PUBCHEM_1002390",
@@ -569,7 +664,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.86,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.923067
+      "predicted_pIC50": 9.923067,
+      "mw": 361.41,
+      "logp": 1.72,
+      "qed": 0.838,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.12
     },
     {
       "compound_id": "PUBCHEM_1002267",
@@ -586,7 +686,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.87,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.896296
+      "predicted_pIC50": 9.896296,
+      "mw": 371.44,
+      "logp": 2.58,
+      "qed": 0.855,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.13
     },
     {
       "compound_id": "PUBCHEM_1002471",
@@ -603,7 +708,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.33,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.876955
+      "predicted_pIC50": 9.876955,
+      "mw": 373.46,
+      "logp": 2.83,
+      "qed": 0.872,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.13
     },
     {
       "compound_id": "PUBCHEM_1002489",
@@ -620,7 +730,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.06,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.869731
+      "predicted_pIC50": 9.869731,
+      "mw": 399.45,
+      "logp": 2.36,
+      "qed": 0.756,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.13
     },
     {
       "compound_id": "PUBCHEM_1002474",
@@ -637,7 +752,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.18,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.724621
+      "predicted_pIC50": 9.724621,
+      "mw": 481.56,
+      "logp": 4.51,
+      "qed": 0.666,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.19
     },
     {
       "compound_id": "PUBCHEM_1002309",
@@ -654,7 +774,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.94,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.715986
+      "predicted_pIC50": 9.715986,
+      "mw": 406.49,
+      "logp": 4.68,
+      "qed": 0.796,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.19
     },
     {
       "compound_id": "PUBCHEM_51033720",
@@ -671,7 +796,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.3,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.7154045
+      "predicted_pIC50": 9.7154045,
+      "mw": 380.41,
+      "logp": 2.92,
+      "qed": 0.75,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.19
     },
     {
       "compound_id": "PUBCHEM_56947515",
@@ -688,7 +818,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.14,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.552507
+      "predicted_pIC50": 9.552507,
+      "mw": 527.51,
+      "logp": 4.76,
+      "qed": 0.336,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.28
     },
     {
       "compound_id": "PUBCHEM_134817183",
@@ -705,7 +840,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.03,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.513874
+      "predicted_pIC50": 9.513874,
+      "mw": 468.54,
+      "logp": 5.45,
+      "qed": 0.529,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.31
     },
     {
       "compound_id": "PUBCHEM_1021550",
@@ -722,7 +862,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.78,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.511376
+      "predicted_pIC50": 9.511376,
+      "mw": 356.47,
+      "logp": 4.34,
+      "qed": 0.809,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.31
     },
     {
       "compound_id": "PUBCHEM_71550931",
@@ -739,7 +884,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.92,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.438005
+      "predicted_pIC50": 9.438005,
+      "mw": 546.6,
+      "logp": 4.71,
+      "qed": 0.368,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.36
     },
     {
       "compound_id": "PUBCHEM_46894021",
@@ -756,7 +906,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.68,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.412983
+      "predicted_pIC50": 9.412983,
+      "mw": 524.41,
+      "logp": 3.97,
+      "qed": 0.374,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.39
     },
     {
       "compound_id": "PUBCHEM_193962",
@@ -773,7 +928,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.52,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.38671
+      "predicted_pIC50": 9.38671,
+      "mw": 435.29,
+      "logp": 4.72,
+      "qed": 0.608,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.41
     },
     {
       "compound_id": "PUBCHEM_1021162",
@@ -790,7 +950,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.79,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.36436
+      "predicted_pIC50": 9.36436,
+      "mw": 385.45,
+      "logp": 4.43,
+      "qed": 0.826,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.43
     },
     {
       "compound_id": "PUBCHEM_71267243",
@@ -807,7 +972,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.39,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.33115
+      "predicted_pIC50": 9.33115,
+      "mw": 408.43,
+      "logp": 3.32,
+      "qed": 0.411,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.47
     },
     {
       "compound_id": "PUBCHEM_44200882",
@@ -824,7 +994,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.88,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.318185
+      "predicted_pIC50": 9.318185,
+      "mw": 393.83,
+      "logp": 3.98,
+      "qed": 0.672,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.48
     },
     {
       "compound_id": "PUBCHEM_71562418",
@@ -841,7 +1016,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.89,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.297928
+      "predicted_pIC50": 9.297928,
+      "mw": 518.54,
+      "logp": 4.38,
+      "qed": 0.393,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.5
     },
     {
       "compound_id": "PUBCHEM_24826799",
@@ -858,7 +1038,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.8,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.291334
+      "predicted_pIC50": 9.291334,
+      "mw": 532.57,
+      "logp": 4.46,
+      "qed": 0.394,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.51
     },
     {
       "compound_id": "PUBCHEM_147817927",
@@ -875,7 +1060,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.38,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.275661
+      "predicted_pIC50": 9.275661,
+      "mw": 435.46,
+      "logp": 2.43,
+      "qed": 0.518,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.53
     },
     {
       "compound_id": "PUBCHEM_6451164",
@@ -892,7 +1082,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.95,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.230241
+      "predicted_pIC50": 9.230241,
+      "mw": 366.43,
+      "logp": 4.99,
+      "qed": 0.617,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.59
     },
     {
       "compound_id": "PUBCHEM_44143088",
@@ -909,7 +1104,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.59,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.225325
+      "predicted_pIC50": 9.225325,
+      "mw": 300.27,
+      "logp": 2.74,
+      "qed": 0.804,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.6
     },
     {
       "compound_id": "PUBCHEM_71605047",
@@ -926,7 +1126,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.14,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.218828
+      "predicted_pIC50": 9.218828,
+      "mw": 532.57,
+      "logp": 4.46,
+      "qed": 0.394,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.6
     },
     {
       "compound_id": "PUBCHEM_53232451",
@@ -943,7 +1148,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.06,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.212717
+      "predicted_pIC50": 9.212717,
+      "mw": 355.35,
+      "logp": 3.57,
+      "qed": 0.646,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.61
     },
     {
       "compound_id": "PUBCHEM_9956119",
@@ -960,7 +1170,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.58,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.207462
+      "predicted_pIC50": 9.207462,
+      "mw": 465.35,
+      "logp": 4.94,
+      "qed": 0.331,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.62
     },
     {
       "compound_id": "PUBCHEM_162533924",
@@ -977,7 +1192,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.12,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.162253
+      "predicted_pIC50": 9.162253,
+      "mw": 531.89,
+      "logp": 2.33,
+      "qed": 0.334,
+      "lipinski": "Fail",
+      "pred_ic50_nm": 0.69
     },
     {
       "compound_id": "PUBCHEM_3033825",
@@ -994,7 +1214,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.68,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.160795
+      "predicted_pIC50": 9.160795,
+      "mw": 280.29,
+      "logp": 1.36,
+      "qed": 0.642,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.69
     },
     {
       "compound_id": "PUBCHEM_24779676",
@@ -1011,7 +1236,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.48,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.154718
+      "predicted_pIC50": 9.154718,
+      "mw": 375.82,
+      "logp": 4.01,
+      "qed": 0.547,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.7
     },
     {
       "compound_id": "PUBCHEM_71533696",
@@ -1028,7 +1258,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.25,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.125329
+      "predicted_pIC50": 9.125329,
+      "mw": 447.34,
+      "logp": 4.81,
+      "qed": 0.336,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.75
     },
     {
       "compound_id": "PUBCHEM_24959105",
@@ -1045,7 +1280,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 0.96,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.107193
+      "predicted_pIC50": 9.107193,
+      "mw": 289.34,
+      "logp": 3.15,
+      "qed": 0.844,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.78
     },
     {
       "compound_id": "PUBCHEM_76287717",
@@ -1062,7 +1302,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.29,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.098366
+      "predicted_pIC50": 9.098366,
+      "mw": 482.94,
+      "logp": 3.71,
+      "qed": 0.333,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.8
     },
     {
       "compound_id": "PUBCHEM_49872646",
@@ -1079,7 +1324,12 @@
       "pi_stack_tyr907": true,
       "dist_tyr907_angstrom": 1.35,
       "catalytic_interaction_score": 3,
-      "predicted_pIC50": 9.095687
+      "predicted_pIC50": 9.095687,
+      "mw": 496.55,
+      "logp": 3.5,
+      "qed": 0.382,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.8
     }
   ],
   "top50_summary": {
@@ -1119,7 +1369,10 @@
       "Solubility_AqSolDB": -5.639746,
       "Caco2_Wang": -4.847522,
       "hERG": 0.4767769,
-      "CYP3A4_Substrate_CarbonMangels": 0.6584805
+      "CYP3A4_Substrate_CarbonMangels": 0.6584805,
+      "qed": 0.641,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.06
     },
     {
       "parent_compound_id": "PUBCHEM_1010644",
@@ -1148,7 +1401,10 @@
       "Solubility_AqSolDB": -6.527816,
       "Caco2_Wang": -4.692497,
       "hERG": 0.4237713,
-      "CYP3A4_Substrate_CarbonMangels": 0.6711166
+      "CYP3A4_Substrate_CarbonMangels": 0.6711166,
+      "qed": 0.57,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.05
     },
     {
       "parent_compound_id": "PUBCHEM_1010644",
@@ -1177,7 +1433,10 @@
       "Solubility_AqSolDB": -6.4331374,
       "Caco2_Wang": -4.7744017,
       "hERG": 0.4084057,
-      "CYP3A4_Substrate_CarbonMangels": 0.6764595
+      "CYP3A4_Substrate_CarbonMangels": 0.6764595,
+      "qed": 0.499,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.07
     },
     {
       "parent_compound_id": "PUBCHEM_1010644",
@@ -1206,7 +1465,10 @@
       "Solubility_AqSolDB": -6.376832,
       "Caco2_Wang": -4.8710146,
       "hERG": 0.45595184,
-      "CYP3A4_Substrate_CarbonMangels": 0.6946538
+      "CYP3A4_Substrate_CarbonMangels": 0.6946538,
+      "qed": 0.6,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.11
     },
     {
       "parent_compound_id": "PUBCHEM_134817183",
@@ -1235,7 +1497,10 @@
       "Solubility_AqSolDB": -6.0329223,
       "Caco2_Wang": -4.769511,
       "hERG": 0.5247216,
-      "CYP3A4_Substrate_CarbonMangels": 0.65621746
+      "CYP3A4_Substrate_CarbonMangels": 0.65621746,
+      "qed": 0.564,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.26
     },
     {
       "parent_compound_id": "PUBCHEM_134817183",
@@ -1264,7 +1529,10 @@
       "Solubility_AqSolDB": -6.821145,
       "Caco2_Wang": -4.7181096,
       "hERG": 0.51189625,
-      "CYP3A4_Substrate_CarbonMangels": 0.6685932
+      "CYP3A4_Substrate_CarbonMangels": 0.6685932,
+      "qed": 0.5,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.23
     },
     {
       "parent_compound_id": "PUBCHEM_134817183",
@@ -1293,7 +1561,10 @@
       "Solubility_AqSolDB": -6.902021,
       "Caco2_Wang": -4.7587066,
       "hERG": 0.5305732,
-      "CYP3A4_Substrate_CarbonMangels": 0.74153364
+      "CYP3A4_Substrate_CarbonMangels": 0.74153364,
+      "qed": 0.455,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.31
     },
     {
       "parent_compound_id": "PUBCHEM_134817183",
@@ -1322,7 +1593,10 @@
       "Solubility_AqSolDB": -7.015668,
       "Caco2_Wang": -4.8354573,
       "hERG": 0.60598844,
-      "CYP3A4_Substrate_CarbonMangels": 0.7086345
+      "CYP3A4_Substrate_CarbonMangels": 0.7086345,
+      "qed": 0.45,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.74
     },
     {
       "parent_compound_id": "PUBCHEM_71550931",
@@ -1351,7 +1625,10 @@
       "Solubility_AqSolDB": -5.0865436,
       "Caco2_Wang": -5.1960006,
       "hERG": 0.94223464,
-      "CYP3A4_Substrate_CarbonMangels": 0.7625655
+      "CYP3A4_Substrate_CarbonMangels": 0.7625655,
+      "qed": 0.379,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.3
     },
     {
       "parent_compound_id": "PUBCHEM_71550931",
@@ -1380,7 +1657,10 @@
       "Solubility_AqSolDB": -5.6644,
       "Caco2_Wang": -5.029047,
       "hERG": 0.9566976,
-      "CYP3A4_Substrate_CarbonMangels": 0.7962888
+      "CYP3A4_Substrate_CarbonMangels": 0.7962888,
+      "qed": 0.278,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.25
     },
     {
       "parent_compound_id": "PUBCHEM_71550931",
@@ -1409,7 +1689,10 @@
       "Solubility_AqSolDB": -5.589978,
       "Caco2_Wang": -5.031709,
       "hERG": 0.95665264,
-      "CYP3A4_Substrate_CarbonMangels": 0.8298129
+      "CYP3A4_Substrate_CarbonMangels": 0.8298129,
+      "qed": 0.289,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.36
     },
     {
       "parent_compound_id": "PUBCHEM_71550931",
@@ -1438,7 +1721,10 @@
       "Solubility_AqSolDB": -5.7769136,
       "Caco2_Wang": -5.1959376,
       "hERG": 0.97299653,
-      "CYP3A4_Substrate_CarbonMangels": 0.74426687
+      "CYP3A4_Substrate_CarbonMangels": 0.74426687,
+      "qed": 0.355,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.77
     },
     {
       "parent_compound_id": "PUBCHEM_71562418",
@@ -1467,7 +1753,10 @@
       "Solubility_AqSolDB": -5.367241,
       "Caco2_Wang": -5.2987123,
       "hERG": 0.91807634,
-      "CYP3A4_Substrate_CarbonMangels": 0.66013545
+      "CYP3A4_Substrate_CarbonMangels": 0.66013545,
+      "qed": 0.399,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.39
     },
     {
       "parent_compound_id": "PUBCHEM_71562418",
@@ -1496,7 +1785,10 @@
       "Solubility_AqSolDB": -5.727805,
       "Caco2_Wang": -5.1289372,
       "hERG": 0.9582714,
-      "CYP3A4_Substrate_CarbonMangels": 0.72142094
+      "CYP3A4_Substrate_CarbonMangels": 0.72142094,
+      "qed": 0.297,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.33
     },
     {
       "parent_compound_id": "PUBCHEM_71562418",
@@ -1525,7 +1817,10 @@
       "Solubility_AqSolDB": -5.562658,
       "Caco2_Wang": -5.1308885,
       "hERG": 0.9608439,
-      "CYP3A4_Substrate_CarbonMangels": 0.7652284
+      "CYP3A4_Substrate_CarbonMangels": 0.7652284,
+      "qed": 0.352,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.5
     },
     {
       "parent_compound_id": "PUBCHEM_71562418",
@@ -1554,7 +1849,10 @@
       "Solubility_AqSolDB": -5.8110056,
       "Caco2_Wang": -5.2924833,
       "hERG": 0.9705858,
-      "CYP3A4_Substrate_CarbonMangels": 0.639103
+      "CYP3A4_Substrate_CarbonMangels": 0.639103,
+      "qed": 0.38,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 1.14
     },
     {
       "parent_compound_id": "PUBCHEM_162533924",
@@ -1583,7 +1881,10 @@
       "Solubility_AqSolDB": -4.382289,
       "Caco2_Wang": -5.2416983,
       "hERG": 0.5713903,
-      "CYP3A4_Substrate_CarbonMangels": 0.77175945
+      "CYP3A4_Substrate_CarbonMangels": 0.77175945,
+      "qed": 0.327,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.45
     },
     {
       "parent_compound_id": "PUBCHEM_162533924",
@@ -1612,7 +1913,10 @@
       "Solubility_AqSolDB": -5.134372,
       "Caco2_Wang": -4.881715,
       "hERG": 0.7496807,
-      "CYP3A4_Substrate_CarbonMangels": 0.80008423
+      "CYP3A4_Substrate_CarbonMangels": 0.80008423,
+      "qed": 0.255,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.49
     },
     {
       "parent_compound_id": "PUBCHEM_162533924",
@@ -1641,7 +1945,10 @@
       "Solubility_AqSolDB": -4.7331567,
       "Caco2_Wang": -4.9811225,
       "hERG": 0.7366481,
-      "CYP3A4_Substrate_CarbonMangels": 0.78059554
+      "CYP3A4_Substrate_CarbonMangels": 0.78059554,
+      "qed": 0.276,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.85
     },
     {
       "parent_compound_id": "PUBCHEM_162533924",
@@ -1670,7 +1977,10 @@
       "Solubility_AqSolDB": -4.7109847,
       "Caco2_Wang": -5.083509,
       "hERG": 0.7967273,
-      "CYP3A4_Substrate_CarbonMangels": 0.8080819
+      "CYP3A4_Substrate_CarbonMangels": 0.8080819,
+      "qed": 0.318,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 2.36
     },
     {
       "parent_compound_id": "PUBCHEM_71533696",
@@ -1699,7 +2009,10 @@
       "Solubility_AqSolDB": -5.699889,
       "Caco2_Wang": -4.983575,
       "hERG": 0.56289613,
-      "CYP3A4_Substrate_CarbonMangels": 0.64931166
+      "CYP3A4_Substrate_CarbonMangels": 0.64931166,
+      "qed": 0.349,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.68
     },
     {
       "parent_compound_id": "PUBCHEM_71533696",
@@ -1728,7 +2041,10 @@
       "Solubility_AqSolDB": -6.329814,
       "Caco2_Wang": -4.8098063,
       "hERG": 0.5395031,
-      "CYP3A4_Substrate_CarbonMangels": 0.6792945
+      "CYP3A4_Substrate_CarbonMangels": 0.6792945,
+      "qed": 0.319,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.39
     },
     {
       "parent_compound_id": "PUBCHEM_71533696",
@@ -1757,7 +2073,10 @@
       "Solubility_AqSolDB": -6.3951035,
       "Caco2_Wang": -4.922332,
       "hERG": 0.4966522,
-      "CYP3A4_Substrate_CarbonMangels": 0.65926945
+      "CYP3A4_Substrate_CarbonMangels": 0.65926945,
+      "qed": 0.289,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.43
     },
     {
       "parent_compound_id": "PUBCHEM_71533696",
@@ -1786,7 +2105,10 @@
       "Solubility_AqSolDB": -6.1757326,
       "Caco2_Wang": -4.882706,
       "hERG": 0.6121768,
-      "CYP3A4_Substrate_CarbonMangels": 0.7108215
+      "CYP3A4_Substrate_CarbonMangels": 0.7108215,
+      "qed": 0.331,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.69
     },
     {
       "parent_compound_id": "PUBCHEM_1002472",
@@ -1815,7 +2137,10 @@
       "Solubility_AqSolDB": -4.36226,
       "Caco2_Wang": -4.965229,
       "hERG": 0.73949385,
-      "CYP3A4_Substrate_CarbonMangels": 0.77345353
+      "CYP3A4_Substrate_CarbonMangels": 0.77345353,
+      "qed": 0.801,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.09
     },
     {
       "parent_compound_id": "PUBCHEM_1002472",
@@ -1844,7 +2169,10 @@
       "Solubility_AqSolDB": -4.61254,
       "Caco2_Wang": -4.707824,
       "hERG": 0.72222173,
-      "CYP3A4_Substrate_CarbonMangels": 0.79335386
+      "CYP3A4_Substrate_CarbonMangels": 0.79335386,
+      "qed": 0.767,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.08
     },
     {
       "parent_compound_id": "PUBCHEM_1002472",
@@ -1873,7 +2201,10 @@
       "Solubility_AqSolDB": -5.378911,
       "Caco2_Wang": -4.7019506,
       "hERG": 0.6833595,
-      "CYP3A4_Substrate_CarbonMangels": 0.7804407
+      "CYP3A4_Substrate_CarbonMangels": 0.7804407,
+      "qed": 0.675,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.11
     },
     {
       "parent_compound_id": "PUBCHEM_1002472",
@@ -1902,7 +2233,10 @@
       "Solubility_AqSolDB": -4.8868475,
       "Caco2_Wang": -4.8415875,
       "hERG": 0.82691765,
-      "CYP3A4_Substrate_CarbonMangels": 0.8337032
+      "CYP3A4_Substrate_CarbonMangels": 0.8337032,
+      "qed": 0.72,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.16
     },
     {
       "parent_compound_id": "PUBCHEM_1002266",
@@ -1931,7 +2265,10 @@
       "Solubility_AqSolDB": -4.8061657,
       "Caco2_Wang": -4.9941506,
       "hERG": 0.86654073,
-      "CYP3A4_Substrate_CarbonMangels": 0.8205457
+      "CYP3A4_Substrate_CarbonMangels": 0.8205457,
+      "qed": 0.687,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.06
     },
     {
       "parent_compound_id": "PUBCHEM_1002266",
@@ -1960,7 +2297,10 @@
       "Solubility_AqSolDB": -5.077282,
       "Caco2_Wang": -4.7483835,
       "hERG": 0.85954493,
-      "CYP3A4_Substrate_CarbonMangels": 0.81800145
+      "CYP3A4_Substrate_CarbonMangels": 0.81800145,
+      "qed": 0.663,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.05
     },
     {
       "parent_compound_id": "PUBCHEM_1002266",
@@ -1989,7 +2329,10 @@
       "Solubility_AqSolDB": -5.622752,
       "Caco2_Wang": -4.7340817,
       "hERG": 0.84477776,
-      "CYP3A4_Substrate_CarbonMangels": 0.80967206
+      "CYP3A4_Substrate_CarbonMangels": 0.80967206,
+      "qed": 0.594,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.07
     },
     {
       "parent_compound_id": "PUBCHEM_1002266",
@@ -2018,7 +2361,10 @@
       "Solubility_AqSolDB": -5.1309996,
       "Caco2_Wang": -4.9182963,
       "hERG": 0.8729768,
-      "CYP3A4_Substrate_CarbonMangels": 0.8125064
+      "CYP3A4_Substrate_CarbonMangels": 0.8125064,
+      "qed": 0.692,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.14
     },
     {
       "parent_compound_id": "PUBCHEM_76287717",
@@ -2047,7 +2393,10 @@
       "Solubility_AqSolDB": -4.811286,
       "Caco2_Wang": -5.574075,
       "hERG": 0.6555697,
-      "CYP3A4_Substrate_CarbonMangels": 0.5729307
+      "CYP3A4_Substrate_CarbonMangels": 0.5729307,
+      "qed": 0.331,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.34
     },
     {
       "parent_compound_id": "PUBCHEM_76287717",
@@ -2076,7 +2425,10 @@
       "Solubility_AqSolDB": -5.462701,
       "Caco2_Wang": -5.202931,
       "hERG": 0.71751416,
-      "CYP3A4_Substrate_CarbonMangels": 0.5514159
+      "CYP3A4_Substrate_CarbonMangels": 0.5514159,
+      "qed": 0.252,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.83
     },
     {
       "parent_compound_id": "PUBCHEM_76287717",
@@ -2105,7 +2457,10 @@
       "Solubility_AqSolDB": -5.7697806,
       "Caco2_Wang": -5.2214117,
       "hERG": 0.7910111,
-      "CYP3A4_Substrate_CarbonMangels": 0.6445559
+      "CYP3A4_Substrate_CarbonMangels": 0.6445559,
+      "qed": 0.331,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.88
     },
     {
       "parent_compound_id": "PUBCHEM_76287717",
@@ -2134,7 +2489,10 @@
       "Solubility_AqSolDB": -5.550288,
       "Caco2_Wang": -5.263635,
       "hERG": 0.6558476,
-      "CYP3A4_Substrate_CarbonMangels": 0.540399
+      "CYP3A4_Substrate_CarbonMangels": 0.540399,
+      "qed": 0.239,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.99
     },
     {
       "parent_compound_id": "PUBCHEM_1002392",
@@ -2163,7 +2521,10 @@
       "Solubility_AqSolDB": -4.946238,
       "Caco2_Wang": -4.906262,
       "hERG": 0.68703353,
-      "CYP3A4_Substrate_CarbonMangels": 0.7778295
+      "CYP3A4_Substrate_CarbonMangels": 0.7778295,
+      "qed": 0.633,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.05
     },
     {
       "parent_compound_id": "PUBCHEM_1002392",
@@ -2192,7 +2553,10 @@
       "Solubility_AqSolDB": -5.28349,
       "Caco2_Wang": -4.6927586,
       "hERG": 0.6862329,
-      "CYP3A4_Substrate_CarbonMangels": 0.7780957
+      "CYP3A4_Substrate_CarbonMangels": 0.7780957,
+      "qed": 0.596,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.04
     },
     {
       "parent_compound_id": "PUBCHEM_1002392",
@@ -2221,7 +2585,10 @@
       "Solubility_AqSolDB": -5.2275777,
       "Caco2_Wang": -4.802113,
       "hERG": 0.6975235,
-      "CYP3A4_Substrate_CarbonMangels": 0.7904405
+      "CYP3A4_Substrate_CarbonMangels": 0.7904405,
+      "qed": 0.535,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.06
     },
     {
       "parent_compound_id": "PUBCHEM_1002392",
@@ -2250,7 +2617,10 @@
       "Solubility_AqSolDB": -5.3905525,
       "Caco2_Wang": -4.8359237,
       "hERG": 0.79860526,
-      "CYP3A4_Substrate_CarbonMangels": 0.8268172
+      "CYP3A4_Substrate_CarbonMangels": 0.8268172,
+      "qed": 0.571,
+      "lipinski": "Pass",
+      "pred_ic50_nm": 0.11
     }
   ],
   "leadopt_summary": {
