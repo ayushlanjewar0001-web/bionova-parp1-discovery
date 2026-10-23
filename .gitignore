@@ -50,3 +50,7 @@ bin/*.exe
 # Logs
 logs/*.log
 !logs/.gitkeep
+
+# Vercel
+.vercel/
+web/.vercel/
