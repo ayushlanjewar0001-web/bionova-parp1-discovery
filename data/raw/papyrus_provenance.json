@@ -1,0 +1,9 @@
+{
+  "source": "Papyrus 2024 (Zenodo 13987985)",
+  "file": "05.7++_combined_set_without_stereochemistry.tsv.xz",
+  "sha256": "8004e0d1027a760f205b45264386f792e7d49658da39f77f52e660a6f19760dd",
+  "target_id": "P09874_WT",
+  "target_name": "PARP1_HUMAN",
+  "uniprot": "P09874",
+  "raw_records_extracted": 1173
+}
