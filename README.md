@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Live Platform](https://img.shields.io/badge/Live%20Platform-Vercel%20Deployed-059669?style=for-the-badge&logo=vercel&logoColor=white)](https://bionova-parp1-discovery.vercel.app)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fayushlanjewar0001-web%2Fbionova-parp1-discovery)
 [![Target](https://img.shields.io/badge/Target-Human%20PARP1%20(P09874)-0d9488?style=for-the-badge&logo=dna&logoColor=white)](https://www.uniprot.org/uniprotkb/P09874)
 [![PDB Structure](https://img.shields.io/badge/PDB%20Complex-7KK4%20(2.30%20%C3%85)-10b981?style=for-the-badge&logo=protein&logoColor=white)](https://www.rcsb.org/structure/7KK4)
 [![Python](https://img.shields.io/badge/Python-3.11-3776ab?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -16,7 +16,7 @@
 **Principal Investigator:** **Ayush Lanjewar** *(Bachelor of Pharmacy Candidate)*  
 **Institution / Focus:** Computational Medicinal Chemistry & In-Silico Drug Discovery  
 **GitHub Repository:** [ayushlanjewar0001-web/bionova-parp1-discovery](https://github.com/ayushlanjewar0001-web/bionova-parp1-discovery)  
-**Live Research Platform:** [https://bionova-parp1-discovery.vercel.app](https://bionova-parp1-discovery.vercel.app)
+**Live Research Platform:** [https://bionova-parp1-discovery.vercel.app](https://bionova-parp1-discovery.vercel.app) *(Deploy with 1-click via the Vercel button above)*
 
 </div>
 
@@ -57,9 +57,13 @@ Instead of relying on unverified claims or simulated shortcuts, **BioNova PARP1*
 
 ## 2. 🌐 Live Interactive Research Platform
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fayushlanjewar0001-web%2Fbionova-parp1-discovery)
+
 The interactive research platform is designed for researchers, biotech recruiters, investors, and pharmacy students. It features a clean, high-contrast **Biotech Light Theme** (with an instant Dark Mode toggle) and delivers full exploratory transparency across the entire investigation:
 
-👉 **Visit Live Web App:** [https://bionova-parp1-discovery.vercel.app](https://bionova-parp1-discovery.vercel.app)
+- **Live Production URL:** [https://bionova-parp1-discovery.vercel.app](https://bionova-parp1-discovery.vercel.app) *(Once deployed via Vercel)*
+- **Instant 1-Click Deployment:** Click the **Deploy with Vercel** button above to connect your GitHub repository and go live in ~30 seconds.
+- **Local Interactive App:** Run `cd web; npm install; npm run dev` to launch locally at `http://localhost:5173`.
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
